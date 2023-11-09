@@ -316,21 +316,21 @@ const video = document.getElementById("video");
 // ---------------------------------------------------------------------------------------
 
 // ----------------------------------- Explode 3D File -----------------------------------
-explode_button.addEventListener("click", () => {
-	explode_button.classList.toggle("active");
+// explode_button.addEventListener("click", () => {
+// 	explode_button.classList.toggle("active");
 
-	let file3D = scene.getObjectByName("file3D");
+// 	let file3D = scene.getObjectByName("file3D");
 
-	if (product_list_text == "VSI Gyropactor") {
-		// SR100C_v1(obj);
-		SR100C_v1(file3D);
-	} else if (product_list_text == "VSI Gyropactor & Platform") {
-		// SRユニット_v1(obj);
-		SRユニット_v1(file3D);
-	} else if (product_list_text == "Sand Manufacturing Plant") {
-		SandManufacturingPlant(file3D);
-	}
-});
+// 	if (product_list_text == "VSI Gyropactor") {
+// 		// SR100C_v1(obj);
+// 		SR100C_v1(file3D);
+// 	} else if (product_list_text == "VSI Gyropactor & Platform") {
+// 		// SRユニット_v1(obj);
+// 		SRユニット_v1(file3D);
+// 	} else if (product_list_text == "Sand Manufacturing Plant") {
+// 		SandManufacturingPlant(file3D);
+// 	}
+// });
 
 // ----------------------------------- dark/light mode -----------------------------------
 if (getMode && getMode === "dark-theme") {
@@ -548,384 +548,386 @@ video_pop_up.addEventListener("click", function (e) {
 
 // ----------------------------------- Explode 3D File -----------------------------------
 
-// Function to create an annotation
-function createAnnotation(obj, content, position, label) {
-	const annotationDiv = document.createElement("div");
-	annotationDiv.id = "annotationDiv";
+// // Function to create an annotation
+// function createAnnotation(obj, content, position, label) {
+// 	const annotationDiv = document.createElement("div");
+// 	annotationDiv.id = "annotationDiv";
 
-	annotationDiv.textContent = content;
-	annotationDiv.style.backgroundColor = "#74E7D4";
-	annotationDiv.style.fontFamily = "Ubuntu";
-	annotationDiv.style.borderRadius = "5px";
-	annotationDiv.style.padding = "4px";
+// 	annotationDiv.textContent = content;
+// 	annotationDiv.style.backgroundColor = "#74E7D4";
+// 	annotationDiv.style.fontFamily = "Ubuntu";
+// 	annotationDiv.style.borderRadius = "5px";
+// 	annotationDiv.style.padding = "4px";
 
-	const annotation = new CSS2DObject(annotationDiv);
-	annotation.name = label;
-	annotation.position.copy(position);
-	annotation.center.set(0, 1, 0);
-	obj.add(annotation);
-}
+// 	const annotation = new CSS2DObject(annotationDiv);
+// 	annotation.name = label;
+// 	annotation.position.copy(position);
+// 	annotation.center.set(0, 1, 0);
+// 	obj.add(annotation);
+// }
 
-function createAnnotation2(img, position, scaleX, scaleY, scaleZ, label) {
-	let path = "files/SRユニット_v1/" + img;
-	const map = new THREE.TextureLoader().load(path);
-	const material = new THREE.SpriteMaterial({ map: map, color: 0xffffff });
+// function createAnnotation2(img, position, scaleX, scaleY, scaleZ, label) {
+// 	let path = "files/SRユニット_v1/" + img;
+// 	const map = new THREE.TextureLoader().load(path);
+// 	const material = new THREE.SpriteMaterial({ map: map, color: 0xffffff });
 
-	var sprite = new THREE.Sprite(material);
-	sprite.name = label;
-	sprite.scale.set(scaleX, scaleY, scaleZ);
-	sprite.position.copy(position);
-	scene.add(sprite);
-}
+// 	var sprite = new THREE.Sprite(material);
+// 	sprite.name = label;
+// 	sprite.scale.set(scaleX, scaleY, scaleZ);
+// 	sprite.position.copy(position);
+// 	scene.add(sprite);
+// }
 
-// Function to remove an annotation
-function removeAnnotation(obj, label) {
-	const annotation = obj.getObjectByName(label);
-	if (annotation != null) {
-		obj.remove(annotation);
-	}
-}
+// // Function to remove an annotation
+// function removeAnnotation(obj, label) {
+// 	const annotation = obj.getObjectByName(label);
+// 	if (annotation != null) {
+// 		obj.remove(annotation);
+// 	}
+// }
 
-// Function to reset the state of the 3D model and annotations
-function resetModelAndAnnotations(obj) {
-	// explode_button.classList.contains("active");
-	explode_button.classList.remove("active");
+// // Function to reset the state of the 3D model and annotations
+// function resetModelAndAnnotations(obj) {
+// 	// explode_button.classList.contains("active");
+// 	explode_button.classList.remove("active");
 
-	removeAnnotation(obj, "A");
-	removeAnnotation(obj, "B");
-	removeAnnotation(obj, "C");
-	removeAnnotation(obj, "D");
-	removeAnnotation(obj, "E");
-	removeAnnotation(obj, "F");
-	removeAnnotation(obj, "G");
-	removeAnnotation(obj, "H");
-	removeAnnotation(obj, "I");
-	removeAnnotation(obj, "J");
-	removeAnnotation(obj, "K");
+// 	removeAnnotation(obj, "A");
+// 	removeAnnotation(obj, "B");
+// 	removeAnnotation(obj, "C");
+// 	removeAnnotation(obj, "D");
+// 	removeAnnotation(obj, "E");
+// 	removeAnnotation(obj, "F");
+// 	removeAnnotation(obj, "G");
+// 	removeAnnotation(obj, "H");
+// 	removeAnnotation(obj, "I");
+// 	removeAnnotation(obj, "J");
+// 	removeAnnotation(obj, "K");
 
-	// removeAnnotation(scene, "A");
-	// removeAnnotation(scene, "B");
-	// removeAnnotation(scene, "C");
-	// removeAnnotation(scene, "D");
-	// removeAnnotation(scene, "E");
-}
+// 	// removeAnnotation(scene, "A");
+// 	// removeAnnotation(scene, "B");
+// 	// removeAnnotation(scene, "C");
+// 	// removeAnnotation(scene, "D");
+// 	// removeAnnotation(scene, "E");
+// }
 
-function SR100C_v1(obj) {
-	let object_children = obj.children;
+// function SR100C_v1(obj) {
+// 	let object_children = obj.children;
 
-	if (explode_button.classList.contains("active")) {
-		object_children.forEach((child) => {
-			if (moved_mesh.includes(child.name)) {
-				child.visible = false;
-			}
-		});
+// 	if (explode_button.classList.contains("active")) {
+// 		object_children.forEach((child) => {
+// 			if (moved_mesh.includes(child.name)) {
+// 				child.visible = false;
+// 			}
+// 		});
 
-		// SR100 Annotation
-		createAnnotation(obj, "Upper Casing", new THREE.Vector3(-0.6, 2.2, 0), "A");
-		createAnnotation(
-			obj,
-			"Material Feed",
-			new THREE.Vector3(-0.3, 2.5, 0),
-			"B"
-		);
-		createAnnotation(
-			obj,
-			"Hydraulic Casing Opener",
-			new THREE.Vector3(0.6, 2.2, 0),
-			"C"
-		);
-		createAnnotation(obj, "Guide Flange", new THREE.Vector3(-0.3, 1.5, 0), "D");
-		createAnnotation(
-			obj,
-			"Air Circulation",
-			new THREE.Vector3(0.1, 1.75, 0.75),
-			"E"
-		);
-		createAnnotation(
-			obj,
-			"Upper Frame",
-			new THREE.Vector3(0.6, 1.5, 0.75),
-			"F"
-		);
-		createAnnotation(
-			obj,
-			"Crushing Chamber",
-			new THREE.Vector3(0.1, 1, 0.75),
-			"G"
-		);
-		createAnnotation(obj, "Rotor", new THREE.Vector3(-0.1, 1, 0), "H");
-		createAnnotation(
-			obj,
-			"Vertical Shaft",
-			new THREE.Vector3(-0.25, 0.5, 0),
-			"I"
-		);
-		createAnnotation(obj, "Pulley", new THREE.Vector3(-0.1, -0.1, 0), "J");
-		createAnnotation(
-			obj,
-			"Shaped Material",
-			new THREE.Vector3(-0.1, -0.1, 0.75),
-			"K"
-		);
+// 		// SR100 Annotation
+// 		createAnnotation(obj, "Upper Casing", new THREE.Vector3(-0.6, 2.2, 0), "A");
+// 		createAnnotation(
+// 			obj,
+// 			"Material Feed",
+// 			new THREE.Vector3(-0.3, 2.5, 0),
+// 			"B"
+// 		);
+// 		createAnnotation(
+// 			obj,
+// 			"Hydraulic Casing Opener",
+// 			new THREE.Vector3(0.6, 2.2, 0),
+// 			"C"
+// 		);
+// 		createAnnotation(obj, "Guide Flange", new THREE.Vector3(-0.3, 1.5, 0), "D");
+// 		createAnnotation(
+// 			obj,
+// 			"Air Circulation",
+// 			new THREE.Vector3(0.1, 1.75, 0.75),
+// 			"E"
+// 		);
+// 		createAnnotation(
+// 			obj,
+// 			"Upper Frame",
+// 			new THREE.Vector3(0.6, 1.5, 0.75),
+// 			"F"
+// 		);
+// 		createAnnotation(
+// 			obj,
+// 			"Crushing Chamber",
+// 			new THREE.Vector3(0.1, 1, 0.75),
+// 			"G"
+// 		);
+// 		createAnnotation(obj, "Rotor", new THREE.Vector3(-0.1, 1, 0), "H");
+// 		createAnnotation(
+// 			obj,
+// 			"Vertical Shaft",
+// 			new THREE.Vector3(-0.25, 0.5, 0),
+// 			"I"
+// 		);
+// 		createAnnotation(obj, "Pulley", new THREE.Vector3(-0.1, -0.1, 0), "J");
+// 		createAnnotation(
+// 			obj,
+// 			"Shaped Material",
+// 			new THREE.Vector3(-0.1, -0.1, 0.75),
+// 			"K"
+// 		);
 
-		gsap.to(camera.position, {
-			duration: 2,
-			x: -3.5,
-		});
-		gsap.to(camera.position, {
-			duration: 2,
-			y: 2,
-		});
-		gsap.to(camera.position, {
-			duration: 1,
-			z: 2.8,
-		});
+// 		gsap.to(camera.position, {
+// 			duration: 2,
+// 			x: -3.5,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 2,
+// 			y: 2,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 1,
+// 			z: 2.8,
+// 		});
 
-		document.getElementById("explode-button").disabled = true;
-		orbitControls.enabled = false;
-		setTimeout(function () {
-			document.getElementById("explode-button").disabled = false;
-			orbitControls.enabled = true;
-		}, 2500);
-	} else {
-		object_children.forEach((child) => {
-			if (moved_mesh.includes(child.name)) {
-				child.visible = true;
-			}
-		});
+// 		document.getElementById("explode-button").disabled = true;
+// 		orbitControls.enabled = false;
+// 		setTimeout(function () {
+// 			document.getElementById("explode-button").disabled = false;
+// 			orbitControls.enabled = true;
+// 		}, 2500);
+// 	} else {
+// 		object_children.forEach((child) => {
+// 			if (moved_mesh.includes(child.name)) {
+// 				child.visible = true;
+// 			}
+// 		});
 
-		// SR100 Annotation
-		resetModelAndAnnotations(obj);
+// 		// SR100 Annotation
+// 		resetModelAndAnnotations(obj);
 
-		gsap.to(camera.position, {
-			duration: 2.8,
-			x: 6,
-		});
-		gsap.to(camera.position, {
-			duration: 2.5,
-			y: 4,
-		});
-		gsap.to(camera.position, {
-			duration: 1,
-			z: -4,
-		});
-		document.getElementById("explode-button").disabled = true;
-		orbitControls.enabled = false;
-		setTimeout(function () {
-			document.getElementById("explode-button").disabled = false;
-			orbitControls.enabled = true;
-		}, 2500);
-	}
-}
+// 		gsap.to(camera.position, {
+// 			duration: 2.8,
+// 			x: 6,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 2.5,
+// 			y: 4,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 1,
+// 			z: -4,
+// 		});
+// 		document.getElementById("explode-button").disabled = true;
+// 		orbitControls.enabled = false;
+// 		setTimeout(function () {
+// 			document.getElementById("explode-button").disabled = false;
+// 			orbitControls.enabled = true;
+// 		}, 2500);
+// 	}
+// }
 
-function SRユニット_v1(obj) {
-	let object_children = obj.children;
+// function SRユニット_v1(obj) {
+// 	let object_children = obj.children;
 
-	if (explode_button.classList.contains("active")) {
-		object_children.forEach((child) => {
-			if (moved_mesh_SR100C_v1.includes(child.name)) {
-				let new_pos = child.position.y + 2;
-				gsap.to(child.position, {
-					duration: 1,
-					y: new_pos,
-				});
-			}
-		});
-		// createAnnotation2("Belt.png",new THREE.Vector3(0.2, 0.2, 1.4), 0.4, 0.14, 1, "A");
-		createAnnotation(obj, "Belt", new THREE.Vector3(-0.5, 0.2, 0.1), "A");
-		// createAnnotation2("Motor.png", new THREE.Vector3(-0.8, 2, 0.4), 0.4, 0.14, 1, "B");
-		createAnnotation(obj, "Motor", new THREE.Vector3(-0.9, 2.9, 0.2), "B");
-		// createAnnotation2("Motor_casing.png", new THREE.Vector3(-0.8, 2.8, 0.7), 0.4, 0.14, 1, "C");
-		createAnnotation(
-			obj,
-			"Motor Casing",
-			new THREE.Vector3(-0.9, 3.7, 0.2),
-			"C"
-		);
-		// createAnnotation2("Platform.png", new THREE.Vector3(3, 0.1, 1.3), 0.4, 0.14, 1, "D");
-		createAnnotation(obj, "Platform", new THREE.Vector3(2.9, 1, 1.2), "D");
-		// createAnnotation2("vsi.png", new THREE.Vector3(1.2, 0.9, 1.3), 0.46, 0.21, 1, "E" );
-		createAnnotation(
-			obj,
-			"VSI SR100 Gyropactor",
-			new THREE.Vector3(1.2, 1.8, 1.2),
-			"E"
-		);
-		gsap.to(camera.position, {
-			duration: 1.2,
-			x: -1.9,
-		});
-		gsap.to(camera.position, {
-			duration: 1,
-			y: 2.2,
-		});
-		gsap.to(camera.position, {
-			duration: 1.3,
-			z: 3.7,
-		});
-		document.getElementById("explode-button").disabled = true;
-		orbitControls.enabled = false;
-		setTimeout(function () {
-			document.getElementById("explode-button").disabled = false;
-			orbitControls.enabled = true;
-		}, 1500);
-	} else {
-		object_children.forEach((child) => {
-			if (moved_mesh_SR100C_v1.includes(child.name)) {
-				let new_pos = child.position.y - 2;
-				gsap.to(child.position, {
-					duration: 1,
-					y: new_pos,
-				});
-			}
-		});
-		// resetModelAndAnnotations(scene);
-		resetModelAndAnnotations(obj);
-		gsap.to(camera.position, {
-			duration: 1.1,
-			x: 6,
-		});
-		gsap.to(camera.position, {
-			duration: 1.4,
-			y: 4,
-		});
-		gsap.to(camera.position, {
-			duration: 1,
-			z: -4,
-		});
-		document.getElementById("explode-button").disabled = true;
-		orbitControls.enabled = false;
-		setTimeout(function () {
-			document.getElementById("explode-button").disabled = false;
-			orbitControls.enabled = true;
-		}, 1500);
-	}
-	// let object_children = obj.children;
-	// if (explode_button.classList.contains("active")) {
-	// 	obj.forEach((child) => {
-	// 		// Check if the child's name is in the list of objects to hide
-	// 		if (moved_mesh.includes(child.name)) {
-	// 			// Hide the child object
-	// 			child.visible = false;
-	// 		} else {
-	// 			let target = new THREE.Vector3();
-	// 			child.getWorldPosition(target);
-	// 			target.normalize();
-	// 			target.setX(target.x * 1 + child.position.x);
-	// 			target.setY(target.y * 1 + child.position.y);
-	// 			target.setZ(target.z * 1 + child.position.z);
-	// 			gsap.to(child.position, {
-	// 				duration: 1,
-	// 				x: target.x,
-	// 			});
-	// 			gsap.to(child.position, {
-	// 				duration: 1,
-	// 				y: target.y,
-	// 			});
-	// 			gsap.to(child.position, {
-	// 				duration: 1,
-	// 				z: target.z,
-	// 			});
-	// 		}
-	// 	});
-	// } else {
-	// 	obj.forEach((child) => {
-	// 		// Toggle visibility for child objects
-	// 		if (moved_mesh.includes(child.name)) {
-	// 			// Show the child object
-	// 			child.visible = true;
-	// 		} else {
-	// 			let target = new THREE.Vector3();
-	// 			child.getWorldPosition(target);
-	// 			target.normalize();
-	// 			target.setX(child.position.x - target.x * 1);
-	// 			target.setY(child.position.y - target.y * 1);
-	// 			target.setZ(child.position.z - target.z * 1);
-	// 			gsap.to(child.position, {
-	// 				duration: 1,
-	// 				x: target.x,
-	// 			});
-	// 			gsap.to(child.position, {
-	// 				duration: 1,
-	// 				y: target.y,
-	// 			});
-	// 			gsap.to(child.position, {
-	// 				duration: 1,
-	// 				z: target.z,
-	// 			});
-	// 		}
-	// 	});
-	// }
-}
-function SandManufacturingPlant(obj) {
-	if (explode_button.classList.contains("active")) {
-		gsap.to(camera.position, {
-			duration: 2,
-			x: -8,
-		});
-		gsap.to(camera.position, {
-			duration: 2,
-			y: 5,
-		});
-		gsap.to(camera.position, {
-			duration: 1,
-			z: 11,
-		});
-		createAnnotation(
-			obj,
-			"Vibrating Screen",
-			new THREE.Vector3(-6, 6.8, -0.6),
-			"A"
-		);
-		createAnnotation(obj, "Cone Crusher", new THREE.Vector3(-0.5, 3, -0), "B");
-		createAnnotation(obj, "Surge Bin", new THREE.Vector3(4, 8, 0), "C");
-		createAnnotation(
-			obj,
-			"Vertical Shaft Impact (VSI) Crusher",
-			new THREE.Vector3(-1, 5, 19),
-			"D"
-		);
-		createAnnotation(obj, "Vibro Feeder", new THREE.Vector3(1, 4.5, 0), "E");
-		createAnnotation(
-			obj,
-			"Primary Jaw Crusher",
-			new THREE.Vector3(20, 7, -7),
-			"F"
-		);
-		createAnnotation(obj, "Stockpile 1", new THREE.Vector3(-2, 8, -22), "G");
-		createAnnotation(obj, "Stockpile 2", new THREE.Vector3(-17, 8, -1), "H");
-		createAnnotation(obj, "Stockpile 3", new THREE.Vector3(-8.5, 6, 12), "I");
+// 	if (explode_button.classList.contains("active")) {
+// 		object_children.forEach((child) => {
+// 			if (moved_mesh_SR100C_v1.includes(child.name)) {
+// 				let new_pos = child.position.y + 2;
+// 				gsap.to(child.position, {
+// 					duration: 1,
+// 					y: new_pos,
+// 				});
+// 			}
+// 		});
+// 		// createAnnotation2("Belt.png",new THREE.Vector3(0.2, 0.2, 1.4), 0.4, 0.14, 1, "A");
+// 		createAnnotation(obj, "Belt", new THREE.Vector3(-0.5, 0.2, 0.1), "A");
+// 		// createAnnotation2("Motor.png", new THREE.Vector3(-0.8, 2, 0.4), 0.4, 0.14, 1, "B");
+// 		createAnnotation(obj, "Motor", new THREE.Vector3(-0.9, 2.9, 0.2), "B");
+// 		// createAnnotation2("Motor_casing.png", new THREE.Vector3(-0.8, 2.8, 0.7), 0.4, 0.14, 1, "C");
+// 		createAnnotation(
+// 			obj,
+// 			"Motor Casing",
+// 			new THREE.Vector3(-0.9, 3.7, 0.2),
+// 			"C"
+// 		);
+// 		// createAnnotation2("Platform.png", new THREE.Vector3(3, 0.1, 1.3), 0.4, 0.14, 1, "D");
+// 		createAnnotation(obj, "Platform", new THREE.Vector3(2.9, 1, 1.2), "D");
+// 		// createAnnotation2("vsi.png", new THREE.Vector3(1.2, 0.9, 1.3), 0.46, 0.21, 1, "E" );
+// 		createAnnotation(
+// 			obj,
+// 			"VSI SR100 Gyropactor",
+// 			new THREE.Vector3(1.2, 1.8, 1.2),
+// 			"E"
+// 		);
+// 		gsap.to(camera.position, {
+// 			duration: 1.2,
+// 			x: -1.9,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 1,
+// 			y: 2.2,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 1.3,
+// 			z: 3.7,
+// 		});
+// 		document.getElementById("explode-button").disabled = true;
+// 		orbitControls.enabled = false;
+// 		setTimeout(function () {
+// 			document.getElementById("explode-button").disabled = false;
+// 			orbitControls.enabled = true;
+// 		}, 1500);
+// 	} else {
+// 		object_children.forEach((child) => {
+// 			if (moved_mesh_SR100C_v1.includes(child.name)) {
+// 				let new_pos = child.position.y - 2;
+// 				gsap.to(child.position, {
+// 					duration: 1,
+// 					y: new_pos,
+// 				});
+// 			}
+// 		});
+// 		// resetModelAndAnnotations(scene);
+// 		resetModelAndAnnotations(obj);
+// 		gsap.to(camera.position, {
+// 			duration: 1.1,
+// 			x: 6,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 1.4,
+// 			y: 4,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 1,
+// 			z: -4,
+// 		});
+// 		document.getElementById("explode-button").disabled = true;
+// 		orbitControls.enabled = false;
+// 		setTimeout(function () {
+// 			document.getElementById("explode-button").disabled = false;
+// 			orbitControls.enabled = true;
+// 		}, 1500);
+// 	}
 
-		orbitControls.target.set(-1, 3, 19);
-		document.getElementById("explode-button").disabled = true;
-		orbitControls.enabled = false;
-		setTimeout(function () {
-			document.getElementById("explode-button").disabled = false;
-			orbitControls.enabled = true;
-		}, 2500);
-	} else {
-		gsap.to(camera.position, {
-			duration: 1,
-			x: -19,
-		});
-		gsap.to(camera.position, {
-			duration: 2.5,
-			y: 12,
-		});
-		gsap.to(camera.position, {
-			duration: 1,
-			z: -17,
-		});
-		resetModelAndAnnotations(obj);
-		orbitControls.target.set(0, 0, 0);
-		document.getElementById("explode-button").disabled = true;
-		orbitControls.enabled = false;
-		setTimeout(function () {
-			document.getElementById("explode-button").disabled = false;
-			orbitControls.enabled = true;
-		}, 2500);
-	}
-}
+// 	// let object_children = obj.children;
+// 	// if (explode_button.classList.contains("active")) {
+// 	// 	obj.forEach((child) => {
+// 	// 		// Check if the child's name is in the list of objects to hide
+// 	// 		if (moved_mesh.includes(child.name)) {
+// 	// 			// Hide the child object
+// 	// 			child.visible = false;
+// 	// 		} else {
+// 	// 			let target = new THREE.Vector3();
+// 	// 			child.getWorldPosition(target);
+// 	// 			target.normalize();
+// 	// 			target.setX(target.x * 1 + child.position.x);
+// 	// 			target.setY(target.y * 1 + child.position.y);
+// 	// 			target.setZ(target.z * 1 + child.position.z);
+// 	// 			gsap.to(child.position, {
+// 	// 				duration: 1,
+// 	// 				x: target.x,
+// 	// 			});
+// 	// 			gsap.to(child.position, {
+// 	// 				duration: 1,
+// 	// 				y: target.y,
+// 	// 			});
+// 	// 			gsap.to(child.position, {
+// 	// 				duration: 1,
+// 	// 				z: target.z,
+// 	// 			});
+// 	// 		}
+// 	// 	});
+// 	// } else {
+// 	// 	obj.forEach((child) => {
+// 	// 		// Toggle visibility for child objects
+// 	// 		if (moved_mesh.includes(child.name)) {
+// 	// 			// Show the child object
+// 	// 			child.visible = true;
+// 	// 		} else {
+// 	// 			let target = new THREE.Vector3();
+// 	// 			child.getWorldPosition(target);
+// 	// 			target.normalize();
+// 	// 			target.setX(child.position.x - target.x * 1);
+// 	// 			target.setY(child.position.y - target.y * 1);
+// 	// 			target.setZ(child.position.z - target.z * 1);
+// 	// 			gsap.to(child.position, {
+// 	// 				duration: 1,
+// 	// 				x: target.x,
+// 	// 			});
+// 	// 			gsap.to(child.position, {
+// 	// 				duration: 1,
+// 	// 				y: target.y,
+// 	// 			});
+// 	// 			gsap.to(child.position, {
+// 	// 				duration: 1,
+// 	// 				z: target.z,
+// 	// 			});
+// 	// 		}
+// 	// 	});
+// 	// }
+// }
+
+// function SandManufacturingPlant(obj) {
+// 	if (explode_button.classList.contains("active")) {
+// 		gsap.to(camera.position, {
+// 			duration: 2,
+// 			x: -8,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 2,
+// 			y: 5,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 1,
+// 			z: 11,
+// 		});
+// 		createAnnotation(
+// 			obj,
+// 			"Vibrating Screen",
+// 			new THREE.Vector3(-6, 6.8, -0.6),
+// 			"A"
+// 		);
+// 		createAnnotation(obj, "Cone Crusher", new THREE.Vector3(-0.5, 3, -0), "B");
+// 		createAnnotation(obj, "Surge Bin", new THREE.Vector3(4, 8, 0), "C");
+// 		createAnnotation(
+// 			obj,
+// 			"Vertical Shaft Impact (VSI) Crusher",
+// 			new THREE.Vector3(-1, 5, 19),
+// 			"D"
+// 		);
+// 		createAnnotation(obj, "Vibro Feeder", new THREE.Vector3(1, 4.5, 0), "E");
+// 		createAnnotation(
+// 			obj,
+// 			"Primary Jaw Crusher",
+// 			new THREE.Vector3(20, 7, -7),
+// 			"F"
+// 		);
+// 		createAnnotation(obj, "Stockpile 1", new THREE.Vector3(-2, 8, -22), "G");
+// 		createAnnotation(obj, "Stockpile 2", new THREE.Vector3(-17, 8, -1), "H");
+// 		createAnnotation(obj, "Stockpile 3", new THREE.Vector3(-8.5, 6, 12), "I");
+
+// 		orbitControls.target.set(-1, 3, 19);
+// 		document.getElementById("explode-button").disabled = true;
+// 		orbitControls.enabled = false;
+// 		setTimeout(function () {
+// 			document.getElementById("explode-button").disabled = false;
+// 			orbitControls.enabled = true;
+// 		}, 2500);
+// 	} else {
+// 		gsap.to(camera.position, {
+// 			duration: 1,
+// 			x: -19,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 2.5,
+// 			y: 12,
+// 		});
+// 		gsap.to(camera.position, {
+// 			duration: 1,
+// 			z: -17,
+// 		});
+// 		resetModelAndAnnotations(obj);
+// 		orbitControls.target.set(0, 0, 0);
+// 		document.getElementById("explode-button").disabled = true;
+// 		orbitControls.enabled = false;
+// 		setTimeout(function () {
+// 			document.getElementById("explode-button").disabled = false;
+// 			orbitControls.enabled = true;
+// 		}, 2500);
+// 	}
+// }
 
 // -------------------------------------- lightning --------------------------------------
 function resetOpsi() {
@@ -1032,7 +1034,7 @@ function loadCatalogue(catalogue_product_list) {
 			let file3D = scene.getObjectByName("file3D");
 
 			// Reset the model and annotations for the current 3D model
-			resetModelAndAnnotations(file3D);
+			// resetModelAndAnnotations(file3D);
 
 			updateFile3D(product_list_text);
 		});
@@ -1052,13 +1054,13 @@ function updateFile3D(file_name) {
 
 		scene.remove(file3D);
 		let newFile3D;
-		if (file_name == "Sand Manufacturing Plant") {
-			newFile3D = `files/Full_Plant_NIW_2.glb`;
+		if (file_name == "Recycling Plant") {
+			newFile3D = `files/Recycling Plant.glb`;
 		} else {
 			newFile3D = `files/${file_name}.glb`;
 		}
 
-		if (product_list_text == "Sand Manufacturing Plant") {
+		if (product_list_text == "Recycling Plant") {
 			camera.position.set(-19, 12, -17);
 			// camera.position.set(-9, 8, 19);
 			// camera.position.set(-1, 3, 17);
