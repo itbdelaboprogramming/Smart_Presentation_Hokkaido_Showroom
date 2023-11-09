@@ -127,7 +127,7 @@ loadingManager.onLoad = function () {
 export const loader = new GLTFLoader(loadingManager);
 loader.name = "loader";
 
-let path = "files/" + "VSI Gyropactor.glb";
+let path = "files/" + "Hokkaido Crushing Plant.glb";
 
 loader.load(
 	path,
