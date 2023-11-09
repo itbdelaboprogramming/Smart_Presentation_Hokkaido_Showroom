@@ -35,7 +35,7 @@
                     <img class="menu-video" src="./assets/Video.svg">
                 </div>
                 <div class="page-name-container">
-                    <div class="page-name-text">Nakayama VSI Gyropactor</div>
+                    <div class="page-name-text">Nakayama Hokkaido Showroom</div>
                 </div>
             </div>
 
@@ -49,32 +49,32 @@
                     <p class="information-description-description">Features:<br>1. Anvil type can be adjusted both up and down side (reversible).<br>2. Assembled (sectionalized) rotor for easy parts replacement.<br>3. Hydraulic top cover opener for easy maintenance.<br>4. Vibration sensor to detect excessive vibration.<br>5. VSI unit can be loaded into a 40FT container.</p>
                     <p class="information-description-specification">Specifications Unit (mm)</p>
                     <!-- <p class="information-description-specification-detail" >Processing performance depends on quality of material, feeding chunks and particle size. <br><br> This machine’s spec and dimension might be changed without prior-notice for the improvement.</p> -->
-                    <img class="information-specification-img" src="./files/dimension_vsi.png" />
+                    <!-- <img class="information-specification-img" src="./files/dimension_vsi.png" />
                     <img class="information-specification-img" src="./files/dimension_vsi_platform.png" />
                     <img class="information-specification-img" src="./files/specification_2.png" />
                     <img class="information-specification-img" src="./files/specification.png" />
-                    <img class="information-specification-img" src="./files/specification_3.png" />
+                    <img class="information-specification-img" src="./files/specification_3.png" /> -->
                 </div>
                 <a class="information-link" target="_blank" href="https://www.ncjpn.com/en/products/crushers/">Crusher Series | Nakayama Iron Works (ncjpn.com)</a>
             </div>
 
             <div class="catalogue-container-2" id="catalogue-container-2">
                 <div>
-                    <p class="catalogue-description-title-2">VSI Gyropactor Series</p>
+                    <p class="catalogue-description-title-2">Hokkaido Showroom</p>
                 </div>
                 <div class="catalogue-description-2">
                     <div class="catalogue-product-list-2 active" id="model_name_1">
-                        <div class="catalogue-product-list-text-2"> VSI Gyropactor </div>
+                        <div class="catalogue-product-list-text-2"> Hokkaido Crushing Plant </div>
                         <img class="catalogue-image-preview-2" src="./files/SR100C_v1_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_2">
-                        <div class="catalogue-product-list-text-2"> VSI Gyropactor & Platform </div>
+                        <div class="catalogue-product-list-text-2"> Recycling Plant </div>
                         <img class="catalogue-image-preview-2" src="./files/SRユニット_v1_preview.png" />
                     </div>
-                    <div class="catalogue-product-list-2" id="model_name_3">
+                    <!-- <div class="catalogue-product-list-2" id="model_name_3">
                         <div class="catalogue-product-list-text-2"> Sand Manufacturing Plant </div>
                         <img class="catalogue-image-preview-2" src="./files/sand_manufacturing_plant.png" />
-                    </div>
+                    </div> -->
                 </div>
             </div>
 
@@ -165,9 +165,9 @@
             </div>
 
             <div class="container-bottom-left">
-                <Button class="menu-container-blue-explode" id="explode-button">
+                <!-- <Button class="menu-container-blue-explode" id="explode-button">
                     Explode/Cut
-                </Button>
+                </Button> -->
                 <div class="menu-container-blue-information">
                     <img src="./assets/Information-Button.png">
                 </div>
