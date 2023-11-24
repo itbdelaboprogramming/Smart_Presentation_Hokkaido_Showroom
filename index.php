@@ -4,13 +4,7 @@
         <title>Smart Presentation</title>
         <link rel="icon" type="image/x-icon" href="assets/SR_logo_03_red.png">
         <meta charset="UTF-8">
-        <!-- <script type="importmap">
-            {
-                "imports": {
-                "three": "https://unpkg.com/three@0.153.0/build/three.module.js"
-                }
-            } 
-        </script> -->
+
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.2.4/dist/gsap.js"></script>
         <link rel="stylesheet" href="./style/style.css" >
         <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
@@ -65,16 +59,12 @@
                 <div class="catalogue-description-2">
                     <div class="catalogue-product-list-2 active" id="model_name_1">
                         <div class="catalogue-product-list-text-2"> Hokkaido Crushing Plant </div>
-                        <img class="catalogue-image-preview-2" src="./files/SR100C_v1_preview.png" />
+                        <img class="catalogue-image-preview-2" src="./files/diorama1_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_2">
                         <div class="catalogue-product-list-text-2"> Recycling Plant </div>
-                        <img class="catalogue-image-preview-2" src="./files/SRユニット_v1_preview.png" />
+                        <img class="catalogue-image-preview-2" src="./files/recyclingplant_preview.png" />
                     </div>
-                    <!-- <div class="catalogue-product-list-2" id="model_name_3">
-                        <div class="catalogue-product-list-text-2"> Sand Manufacturing Plant </div>
-                        <img class="catalogue-image-preview-2" src="./files/sand_manufacturing_plant.png" />
-                    </div> -->
                 </div>
             </div>
 
@@ -165,9 +155,7 @@
             </div>
 
             <div class="container-bottom-left">
-                <!-- <Button class="menu-container-blue-explode" id="explode-button">
-                    Explode/Cut
-                </Button> -->
+
                 <div class="menu-container-blue-information">
                     <img src="./assets/Information-Button.png">
                 </div>

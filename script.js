@@ -1,15 +1,9 @@
 const myCanvas = document.querySelector("#myCanvas");
-// var myText = document.getElementById("myText").textContent;
 
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { TextGeometry } from "three/addons/geometries/TextGeometry.js";
-import {
-	CSS2DRenderer,
-	CSS2DObject,
-} from "three/addons/renderers/CSS2DRenderer.js";
-import { FontLoader } from "three/addons/loaders/FontLoader.js";
+import { CSS2DRenderer } from "three/addons/renderers/CSS2DRenderer.js";
 
 // ----------------------------------- SCENE BACKGROUND COLOR -----------------------------------
 export const scene = new THREE.Scene();
@@ -127,7 +121,7 @@ loadingManager.onLoad = function () {
 export const loader = new GLTFLoader(loadingManager);
 loader.name = "loader";
 
-let path = "files/" + "Hokkaido Crushing Plant.glb";
+let path = "files/glb/" + "Hokkaido Crushing Plant Layout 2.glb";
 
 loader.load(
 	path,
@@ -144,50 +138,6 @@ loader.load(
 		console.error(error);
 	}
 );
-
-// const map = new THREE.TextureLoader().load("files/SR100C_V1/Belt.png");
-// const material = new THREE.SpriteMaterial({ map: map, color: 0xffffff });
-// var sprite = new THREE.Sprite(material);
-// sprite.scale.set(0.35, 0.1, 1);
-// sprite.position.set(-0.8, 0.8, -1);
-// scene.add(sprite);
-
-// var spritey = makeTextSprite(" Held00 ");
-// spritey.position.set(0.8, 0.8, -1);
-// scene.add(spritey);
-
-// function makeTextSprite(message) {
-// 	var canvas = document.createElement("canvas");
-// 	var context = canvas.getContext("2d");
-
-// 	var fontface = "Inter";
-// 	var fontsize = 15;
-// 	var borderThickness = 0;
-
-// 	// canvas.style.backgroundColor = "blue";
-
-// 	context.font = "bolder " + fontsize + "px " + fontface;
-// 	var metrics = context.measureText(message);
-// 	console.log(metrics);
-
-// 	context.fillStyle = "rgba(116,231,212,1.0";
-// 	context.fillRect(0, 0, metrics.width, 25);
-// 	context.strokeStyle = "rgba(0,0,0,1.0)";
-// 	context.fillStyle = "rgba(0,0,0,1.0)";
-
-// 	context.font = "Bold " + fontsize + "px " + fontface;
-// 	context.fillText(message, borderThickness, fontsize + borderThickness);
-
-// 	var texture = new THREE.Texture(canvas);
-// 	texture.needsUpdate = true;
-// 	var spriteMaterial = new THREE.SpriteMaterial({
-// 		map: texture,
-// 		useScreenCoordinates: false,
-// 	});
-
-// 	var sprite = new THREE.Sprite(spriteMaterial);
-// 	return sprite;
-// }
 
 // ----------------------------------------- RENDER LOOP ----------------------------------------
 renderer.setAnimationLoop(() => {
