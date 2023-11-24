@@ -472,11 +472,8 @@ function updateFile3D(file_name) {
 
 		scene.remove(file3D);
 		let newFile3D;
-		if (file_name == "Recycling Plant") {
-			newFile3D = `files/glb/Recycling Plant.glb`;
-		} else {
-			newFile3D = `files/glb/${file_name}.glb`;
-		}
+
+		newFile3D = `files/glb/${file_name}.glb`;
 
 		if (product_list_text == "Recycling Plant") {
 			camera.position.set(-19, 12, -17);

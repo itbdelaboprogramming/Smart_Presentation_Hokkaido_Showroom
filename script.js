@@ -121,7 +121,7 @@ loadingManager.onLoad = function () {
 export const loader = new GLTFLoader(loadingManager);
 loader.name = "loader";
 
-let path = "files/glb/" + "Hokkaido Crushing Plant Layout 2.glb";
+let path = "files/glb/" + "Hokkaido Crushing Full Plant.glb";
 
 loader.load(
 	path,

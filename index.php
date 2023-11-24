@@ -58,12 +58,56 @@
                 </div>
                 <div class="catalogue-description-2">
                     <div class="catalogue-product-list-2 active" id="model_name_1">
+                        <div class="catalogue-product-list-text-2"> Hokkaido Crushing Full Plant </div>
+                        <img class="catalogue-image-preview-2" src="./files/Hokkaido Crushing Full Plant_preview.png" />
+                    </div>
+                    <div class="catalogue-product-list-2" id="model_name_1">
                         <div class="catalogue-product-list-text-2"> Hokkaido Crushing Plant </div>
-                        <img class="catalogue-image-preview-2" src="./files/diorama1_preview.png" />
+                        <img class="catalogue-image-preview-2" src="./files/Hokkaido Crushing Plant_preview.png" />
+                    </div>
+                    <div class="catalogue-product-list-2" id="model_name_1">
+                        <div class="catalogue-product-list-text-2"> NE750J </div>
+                        <img class="catalogue-image-preview-2" src="./files/NE750J_preview.png" />
+                    </div>
+                    <div class="catalogue-product-list-2" id="model_name_1">
+                        <div class="catalogue-product-list-text-2"> NEBC10520 Belt Conveyor </div>
+                        <img class="catalogue-image-preview-2" src="./files/NEBC10520 Belt Conveyor_preview.png" />
+                    </div>
+                    <div class="catalogue-product-list-2" id="model_name_1">
+                        <div class="catalogue-product-list-text-2"> N-ePower </div>
+                        <img class="catalogue-image-preview-2" src="./files/N-ePower_preview.png" />
+                    </div>
+                    <div class="catalogue-product-list-2" id="model_name_1">
+                        <div class="catalogue-product-list-text-2"> Micro Hydro System </div>
+                        <img class="catalogue-image-preview-2" src="./files/Micro Hydro System_preview.png" />
+                    </div>
+                    <div class="catalogue-product-list-2" id="model_name_1">
+                        <div class="catalogue-product-list-text-2"> MSD700 Bucket </div>
+                        <img class="catalogue-image-preview-2" src="./files/MSD700 Bucket_preview.png" />
+                    </div>
+                    <div class="catalogue-product-list-2" id="model_name_1">
+                        <div class="catalogue-product-list-text-2"> MSD700 Blade </div>
+                        <img class="catalogue-image-preview-2" src="./files/MSD700 Blade_preview.png" />
+                    </div>
+                    <div class="catalogue-product-list-2" id="model_name_2">
+                        <div class="catalogue-product-list-text-2"> Recycling Full Plant </div>
+                        <img class="catalogue-image-preview-2" src="./files/Recycling Full Plant_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_2">
                         <div class="catalogue-product-list-text-2"> Recycling Plant </div>
-                        <img class="catalogue-image-preview-2" src="./files/recyclingplant_preview.png" />
+                        <img class="catalogue-image-preview-2" src="./files/Recycling Plant_preview.png" />
+                    </div>
+                    <div class="catalogue-product-list-2" id="model_name_2">
+                        <div class="catalogue-product-list-text-2"> NE1200RD </div>
+                        <img class="catalogue-image-preview-2" src="./files/NE1200RD_preview.png" />
+                    </div>
+                    <div class="catalogue-product-list-2" id="model_name_2">
+                        <div class="catalogue-product-list-text-2"> MSD700 Dump </div>
+                        <img class="catalogue-image-preview-2" src="./files/MSD700 Dump_preview.png" />
+                    </div>
+                    <div class="catalogue-product-list-2" id="model_name_2">
+                        <div class="catalogue-product-list-text-2"> MSD700 Backhoe </div>
+                        <img class="catalogue-image-preview-2" src="./files/MSD700 Backhoe_preview.png" />
                     </div>
                 </div>
             </div>
