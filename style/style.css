@@ -725,8 +725,8 @@ canvas {
 
 .sound-expand {
 	display: flex;
+	justify-content: center;
 	flex-direction: column;
-	justify-content: space-between;
 	align-items: center;
 	gap: 10px;
 

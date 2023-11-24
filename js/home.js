@@ -69,7 +69,6 @@ const soundExpand = document.querySelector(".sound-expand");
 let change_audio = "model_name_1";
 let soundStatus = 0;
 
-var audio = new Audio("./audio/podcast-18169.mp3");
 var audio_speech = new Audio("./audio/Play.ht - VSI Gyropactor.wav");
 var audio_speech_2 = new Audio(
 	"./audio/Play.ht - VSI Gyropactor & Platform.wav"
@@ -77,17 +76,6 @@ var audio_speech_2 = new Audio(
 var audio_speech_3 = new Audio("./audio/Play.ht - Full Plant.wav");
 
 var sound = audio_speech;
-
-function musicPlayer() {
-	audio.addEventListener("ended", function () {
-		// Delay the next call to musicPlayer by 30000 milliseconds
-		setTimeout(() => {
-			musicPlayer();
-		}, 30000);
-	});
-
-	audio.play();
-}
 
 function audioPlayer() {
 	if (change_audio === "model_name_1") {
@@ -110,7 +98,7 @@ function audioPlayer() {
 	sound.play();
 }
 
-const toggle_music = document.querySelector(".toggle-music");
+// const toggle_music = document.querySelector(".toggle-music");
 const toggle_speech = document.querySelector(".toggle-speech");
 
 // -------------------------------------- animation --------------------------------------
@@ -266,16 +254,6 @@ menuSound.addEventListener("click", () => {
 		iconSoundOff.style.display = "block";
 		iconSoundOn.style.display = "none";
 		soundExpand.style.display = "none";
-	}
-});
-
-toggle_music.addEventListener("click", () => {
-	toggle_music.classList.toggle("active");
-
-	if (toggle_music.classList.contains("active")) {
-		musicPlayer();
-	} else {
-		audio.pause();
 	}
 });
 

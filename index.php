@@ -115,14 +115,6 @@
             <div class="container-bottom-left-ml2x">
                 <div class="sound-expand" style="display:none;">
                     <div class="sound-expand-component">
-                        Music
-                        <div class="toggle-container">
-                            Off
-                            <div class="toggle-music"></div>
-                            On
-                        </div>
-                    </div>
-                    <div class="sound-expand-component">
                         Voice Over
                         <div class="toggle-container">
                             Off
