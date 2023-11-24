@@ -182,6 +182,12 @@
                 </div>
                 <div class="toggle"></div>
             </div>
+
+            <div class="container-top-right">
+                <button class="menu-container-back-button" onClick="location.href='home'">
+                    <img src="./assets/Back-Button.svg">
+                </button>
+            </div>
             
 
             <div class="container-full-screen-pdf">

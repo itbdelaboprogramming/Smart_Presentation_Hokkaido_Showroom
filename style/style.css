@@ -101,6 +101,15 @@ canvas {
 }
 
 /* ------------------------------------------- FLOATING CONTAINER ------------------------------------------ */
+.container-top-right {
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	right: 0;
+	padding-top: 23px;
+	padding-right: 23px;
+}
+
 .container-top-left {
 	position: fixed;
 	z-index: 2;
@@ -1085,4 +1094,22 @@ canvas {
 
 .menu-container-blue-explode.active {
 	background-color: #74e7d4;
+}
+
+/* ----------------------- for back button --------------------- */
+.menu-container-back-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary-color-25);
+	padding: 0;
+	border: 1px solid var(--primary-color-100);
+	border-radius: 14.3734px;
+	width: 46.99px;
+	height: 46.99px;
+	cursor: pointer;
+}
+
+.menu-container-back-button:hover {
+	box-shadow: 0px 4px 4px #00000040;
 }
