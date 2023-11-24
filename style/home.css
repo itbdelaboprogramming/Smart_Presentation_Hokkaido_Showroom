@@ -1,4 +1,16 @@
-.page-404 {
+.bg {
+	background-image: url("../assets/bg.png");
+
+	height: 100%;
+
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.page-home {
+	background-color: rgba(197, 190, 178, 0.7);
 	position: absolute;
 	top: 0%;
 	left: 0%;
@@ -14,7 +26,7 @@
 	user-select: none;
 }
 
-.title-404 {
+.title-home {
 	font-size: 10rem;
 	font-weight: 700;
 	margin: 0;
@@ -24,6 +36,8 @@
 	display: flex;
 	flex-direction: row;
 	gap: 5px;
+
+	font-family: "Inter";
 }
 
 .button-404 {
