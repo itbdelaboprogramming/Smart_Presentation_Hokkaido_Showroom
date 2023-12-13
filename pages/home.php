@@ -11,7 +11,7 @@
     <body>
         <div class="bg">
             <div class="page-home">
-                <p class="title-home">HOME PAGE</p>
+                <p class="title-home">中山鉄工所北海道ショールーム</p>
     
                 <div class="button-container">
                     <a class="button-404" onclick="location.reload()">Reload Page</a>

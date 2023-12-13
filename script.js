@@ -4,6 +4,7 @@ import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { CSS2DRenderer } from "three/addons/renderers/CSS2DRenderer.js";
+import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 
 // ----------------------------------- SCENE BACKGROUND COLOR -----------------------------------
 export const scene = new THREE.Scene();
@@ -122,6 +123,13 @@ export const loader = new GLTFLoader(loadingManager);
 loader.name = "loader";
 
 let path = "files/glb/" + "MSD700 Blade.glb";
+
+const dracoLoader = new DRACOLoader();
+dracoLoader.setDecoderPath(
+	"https://www.gstatic.com/draco/versioned/decoders/1.5.6/"
+);
+dracoLoader.setDecoderConfig({ type: "js" });
+loader.setDRACOLoader(dracoLoader);
 
 loader.load(
 	path,

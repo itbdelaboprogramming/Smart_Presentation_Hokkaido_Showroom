@@ -27,7 +27,7 @@
 }
 
 .title-home {
-	font-size: 10rem;
+	font-size: 6rem;
 	font-weight: 700;
 	margin: 0;
 }
@@ -62,4 +62,8 @@
 .button-404:active {
 	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 	transform: translateY(1px);
+}
+
+video {
+	width: 100%;
 }
