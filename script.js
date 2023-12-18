@@ -122,7 +122,16 @@ loadingManager.onLoad = function () {
 export const loader = new GLTFLoader(loadingManager);
 loader.name = "loader";
 
-let path = "files/glb/" + "MSD700 Blade.glb";
+const currentPath = window.location.pathname;
+let path;
+
+if (currentPath.includes("crushing-plant")) {
+	path = "files/glb/" + "Hokkaido Crushing Full Plant.glb";
+} else if (currentPath.includes("recycling-plant")) {
+	path = "files/glb/" + "Recycling Full Plant.glb";
+} else {
+	path = "files/glb/" + "MSD700 Blade.glb";
+}
 
 const dracoLoader = new DRACOLoader();
 dracoLoader.setDecoderPath(
