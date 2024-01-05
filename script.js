@@ -19,8 +19,8 @@ camera.position.set(6, 4, -4);
 camera.layers.enableAll();
 
 // ----------------------------------------- GRID HELPER ----------------------------------------
-const size = 50;
-const divisions = 50;
+const size = 150;
+const divisions = 150;
 const colorCenterLine = 0xffffff;
 const colorGrid = 0xffffff;
 

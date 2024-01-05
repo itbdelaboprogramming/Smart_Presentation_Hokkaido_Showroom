@@ -130,7 +130,7 @@ if (getMode && getMode === "dark-theme") {
 
 	scene.remove(scene.getObjectByName("grid"));
 
-	const grid = new THREE.GridHelper(50, 50, 0x475b74, 0x475b74);
+	const grid = new THREE.GridHelper(150, 150, 0x475b74, 0x475b74);
 	grid.position.y = -1;
 	grid.name = "grid";
 	scene.add(grid);
@@ -148,7 +148,7 @@ toggle.addEventListener("click", () => {
 
 		scene.remove(scene.getObjectByName("grid"));
 
-		const grid = new THREE.GridHelper(50, 50, 0x475b74, 0x475b74);
+		const grid = new THREE.GridHelper(150, 150, 0x475b74, 0x475b74);
 		grid.position.y = -1;
 		grid.name = "grid";
 		scene.add(grid);
@@ -158,7 +158,7 @@ toggle.addEventListener("click", () => {
 		scene.background = new THREE.Color(0xdbe9e9);
 
 		scene.remove(scene.getObjectByName("grid"));
-		const grid = new THREE.GridHelper(50, 50, 0xffffff, 0xffffff);
+		const grid = new THREE.GridHelper(150, 150, 0xffffff, 0xffffff);
 		grid.position.y = -1;
 		grid.name = "grid";
 		scene.add(grid);
