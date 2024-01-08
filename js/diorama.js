@@ -16,17 +16,6 @@ const menuLightning = document.querySelector(".menu-container-blue-lightning");
 const lightning_expand = document.querySelector(
 	".menu-container-blue-lightning-expand"
 );
-const lightning_title = document.querySelector(".lightning-title-2");
-const opsi = lightning_title.querySelectorAll(".opsi");
-
-const custom_lightning = document.querySelector(".custom-lightning");
-
-const ambientLight = scene.getObjectByName("ambientLight");
-const dirLight = scene.getObjectByName("dirLight");
-const light1 = scene.getObjectByName("light1");
-const light2 = scene.getObjectByName("light2");
-const light3 = scene.getObjectByName("light3");
-const light4 = scene.getObjectByName("light4");
 
 // -------------------------------- slider env brightness --------------------------------
 const slider_env = document.getElementById("slider-env");
@@ -122,7 +111,7 @@ const video = document.getElementById("video");
 // ---------------------------------------------------------------------------------------
 
 // ----------------------------------- dark/light mode -----------------------------------
-if (getMode && getMode === "dark-theme") {
+if (!getMode || (getMode && getMode === "dark-theme")) {
 	document.body.classList.add("dark-theme");
 	toggle.classList.add("active");
 
@@ -178,44 +167,28 @@ menuLightning.addEventListener("click", () => {
 	}
 });
 
-opsi.forEach(function (opsi) {
-	opsi.addEventListener("click", () => {
-		resetOpsi();
-		opsi.classList.toggle("active");
-
-		if (opsi.classList.contains("active")) {
-			let opsi_text = opsi.innerText;
-			updateLightning(opsi_text);
-		}
-	});
-});
-
-window.addEventListener("resize", () => {
-	if (custom_lightning.style.display == "flex") {
-		if (window.innerWidth < 900) {
-			lightning_expand.style.height = "230px";
-		} else {
-			lightning_expand.style.height = "190px";
-		}
-	}
-});
-
 // -------------------------------- slider env brightness --------------------------------
+slider_env.value = 0.5;
 updateSliderEnv();
+updateEnvBrightness();
 slider_env.addEventListener("input", () => {
 	updateSliderEnv();
 	updateEnvBrightness();
 });
 
 // --------------------------------- slider lamp position --------------------------------
+slider_lamp_pos.value = 210;
 updateSliderLampPos();
+updateLampPos();
 slider_lamp_pos.addEventListener("input", () => {
 	updateSliderLampPos();
 	updateLampPos();
 });
 
 // ------------------------------- slider lamp brightness --------------------------------
+slider_lamp.value = 20;
 updateSliderLamp();
+updateLamp();
 slider_lamp.addEventListener("input", () => {
 	updateSliderLamp();
 	updateLamp();
@@ -324,52 +297,6 @@ video_pop_up.addEventListener("click", function (e) {
 // ---------------------------------------------------------------------------------------
 // ---------------------------------- FUNCTION HELPER ------------------------------------
 // ---------------------------------------------------------------------------------------
-
-// -------------------------------------- lightning --------------------------------------
-function resetOpsi() {
-	opsi.forEach(function (opsi) {
-		opsi.classList.remove("active");
-	});
-}
-
-function updateLightning(opsi_text) {
-	if (opsi_text === "custom") {
-		custom_lightning.style.display = "flex";
-
-		if (window.innerWidth < 900) {
-			lightning_expand.style.height = "230px";
-		}
-
-		ambientLight.intensity = 0.5;
-		dirLight.intensity = 20;
-
-		light1.intensity = 0;
-		light2.intensity = 0;
-		light3.intensity = 0;
-		light4.intensity = 0;
-
-		slider_env.value = 0.5;
-		updateSliderEnv();
-		updateEnvBrightness();
-		slider_lamp.value = 20;
-		updateSliderLamp();
-		updateLamp();
-		slider_lamp_pos.value = 210;
-		updateSliderLampPos();
-		updateLampPos();
-	} else {
-		custom_lightning.style.display = "none";
-		lightning_expand.style.height = "190px";
-
-		ambientLight.intensity = 0;
-		dirLight.intensity = 0;
-
-		light1.intensity = 1;
-		light2.intensity = 1;
-		light3.intensity = 1;
-		light4.intensity = 1;
-	}
-}
 
 // -------------------------------- slider env brightness --------------------------------
 function updateSliderEnv() {

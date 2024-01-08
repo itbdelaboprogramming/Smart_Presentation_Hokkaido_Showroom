@@ -110,17 +110,9 @@
                     <div class="menu-container-blue-lightning-expand-wrapper">
                         <div class="lightning-component">
                             <div class="lightning-title-2">
-                                Lighting:
-                                <div class="opsi-container">
-                                    <div class="opsi active">
-                                        default
-                                    </div>
-                                    <div class="opsi">
-                                        custom
-                                    </div>
-                                </div>
+                                Lighting
                             </div>
-                            <div class="lightning-component-container custom-lightning" style="display:none;">
+                            <div class="lightning-component-container custom-lightning">
                                 <div class="slider-group">
                                     Environment Brightness
                                     <div class="slider-container">

@@ -42,44 +42,17 @@ scene.add(grid);
 const ambientLight = new THREE.HemisphereLight(
 	"white", // bright sky color
 	"grey", // dim ground color
-	0 // intensity
+	0.5 // intensity
 );
 ambientLight.name = "ambientLight";
 scene.add(ambientLight);
 
 // -------------------------------- LIGHTNING CUSTOM: DIRECTIONAL -------------------------------
-var dirLight = new THREE.DirectionalLight(0x404040, 0);
+var dirLight = new THREE.DirectionalLight(0x404040, 20);
 dirLight.name = "dirLight";
 dirLight.position.set(100, 100, -10);
 dirLight.castShadow = true;
 scene.add(dirLight);
-
-// --------------------------- LIGHTNING DEFAULT: FRONT ABOVE CENTER ----------------------------
-const r = 20;
-const light1 = new THREE.PointLight(0xffffff, 1, 0);
-light1.name = "light1";
-light1.position.set(r, r, 0);
-light1.shadowMapVisible = true;
-scene.add(light1);
-
-// ----------------------------- LIGHTNING DEFAULT: BACK ABOVE LEFT -----------------------------
-const light2 = new THREE.PointLight(0xffffff, 1, 0);
-light2.name = "light2";
-light2.position.set(-0.5 * r, r, 0.866 * r);
-scene.add(light2);
-
-// ---------------------------- LIGHTNING DEFAULT: BACK ABOVE RIGHT -----------------------------
-const light3 = new THREE.PointLight(0xffffff, 1, 0);
-light3.name = "light3";
-light3.position.set(-0.5 * r, r, -0.866 * r);
-scene.add(light3);
-
-// --------------------------- LIGHTNING DEFAULT: CENTER BELOW CENTER ---------------------------
-const light4 = new THREE.PointLight(0xffffff, 1, 0);
-light4.name = "light4";
-light4.position.set(0, -r, 0);
-scene.add(light4);
-
 // --------------------------- LIGHTNING DEFAULT: CENTER BELOW CENTER ---------------------------
 const renderer = new THREE.WebGLRenderer({ canvas: myCanvas });
 renderer.setClearColor(0xff0000, 1.0);

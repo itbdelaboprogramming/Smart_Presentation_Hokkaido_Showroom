@@ -484,7 +484,8 @@ canvas {
 	}
 
 	.lightning-title-2 {
-		flex-direction: column;
+		/* flex-direction: column; */
+		display: none;
 	}
 
 	.opsi-container {
@@ -499,6 +500,7 @@ canvas {
 	.menu-container-blue-lightning-expand {
 		max-width: 690px;
 		min-width: 180px;
+		height: 230px;
 	}
 
 	.slider-group {
