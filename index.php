@@ -21,6 +21,10 @@
         case "recycling-plant":
             include "./pages/recycling-plant.php";
             break;
+
+        case "company-video":
+            include "./pages/company-video.php";
+            break;
         
         default:
             http_response_code(404);

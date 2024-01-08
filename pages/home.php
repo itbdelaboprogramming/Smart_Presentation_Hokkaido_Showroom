@@ -33,7 +33,7 @@
                 </div>
 
                 <div class="button-container-2">
-                    <a class="button-movie" onclick="location.reload()">
+                    <a class="button-movie" href="company-video">
                         <img src="./assets/movie.png" alt="Company Information">
                             <!-- <span>Company Information</span> -->
                     </a>                    
