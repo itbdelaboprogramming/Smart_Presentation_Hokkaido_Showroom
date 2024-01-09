@@ -25,6 +25,9 @@
             <!-- <canvas id="lineCanvas" style="position: absolute; top: 0; left: 0;"></canvas> -->
             <div class="container-top-left">
                 <div class="pdf_container">
+                    <button class="menu-container-back-button" onClick="location.href='home'">
+                        <img src="./assets/Back-Button.svg">
+                    </button>
                     <img class="menu-pdf" src="./assets/Pdf.svg">
                     <img class="menu-video" src="./assets/Video.svg">
                 </div>
@@ -52,7 +55,7 @@
                 <a class="information-link" target="_blank" href="https://www.ncjpn.com/en/products/crushers/">Crusher Series | Nakayama Iron Works (ncjpn.com)</a>
             </div>
 
-            <div class="catalogue-container-2" id="catalogue-container-2">
+            <div class="catalogue-container-2" id="catalogue-container-2" style="display:flex;">
                 <div>
                     <p class="catalogue-description-title-2">Hokkaido Showroom</p>
                 </div>
@@ -178,7 +181,7 @@
             </div>
 
             <div class="container-bottom-right">
-                <div class="menu-container-blue-album">
+                <div class="menu-container-blue-album active">
                     <img src="./assets/Album-Button.png">
                 </div>
                 <div class="menu-container-blue-lightning">
@@ -187,11 +190,7 @@
                 <div class="toggle"></div>
             </div>
 
-            <div class="container-top-right">
-                <button class="menu-container-back-button" onClick="location.href='home'">
-                    <img src="./assets/Back-Button.svg">
-                </button>
-            </div>
+
             
 
             <div class="container-full-screen-pdf">

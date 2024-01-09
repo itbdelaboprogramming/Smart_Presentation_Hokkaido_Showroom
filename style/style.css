@@ -582,7 +582,7 @@ canvas {
 	margin-top: auto;
 	margin-bottom: auto;
 
-	display: none;
+	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
@@ -897,7 +897,7 @@ canvas {
 	gap: 5px;
 
 	/* width: 250px; */
-	width: 700px;
+	width: 30%;
 	height: 40%;
 
 	background: rgba(212, 242, 244, 0.8);
