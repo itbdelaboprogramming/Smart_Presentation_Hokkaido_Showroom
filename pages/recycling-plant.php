@@ -169,7 +169,7 @@
             </div>
 
             <div class="container-bottom-right">
-                <div class="menu-container-blue-album">
+                <div class="menu-container-blue-album active">
                     <img src="./assets/Album-Button.png">
                 </div>
                 <div class="menu-container-blue-lightning">

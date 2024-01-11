@@ -1,6 +1,8 @@
 import { scene, camera, orbitControls, loader } from "../script.js";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
+// const jsonData = require("../data/data.json");
+import jsonData from "../data/data.json" assert { type: "json" };
 
 // ---------------------------------------------------------------------------------------
 // ----------------------------------- Const, Var, Let -----------------------------------
@@ -387,6 +389,12 @@ function updateFile3D(file_name) {
 				file3D.name = "file3D";
 				scene.add(file3D);
 				file3D.position.set(0, -0.95, 0);
+
+				camera.position.set(
+					jsonData[file_name].position.x,
+					jsonData[file_name].position.y,
+					jsonData[file_name].position.z
+				);
 			},
 			undefined,
 			function (error) {
