@@ -100,8 +100,10 @@ let path;
 
 if (currentPath.includes("crushing-plant")) {
 	path = "files/glb/" + "Hokkaido Crushing Full Plant.glb";
+	camera.position.set(-50, 25, 35);
 } else if (currentPath.includes("recycling-plant")) {
 	path = "files/glb/" + "Recycling Full Plant.glb";
+	camera.position.set(20, 10, 20);
 } else {
 	path = "files/glb/" + "MSD700 Blade.glb";
 }

@@ -380,17 +380,6 @@ function updateFile3D(file_name) {
 
 		newFile3D = `files/glb/${file_name}.glb`;
 
-		if (product_list_text == "Recycling Plant") {
-			camera.position.set(-19, 12, -17);
-			// camera.position.set(-9, 8, 19);
-			// camera.position.set(-1, 3, 17);
-			// orbitControls.target.set(-1, 3, 17);
-			orbitControls.target.set(0, 0, 0);
-		} else {
-			camera.position.set(6, 4, -4);
-			orbitControls.target.set(0, 0, 0);
-		}
-
 		loader.load(
 			newFile3D,
 			function (gltf) {
