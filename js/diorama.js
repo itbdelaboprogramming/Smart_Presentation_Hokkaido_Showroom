@@ -102,6 +102,13 @@ const menuInformation = document.querySelector(
 	".menu-container-blue-information"
 );
 const informationContainer = document.getElementById("information-container");
+const information_title = document.querySelector(
+	".information-description-title"
+);
+const information_description = document.querySelector(
+	".information-description-description"
+);
+const information_link = document.querySelector(".information-link");
 
 // ------------------------------------- video button ------------------------------------
 const video_button = document.querySelector(".menu-video");
@@ -362,6 +369,7 @@ function loadCatalogue(catalogue_product_list) {
 			// resetModelAndAnnotations(file3D);
 
 			updateFile3D(product_list_text);
+			updateInformation(product_list_text);
 		});
 	});
 }
@@ -370,6 +378,17 @@ function resetCatalogueSelect() {
 	catalogue_product_list.forEach(function (product_list) {
 		product_list.classList.remove("active");
 	});
+}
+
+function updateInformation(file_name) {
+	information_title.innerHTML = file_name;
+
+	let x = jsonData[file_name].info.split(". ");
+	let x_y = x.join(".<br><br>");
+	information_description.innerHTML = x_y;
+
+	information_link.href = jsonData[file_name].link;
+	information_link.innerHTML = file_name + " | Nakayama Iron Works (ncjpn.com)";
 }
 
 function updateFile3D(file_name) {

@@ -39,12 +39,10 @@
             <div class="information-container" id="information-container" style="display:none;">
                 <div class="information-description">
                     <p class="information-description-title">
-                        VSI (Gyropactor) SR
+                        Recycling Full Plant
                     </p>
-                    <p class="information-description-model-number">SR100C</p>
-                    <p class="information-description-description">SR type can accept large material and increase the crushing efficiency at high speed rotating range. <br><br> Two types of crushing chamber are available:<br>1. Anvil type is mainly for crushing.<br>2. Rock bed type is for better shaping.</p>
-                    <p class="information-description-description">Features:<br>1. Anvil type can be adjusted both up and down side (reversible).<br>2. Assembled (sectionalized) rotor for easy parts replacement.<br>3. Hydraulic top cover opener for easy maintenance.<br>4. Vibration sensor to detect excessive vibration.<br>5. VSI unit can be loaded into a 40FT container.</p>
-                    <p class="information-description-specification">Specifications Unit (mm)</p>
+                    <p class="information-description-description">High-performance recycling plant with maximum production capability equipped with low-cost and space-saving advantages.</p>
+                    <!-- <p class="information-description-specification">Specifications Unit (mm)</p> -->
                     <!-- <p class="information-description-specification-detail" >Processing performance depends on quality of material, feeding chunks and particle size. <br><br> This machine’s spec and dimension might be changed without prior-notice for the improvement.</p> -->
                     <!-- <img class="information-specification-img" src="./files/dimension_vsi.png" />
                     <img class="information-specification-img" src="./files/dimension_vsi_platform.png" />
@@ -52,7 +50,7 @@
                     <img class="information-specification-img" src="./files/specification.png" />
                     <img class="information-specification-img" src="./files/specification_3.png" /> -->
                 </div>
-                <a class="information-link" target="_blank" href="https://www.ncjpn.com/en/products/crushers/">Crusher Series | Nakayama Iron Works (ncjpn.com)</a>
+                <a class="information-link" target="_blank" href="https://www.ncjpn.com/en/products/crushers/">Recycling Full Plant | Nakayama Iron Works (ncjpn.com)</a>
             </div>
 
             <div class="catalogue-container-2" id="catalogue-container-2" style="display:flex;">

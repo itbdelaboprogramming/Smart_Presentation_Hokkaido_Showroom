@@ -39,12 +39,9 @@
             <div class="information-container" id="information-container" style="display:none;">
                 <div class="information-description">
                     <p class="information-description-title">
-                        VSI (Gyropactor) SR
+                        Hokkaido Crushing Full Plant
                     </p>
-                    <p class="information-description-model-number">SR100C</p>
-                    <p class="information-description-description">SR type can accept large material and increase the crushing efficiency at high speed rotating range. <br><br> Two types of crushing chamber are available:<br>1. Anvil type is mainly for crushing.<br>2. Rock bed type is for better shaping.</p>
-                    <p class="information-description-description">Features:<br>1. Anvil type can be adjusted both up and down side (reversible).<br>2. Assembled (sectionalized) rotor for easy parts replacement.<br>3. Hydraulic top cover opener for easy maintenance.<br>4. Vibration sensor to detect excessive vibration.<br>5. VSI unit can be loaded into a 40FT container.</p>
-                    <p class="information-description-specification">Specifications Unit (mm)</p>
+                    <p class="information-description-description">We have been putting much effort on industrial machines that meets the need of the market, especially developing crushing, screening techniques and systematization.  <br><br> Using experienced knowledge on up-to-date plant techniques, our crushing plants manufactures low-cost and excellent products.  <br><br> Our crushing plants cope with agrregate plant, gravel manufacturing plant, dam aggregate plant, setting stones, portable crushing plant,etc with ensured techniques using day by day technical innovation and fully experienced techniques.</p>
                     <!-- <p class="information-description-specification-detail" >Processing performance depends on quality of material, feeding chunks and particle size. <br><br> This machine’s spec and dimension might be changed without prior-notice for the improvement.</p> -->
                     <!-- <img class="information-specification-img" src="./files/dimension_vsi.png" />
                     <img class="information-specification-img" src="./files/dimension_vsi_platform.png" />
@@ -52,7 +49,7 @@
                     <img class="information-specification-img" src="./files/specification.png" />
                     <img class="information-specification-img" src="./files/specification_3.png" /> -->
                 </div>
-                <a class="information-link" target="_blank" href="https://www.ncjpn.com/en/products/crushers/">Crusher Series | Nakayama Iron Works (ncjpn.com)</a>
+                <a class="information-link" target="_blank" href="https://www.ncjpn.com/en/products/crushers/">Hokkaido Crushing Full Plant | Nakayama Iron Works (ncjpn.com)</a>
             </div>
 
             <div class="catalogue-container-2" id="catalogue-container-2" style="display:flex;">
