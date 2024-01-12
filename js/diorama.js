@@ -387,7 +387,7 @@ function updateInformation(file_name) {
 	let x_y = x.join(".<br><br>");
 	information_description.innerHTML = x_y;
 
-	information_link.href = jsonData[file_name].link;
+	information_link.href = jsonData[file_name].web_link;
 	information_link.innerHTML = file_name + " | Nakayama Iron Works (ncjpn.com)";
 }
 
