@@ -393,6 +393,7 @@ function updateInformation(file_name) {
 		"src",
 		jsonData[file_name].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
 	);
+	video.setAttribute("src", jsonData[file_name].video_link);
 }
 
 function updateFile3D(file_name) {

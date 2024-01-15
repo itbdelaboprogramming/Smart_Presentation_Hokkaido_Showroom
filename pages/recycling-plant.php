@@ -182,7 +182,7 @@
             </div>
             <div class="container-full-screen-video">
                 <div class="pdf-pop-up-container-video" id="pdf-pop-up-container-video">
-                    <video id="video" width="100%" height="auto" src="./files/中山鉄工所ジャイロパクタ SRシリーズ.mp4" type="video/mp4" controls></video>
+                    <video id="video" width="100%" height="auto" type="video/mp4" controls></video>
                 </div>
             </div>
             <div class="loadingScreenContainer" style="display: none">
