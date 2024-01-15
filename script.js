@@ -5,6 +5,7 @@ import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import { CSS2DRenderer } from "three/addons/renderers/CSS2DRenderer.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
+import jsonData from "./data/data.json" assert { type: "json" };
 
 // ----------------------------------- SCENE BACKGROUND COLOR -----------------------------------
 export const scene = new THREE.Scene();
@@ -98,14 +99,29 @@ loader.name = "loader";
 const currentPath = window.location.pathname;
 let path;
 
+const pdf_file = document.getElementById("pdf-file");
 if (currentPath.includes("crushing-plant")) {
 	path = "files/glb/" + "Hokkaido Crushing Full Plant.glb";
 	camera.position.set(-50, 25, 35);
+	pdf_file.setAttribute(
+		"src",
+		jsonData["Hokkaido Crushing Full Plant"].pdf_link +
+			"#scrollbar=0&toolbar=0&view=FitH"
+	);
 } else if (currentPath.includes("recycling-plant")) {
 	path = "files/glb/" + "Recycling Full Plant.glb";
 	camera.position.set(20, 10, 20);
+	pdf_file.setAttribute(
+		"src",
+		jsonData["Recycling Full Plant"].pdf_link +
+			"#scrollbar=0&toolbar=0&view=FitH"
+	);
 } else {
 	path = "files/glb/" + "MSD700 Blade.glb";
+	pdf_file.setAttribute(
+		"src",
+		jsonData["MSD700 Blade"].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
+	);
 }
 
 const dracoLoader = new DRACOLoader();

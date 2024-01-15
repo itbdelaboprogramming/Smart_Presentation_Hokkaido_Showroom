@@ -1,7 +1,6 @@
 import { scene, camera, orbitControls, loader } from "../script.js";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-// const jsonData = require("../data/data.json");
 import jsonData from "../data/data.json" assert { type: "json" };
 
 // ---------------------------------------------------------------------------------------
@@ -109,6 +108,7 @@ const information_description = document.querySelector(
 	".information-description-description"
 );
 const information_link = document.querySelector(".information-link");
+const pdf_file = document.getElementById("pdf-file");
 
 // ------------------------------------- video button ------------------------------------
 const video_button = document.querySelector(".menu-video");
@@ -389,6 +389,10 @@ function updateInformation(file_name) {
 
 	information_link.href = jsonData[file_name].web_link;
 	information_link.innerHTML = file_name + " | Nakayama Iron Works (ncjpn.com)";
+	pdf_file.setAttribute(
+		"src",
+		jsonData[file_name].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
+	);
 }
 
 function updateFile3D(file_name) {

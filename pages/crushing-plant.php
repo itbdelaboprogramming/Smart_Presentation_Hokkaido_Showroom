@@ -187,12 +187,9 @@
                 <div class="toggle"></div>
             </div>
 
-
-            
-
             <div class="container-full-screen-pdf">
                 <div class="pdf-pop-up-container" id="pdf-pop-up-container">
-                    <embed src="./files/SR_en_ver.2.06_20220523.pdf#scrollbar=0&toolbar=0&view=FitH" type="application/pdf" width="100%" height="100%"/>
+                    <embed id="pdf-file" type="application/pdf" width="100%" height="100%"/>
                 </div>
             </div>
             <div class="container-full-screen-video">
