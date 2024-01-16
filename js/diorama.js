@@ -383,8 +383,8 @@ function resetCatalogueSelect() {
 function updateInformation(file_name) {
 	information_title.innerHTML = file_name;
 
-	let x = jsonData[file_name].info.split(". ");
-	let x_y = x.join(".<br><br>");
+	let x = jsonData[file_name].info.split("。");
+	let x_y = x.join("。<br><br>");
 	information_description.innerHTML = x_y;
 
 	information_link.href = jsonData[file_name].web_link;

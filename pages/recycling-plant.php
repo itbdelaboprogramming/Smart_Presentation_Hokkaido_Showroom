@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Smart Presentation</title>
+        <title>スマート・プレゼンテーション</title>
         <link rel="icon" type="image/x-icon" href="assets/SR_logo_03_red.png">
         <meta charset="UTF-8">
 
@@ -32,7 +32,7 @@
                     <img class="menu-video" src="./assets/Video.svg">
                 </div>
                 <div class="page-name-container">
-                    <div class="page-name-text">Nakayama Hokkaido Showroom - Recycling Plant</div>
+                    <div class="page-name-text">リサイクルプラント</div>
                 </div>
             </div>
 
@@ -55,7 +55,7 @@
 
             <div class="catalogue-container-2" id="catalogue-container-2" style="display:flex;">
                 <div>
-                    <p class="catalogue-description-title-2">Hokkaido Showroom</p>
+                    <p class="catalogue-description-title-2">北海道ショールーム</p>
                 </div>
                 <div class="catalogue-description-2">
                     <div class="catalogue-product-list-2" id="model_name_2">
