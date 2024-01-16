@@ -5,9 +5,9 @@
 		"video_link": "./files/video/中山鉄工所ジャイロパクタ SRシリーズ.mp4",
 		"web_link": "https://www.ncjpn.com/en/products/npd/",
 		"position": {
-			"x": -50,
+			"x": 50,
 			"y": 25,
-			"z": 35
+			"z": -30
 		}
 	},
 	"Hokkaido Crushing Plant": {
@@ -16,9 +16,9 @@
 		"video_link": "./files/video/中山鉄工所ジャイロパクタ SRシリーズ.mp4",
 		"web_link": "https://www.ncjpn.com/en/products/npd/",
 		"position": {
-			"x": -30,
+			"x": 40,
 			"y": 25,
-			"z": 35
+			"z": -35
 		}
 	},
 	"NE750J": {

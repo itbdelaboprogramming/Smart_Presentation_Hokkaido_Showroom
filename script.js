@@ -104,7 +104,11 @@ const video = document.getElementById("video");
 
 if (currentPath.includes("crushing-plant")) {
 	path = "files/glb/" + "Hokkaido Crushing Full Plant.glb";
-	camera.position.set(-50, 25, 35);
+	camera.position.set(
+		jsonData["Hokkaido Crushing Full Plant"].position.x,
+		jsonData["Hokkaido Crushing Full Plant"].position.y,
+		jsonData["Hokkaido Crushing Full Plant"].position.z
+	);
 	pdf_file.setAttribute(
 		"src",
 		jsonData["Hokkaido Crushing Full Plant"].pdf_link +
@@ -116,7 +120,11 @@ if (currentPath.includes("crushing-plant")) {
 	);
 } else if (currentPath.includes("recycling-plant")) {
 	path = "files/glb/" + "Recycling Full Plant.glb";
-	camera.position.set(20, 10, 20);
+	camera.position.set(
+		jsonData["Recycling Full Plant"].position.x,
+		jsonData["Recycling Full Plant"].position.y,
+		jsonData["Recycling Full Plant"].position.z
+	);
 	pdf_file.setAttribute(
 		"src",
 		jsonData["Recycling Full Plant"].pdf_link +
@@ -125,6 +133,11 @@ if (currentPath.includes("crushing-plant")) {
 	video.setAttribute("src", jsonData["Recycling Full Plant"].video_link);
 } else {
 	path = "files/glb/" + "MSD700 Blade.glb";
+	camera.position.set(
+		jsonData["MSD700 Blade"].position.x,
+		jsonData["MSD700 Blade"].position.y,
+		jsonData["MSD700 Blade"].position.z
+	);
 	pdf_file.setAttribute(
 		"src",
 		jsonData["MSD700 Blade"].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
