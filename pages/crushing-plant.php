@@ -183,10 +183,10 @@
                     <img src="./assets/Information-Button.png">
                     Information
                 </div>
-                <div class="menu-container-blue-sound">
+                <!-- <div class="menu-container-blue-sound">
                     <img src="./assets/Sound-Off-Button.png" id="sound-off">
                     <img src="./assets/Sound-On-Button.png" id="sound-on" style="display: none;">
-                </div>
+                </div> -->
                 <div class="menu-container-blue-animation">
                     <img src="./assets/Animation-Off-Button.png" id="animation-off">
                     <img src="./assets/Animation-On-Button.png" id="animation-on" style="display: none;">

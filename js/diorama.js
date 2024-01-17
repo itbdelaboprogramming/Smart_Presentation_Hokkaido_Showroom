@@ -57,7 +57,7 @@ const iconSoundOn = document.getElementById("sound-on");
 const soundExpand = document.querySelector(".sound-expand");
 
 let change_audio = "model_name_1";
-let soundStatus = 0;
+let soundStatus = 1;
 
 var audio_speech = new Audio("./audio/Play.ht - VSI Gyropactor.wav");
 var audio_speech_2 = new Audio(
@@ -67,7 +67,7 @@ var audio_speech_3 = new Audio("./audio/Play.ht - Full Plant.wav");
 
 var sound = audio_speech_3;
 
-function audioPlayer() {
+async function audioPlayer() {
 	// if (change_audio === "model_name_1") {
 	// 	sound = audio_speech;
 	// } else if (change_audio === "model_name_2") {
@@ -84,9 +84,15 @@ function audioPlayer() {
 			}, 30000);
 		});
 	}
-	sound.play();
+	try {
+		sound.currentTime = 0;
+		await sound.play();
+	} catch (e) {
+		// do nothing
+		// console.log("error", e);
+	}
 }
-// audioPlayer();
+audioPlayer();
 
 // Function to print "test"
 // function printTest() {
@@ -238,40 +244,40 @@ slider.addEventListener("input", () => {
 });
 
 // ---------------------------------------- sound ----------------------------------------
-menuSound.addEventListener("click", () => {
-	menuSound.classList.toggle("active");
+// menuSound.addEventListener("click", () => {
+// 	menuSound.classList.toggle("active");
 
-	if (menuSound.classList.contains("active")) {
-		iconSoundOff.style.display = "none";
-		iconSoundOn.style.display = "block";
-		soundExpand.style.display = "flex";
-	} else {
-		iconSoundOff.style.display = "block";
-		iconSoundOn.style.display = "none";
-		soundExpand.style.display = "none";
-	}
-});
+// 	if (menuSound.classList.contains("active")) {
+// 		iconSoundOff.style.display = "none";
+// 		iconSoundOn.style.display = "block";
+// 		soundExpand.style.display = "flex";
+// 	} else {
+// 		iconSoundOff.style.display = "block";
+// 		iconSoundOn.style.display = "none";
+// 		soundExpand.style.display = "none";
+// 	}
+// });
 
-toggle_speech.addEventListener("click", () => {
-	toggle_speech.classList.toggle("active");
+// toggle_speech.addEventListener("click", () => {
+// 	toggle_speech.classList.toggle("active");
 
-	// if (change_audio === "model_name_1") {
-	// 	sound = audio_speech;
-	// } else if (change_audio === "model_name_2") {
-	// 	sound = audio_speech_2;
-	// } else if (change_audio === "model_name_3") {
-	// 	sound = audio_speech_3;
-	// }
+// 	// if (change_audio === "model_name_1") {
+// 	// 	sound = audio_speech;
+// 	// } else if (change_audio === "model_name_2") {
+// 	// 	sound = audio_speech_2;
+// 	// } else if (change_audio === "model_name_3") {
+// 	// 	sound = audio_speech_3;
+// 	// }
 
-	if (toggle_speech.classList.contains("active")) {
-		soundStatus = 1;
-		audioPlayer();
-	} else {
-		soundStatus = 0;
-		sound.pause();
-		sound.currentTime = 0;
-	}
-});
+// 	if (toggle_speech.classList.contains("active")) {
+// 		soundStatus = 1;
+// 		audioPlayer();
+// 	} else {
+// 		soundStatus = 0;
+// 		sound.pause();
+// 		sound.currentTime = 0;
+// 	}
+// });
 
 // -------------------------------------- animation --------------------------------------
 menuAnimation.addEventListener("click", () => {
