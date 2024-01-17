@@ -981,6 +981,12 @@ canvas {
 	padding-right: 16px;
 }
 
+.information-footer {
+	display: flex;
+	justify-content: center;
+	gap: 5px;
+}
+
 /* ----------------------------------------------- PAGE NAME ----------------------------------------------- */
 .page-name-container {
 	padding: 18px 50px 18px 50px;
@@ -1006,7 +1012,7 @@ canvas {
 	color: var(--primary-color-200);
 }
 
-/* ---------------------------------------------- PDF BUTTON ----------------------------------------------- */
+/* ---------------------------------------------- PDF & VIDEO BUTTON ----------------------------------------------- */
 .pdf_container {
 	display: flex;
 	flex-direction: column;
@@ -1014,8 +1020,23 @@ canvas {
 	user-select: none;
 }
 
-.menu-pdf {
+.menu-pdf,
+.menu-video {
 	cursor: pointer;
+	border-radius: 8.5px;
+	background: var(--secondary-color-200, #ff7582);
+
+	color: white;
+	font-weight: 500;
+	/* max-height: 40px; */
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 5px 10px;
+	gap: 6px;
+
+	min-width: 110px;
 }
 
 .menu-pdf:hover {
@@ -1026,16 +1047,10 @@ canvas {
 	filter: brightness(0.5);
 }
 
-/* ---------------------------------------------- PDF POP UP ----------------------------------------------- */
-.pdf-pop-up-container {
-	border: 10px solid var(--secondary-color-side-theme-sunset-200, #ff7582);
-	height: 100%;
-	width: 100%;
-}
-
-/* --------------------------------------------- VIDEO BUTTON ---------------------------------------------- */
-.menu-video {
-	cursor: pointer;
+.menu-pdf img,
+.menu-video img {
+	height: 20px;
+	width: auto;
 }
 
 .menu-video:hover {
@@ -1046,9 +1061,16 @@ canvas {
 	filter: brightness(0.5);
 }
 
+/* ---------------------------------------------- PDF POP UP ----------------------------------------------- */
+.pdf-pop-up-container {
+	border: 10px solid var(--secondary-color-200, #ff7582);
+	height: 100%;
+	width: 100%;
+}
+
 /* --------------------------------------------- VIDEO POP UP ---------------------------------------------- */
 .pdf-pop-up-container-video {
-	border: 10px solid var(--secondary-color-side-theme-sunset-200, #ff7582);
+	border: 10px solid var(--secondary-color-200, #ff7582);
 	height: fit-content;
 	width: fit-content;
 

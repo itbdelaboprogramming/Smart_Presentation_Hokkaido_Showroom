@@ -28,8 +28,6 @@
                     <button class="menu-container-back-button" onClick="location.href='home'">
                         <img src="./assets/Back-Button.svg">
                     </button>
-                    <img class="menu-pdf" src="./assets/Pdf.svg">
-                    <img class="menu-video" src="./assets/Video.svg">
                 </div>
                 <div class="page-name-container">
                     <div class="page-name-text">リサイクルプラント</div>
@@ -50,7 +48,17 @@
                     <img class="information-specification-img" src="./files/specification.png" />
                     <img class="information-specification-img" src="./files/specification_3.png" /> -->
                 </div>
-                <a class="information-link" target="_blank" href="https://www.ncjpn.com/en/products/crushers/">Recycling Full Plant | Nakayama Iron Works (ncjpn.com)</a>
+                <div class="information-footer">
+                    <div  class="menu-pdf">
+                        <img src="./assets/Pdf.svg">
+                        カタログ​
+                    </div>
+                    <div class="menu-video">
+                        <img src="./assets/Video.svg">
+                        動画​
+                    </div>
+                </div>
+                <!-- <a class="information-link" target="_blank" href="https://www.ncjpn.com/en/products/crushers/">Recycling Full Plant | Nakayama Iron Works (ncjpn.com)</a> -->
             </div>
 
             <div class="catalogue-container-2" id="catalogue-container-2" style="display:flex;">

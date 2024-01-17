@@ -141,7 +141,7 @@ if (currentPath.includes("crushing-plant")) {
 	);
 	video.setAttribute("src", jsonData["Recycling Full Plant"].video_link);
 } else {
-	path = jsonData["MSD700 Blade"].glb_file;
+	path = jsonData["MSD700-Blade"].glb_file;
 	camera.position.set(
 		jsonData["MSD700-Blade"].position.x,
 		jsonData["MSD700-Blade"].position.y,

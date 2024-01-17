@@ -120,7 +120,7 @@ const information_title = document.querySelector(
 const information_description = document.querySelector(
 	".information-description-description"
 );
-const information_link = document.querySelector(".information-link");
+// const information_link = document.querySelector(".information-link");
 const pdf_file = document.getElementById("pdf-file");
 
 // ------------------------------------- video button ------------------------------------
@@ -400,8 +400,8 @@ export function updateInformation(file_name) {
 	let x_joined = x.join("。<br><br>");
 	information_description.innerHTML = x_joined;
 
-	information_link.href = jsonData[file_name].web_link;
-	information_link.innerHTML = file_name + " | Nakayama Iron Works (ncjpn.com)";
+	// information_link.href = jsonData[file_name].web_link;
+	// information_link.innerHTML = file_name + " | Nakayama Iron Works (ncjpn.com)";
 	pdf_file.setAttribute(
 		"src",
 		jsonData[file_name].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
