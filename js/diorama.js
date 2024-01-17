@@ -393,7 +393,7 @@ function resetCatalogueSelect() {
 	});
 }
 
-export function updateInformation(file_name) {
+function updateInformation(file_name) {
 	information_title.innerHTML = file_name;
 
 	let x = jsonData[file_name].info.split("。");
@@ -402,11 +402,22 @@ export function updateInformation(file_name) {
 
 	// information_link.href = jsonData[file_name].web_link;
 	// information_link.innerHTML = file_name + " | Nakayama Iron Works (ncjpn.com)";
-	pdf_file.setAttribute(
-		"src",
-		jsonData[file_name].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
-	);
-	video.setAttribute("src", jsonData[file_name].video_link);
+	if (jsonData[file_name].hasOwnProperty("pdf_link")) {
+		pdf_button.style.display = "flex";
+		pdf_file.setAttribute(
+			"src",
+			jsonData[file_name].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
+		);
+	} else {
+		pdf_button.style.display = "none";
+	}
+
+	if (jsonData[file_name].hasOwnProperty("video_link")) {
+		video_button.style.display = "flex";
+		video.setAttribute("src", jsonData[file_name].video_link);
+	} else {
+		video_button.style.display = "none";
+	}
 }
 
 function updateFile3D(file_name) {

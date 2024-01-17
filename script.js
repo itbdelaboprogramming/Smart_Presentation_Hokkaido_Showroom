@@ -104,6 +104,8 @@ const video = document.getElementById("video");
 const information_description = document.querySelector(
 	".information-description-description"
 );
+const pdf_button = document.querySelector(".menu-pdf");
+const video_button = document.querySelector(".menu-video");
 
 if (currentPath.includes("crushing-plant")) {
 	path = jsonData["Hokkaido Crushing Full Plant"].glb_file;
@@ -112,18 +114,7 @@ if (currentPath.includes("crushing-plant")) {
 		jsonData["Hokkaido Crushing Full Plant"].position.y,
 		jsonData["Hokkaido Crushing Full Plant"].position.z
 	);
-	pdf_file.setAttribute(
-		"src",
-		jsonData["Hokkaido Crushing Full Plant"].pdf_link +
-			"#scrollbar=0&toolbar=0&view=FitH"
-	);
-	video.setAttribute(
-		"src",
-		jsonData["Hokkaido Crushing Full Plant"].video_link
-	);
-	let x = jsonData["Hokkaido Crushing Full Plant"].info.split("。");
-	let x_joined = x.join("。<br><br>");
-	information_description.innerHTML = x_joined;
+	updateInformation("Hokkaido Crushing Full Plant");
 } else if (currentPath.includes("recycling-plant")) {
 	path = jsonData["Recycling Full Plant"].glb_file;
 	camera.position.set(
@@ -131,15 +122,7 @@ if (currentPath.includes("crushing-plant")) {
 		jsonData["Recycling Full Plant"].position.y,
 		jsonData["Recycling Full Plant"].position.z
 	);
-	let x = jsonData["Recycling Full Plant"].info.split("。");
-	let x_joined = x.join("。<br><br>");
-	information_description.innerHTML = x_joined;
-	pdf_file.setAttribute(
-		"src",
-		jsonData["Recycling Full Plant"].pdf_link +
-			"#scrollbar=0&toolbar=0&view=FitH"
-	);
-	video.setAttribute("src", jsonData["Recycling Full Plant"].video_link);
+	updateInformation("Recycling Full Plant");
 } else {
 	path = jsonData["MSD700-Blade"].glb_file;
 	camera.position.set(
@@ -147,14 +130,7 @@ if (currentPath.includes("crushing-plant")) {
 		jsonData["MSD700-Blade"].position.y,
 		jsonData["MSD700-Blade"].position.z
 	);
-	pdf_file.setAttribute(
-		"src",
-		jsonData["MSD700-Blade"].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
-	);
-	video.setAttribute("src", jsonData["MSD700-Blade"].video_link);
-	let x = jsonData["MSD700-Blade"].info.split("。");
-	let x_joined = x.join("。<br><br>");
-	information_description.innerHTML = x_joined;
+	updateInformation("MSD700-Blade");
 }
 
 const dracoLoader = new DRACOLoader();
@@ -200,3 +176,26 @@ window.addEventListener("resize", () => {
 	camera.updateProjectionMatrix();
 	labelRenderer.setSize(window.innerWidth - 0.5, window.innerHeight - 0.5);
 });
+
+function updateInformation(file_name) {
+	let x = jsonData[file_name].info.split("。");
+	let x_joined = x.join("。<br><br>");
+	information_description.innerHTML = x_joined;
+
+	if (jsonData[file_name].hasOwnProperty("pdf_link")) {
+		pdf_button.style.display = "flex";
+		pdf_file.setAttribute(
+			"src",
+			jsonData[file_name].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
+		);
+	} else {
+		pdf_button.style.display = "none";
+	}
+
+	if (jsonData[file_name].hasOwnProperty("video_link")) {
+		video_button.style.display = "flex";
+		video.setAttribute("src", jsonData[file_name].video_link);
+	} else {
+		video_button.style.display = "none";
+	}
+}
