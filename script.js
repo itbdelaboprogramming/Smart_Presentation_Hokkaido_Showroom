@@ -143,16 +143,16 @@ if (currentPath.includes("crushing-plant")) {
 } else {
 	path = jsonData["MSD700 Blade"].glb_file;
 	camera.position.set(
-		jsonData["MSD700 Blade"].position.x,
-		jsonData["MSD700 Blade"].position.y,
-		jsonData["MSD700 Blade"].position.z
+		jsonData["MSD700-Blade"].position.x,
+		jsonData["MSD700-Blade"].position.y,
+		jsonData["MSD700-Blade"].position.z
 	);
 	pdf_file.setAttribute(
 		"src",
-		jsonData["MSD700 Blade"].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
+		jsonData["MSD700-Blade"].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
 	);
-	video.setAttribute("src", jsonData["MSD700 Blade"].video_link);
-	let x = jsonData["MSD700 Blade"].info.split("。");
+	video.setAttribute("src", jsonData["MSD700-Blade"].video_link);
+	let x = jsonData["MSD700-Blade"].info.split("。");
 	let x_joined = x.join("。<br><br>");
 	information_description.innerHTML = x_joined;
 }

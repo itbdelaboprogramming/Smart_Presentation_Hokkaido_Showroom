@@ -65,16 +65,16 @@ var audio_speech_2 = new Audio(
 );
 var audio_speech_3 = new Audio("./audio/Play.ht - Full Plant.wav");
 
-var sound = audio_speech;
+var sound = audio_speech_3;
 
 function audioPlayer() {
-	if (change_audio === "model_name_1") {
-		sound = audio_speech;
-	} else if (change_audio === "model_name_2") {
-		sound = audio_speech_2;
-	} else if (change_audio === "model_name_3") {
-		sound = audio_speech_3;
-	}
+	// if (change_audio === "model_name_1") {
+	// 	sound = audio_speech;
+	// } else if (change_audio === "model_name_2") {
+	// 	sound = audio_speech_2;
+	// } else if (change_audio === "model_name_3") {
+	// 	sound = audio_speech_3;
+	// }
 
 	if (typeof soundStatus !== "undefined" && soundStatus === 1) {
 		sound.addEventListener("ended", function () {
@@ -84,9 +84,22 @@ function audioPlayer() {
 			}, 30000);
 		});
 	}
-
 	sound.play();
 }
+// audioPlayer();
+
+// Function to print "test"
+// function printTest() {
+// 	console.log("test");
+// 	console.log("adio pause", sound.paused);
+// 	console.log("audion ended", sound.ended);
+// 	if (sound.paused) {
+// 		sound.currentTime = 0;
+// 		sound.play();
+// 	}
+// }
+
+// var intervalId = setInterval(printTest, 10000); // 30000 milliseconds (30 seconds)
 
 // const toggle_music = document.querySelector(".toggle-music");
 const toggle_speech = document.querySelector(".toggle-speech");
@@ -242,13 +255,13 @@ menuSound.addEventListener("click", () => {
 toggle_speech.addEventListener("click", () => {
 	toggle_speech.classList.toggle("active");
 
-	if (change_audio === "model_name_1") {
-		sound = audio_speech;
-	} else if (change_audio === "model_name_2") {
-		sound = audio_speech_2;
-	} else if (change_audio === "model_name_3") {
-		sound = audio_speech_3;
-	}
+	// if (change_audio === "model_name_1") {
+	// 	sound = audio_speech;
+	// } else if (change_audio === "model_name_2") {
+	// 	sound = audio_speech_2;
+	// } else if (change_audio === "model_name_3") {
+	// 	sound = audio_speech_3;
+	// }
 
 	if (toggle_speech.classList.contains("active")) {
 		soundStatus = 1;
