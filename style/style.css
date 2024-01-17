@@ -160,7 +160,7 @@ canvas {
 	right: 0%;
 	padding-bottom: 23px;
 	padding-right: 23px;
-	margin-right: 80px;
+	margin-right: 120px;
 	font-size: 13px;
 }
 
@@ -220,6 +220,48 @@ canvas {
 	flex-direction: column;
 }
 
+/* -------------------------------------------- BLUE CONTAINER -------------------------------------------- */
+.menu-container-blue-information,
+.menu-container-blue-animation {
+	display: flex;
+	justify-content: left;
+	align-items: center;
+	padding: 0px 10px;
+	gap: 7px;
+
+	background-color: #189ab4;
+	border-radius: 9px;
+	height: 46.99px;
+	min-width: 122px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in;
+
+	user-select: none;
+	font-family: "Ubuntu";
+	color: var(--primary-color-25, #d4f2f4);
+	font-weight: 500;
+}
+.menu-container-blue-album,
+.menu-container-blue-lightning {
+	display: flex;
+	justify-content: right;
+	align-items: center;
+	padding: 0px 10px;
+	gap: 7px;
+
+	background-color: #189ab4;
+	border-radius: 9px;
+	height: 46.99px;
+	min-width: 93px;
+	cursor: pointer;
+	transition: background-color 0.3s ease-in;
+
+	user-select: none;
+	font-family: "Ubuntu";
+	color: var(--primary-color-25, #d4f2f4);
+	font-weight: 500;
+}
+
 /* -------------------------------------------- EXPLODE 3D FILE -------------------------------------------- */
 .move-cam-button {
 	font-family: "Inter";
@@ -274,20 +316,6 @@ canvas {
 }
 
 /* -------------------------------------- FOR BUTTON ALBUM/CATALOGUE --------------------------------------- */
-.menu-container-blue-album {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #189ab4;
-	padding: 0;
-	border-radius: 14.3734px;
-	width: 46.99px;
-	height: 46.99px;
-	cursor: pointer;
-	transition: background-color 0.3s ease-in;
-
-	user-select: none;
-}
 
 .menu-container-blue-album:hover {
 	box-shadow: 0px 4px 4px var(--onhover-color);
@@ -297,19 +325,7 @@ canvas {
 	background-color: #74e7d4;
 }
 
-/* ------------------------------------ FOR BUTTON LIGHTNING CONTROLLER ------------------------------------ */
-.menu-container-blue-lightning {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #189ab4;
-	padding: 0;
-	border-radius: 14.3734px;
-	width: 46.99px;
-	height: 46.99px;
-	cursor: pointer;
-	transition: background-color 0.3s ease-in;
-}
+/* ------------------------------------ FOR BUTTON LIGHTING CONTROLLER ------------------------------------ */
 
 .menu-container-blue-lightning:hover {
 	box-shadow: 0px 4px 4px var(--onhover-color);
@@ -680,18 +696,6 @@ canvas {
 }
 
 /* ----------------------------------------- FOR BUTTON INFORMATION ---------------------------------------- */
-.menu-container-blue-information {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #189ab4;
-	padding: 0;
-	border-radius: 14.3734px;
-	width: 46.99px;
-	height: 46.99px;
-	cursor: pointer;
-	transition: background-color 0.3s ease-in;
-}
 
 .menu-container-blue-information:hover {
 	box-shadow: 0px 4px 4px var(--onhover-color);
@@ -859,18 +863,6 @@ canvas {
 }
 
 /* ------------------------------------------ FOR BUTTON ANIMATION ----------------------------------------- */
-.menu-container-blue-animation {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: #189ab4;
-	padding: 0;
-	border-radius: 14.3734px;
-	width: 46.99px;
-	height: 46.99px;
-	cursor: pointer;
-	transition: background-color 0.3s ease-in;
-}
 
 .menu-container-blue-animation:hover {
 	box-shadow: 0px 4px 4px var(--onhover-color);

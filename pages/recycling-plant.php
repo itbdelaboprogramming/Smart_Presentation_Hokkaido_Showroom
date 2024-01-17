@@ -167,6 +167,7 @@
 
                 <div class="menu-container-blue-information">
                     <img src="./assets/Information-Button.png">
+                    Information
                 </div>
                 <div class="menu-container-blue-sound">
                     <img src="./assets/Sound-Off-Button.png" id="sound-off">
@@ -175,14 +176,17 @@
                 <div class="menu-container-blue-animation">
                     <img src="./assets/Animation-Off-Button.png" id="animation-off">
                     <img src="./assets/Animation-On-Button.png" id="animation-on" style="display: none;">
+                    Animation
                 </div>
             </div>
 
             <div class="container-bottom-right">
                 <div class="menu-container-blue-album active">
+                    Catalog
                     <img src="./assets/Album-Button.png">
                 </div>
                 <div class="menu-container-blue-lightning">
+                    Lighting
                     <img src="./assets/Lightning-Button.png">
                 </div>
                 <div class="toggle"></div>
