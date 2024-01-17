@@ -380,12 +380,12 @@ function resetCatalogueSelect() {
 	});
 }
 
-function updateInformation(file_name) {
+export function updateInformation(file_name) {
 	information_title.innerHTML = file_name;
 
 	let x = jsonData[file_name].info.split("。");
-	let x_y = x.join("。<br><br>");
-	information_description.innerHTML = x_y;
+	let x_joined = x.join("。<br><br>");
+	information_description.innerHTML = x_joined;
 
 	information_link.href = jsonData[file_name].web_link;
 	information_link.innerHTML = file_name + " | Nakayama Iron Works (ncjpn.com)";

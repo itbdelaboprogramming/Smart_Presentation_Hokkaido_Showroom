@@ -101,6 +101,9 @@ let path;
 
 const pdf_file = document.getElementById("pdf-file");
 const video = document.getElementById("video");
+const information_description = document.querySelector(
+	".information-description-description"
+);
 
 if (currentPath.includes("crushing-plant")) {
 	path = "files/glb/" + "Hokkaido Crushing Full Plant.glb";
@@ -118,6 +121,9 @@ if (currentPath.includes("crushing-plant")) {
 		"src",
 		jsonData["Hokkaido Crushing Full Plant"].video_link
 	);
+	let x = jsonData["Hokkaido Crushing Full Plant"].info.split("。");
+	let x_joined = x.join("。<br><br>");
+	information_description.innerHTML = x_joined;
 } else if (currentPath.includes("recycling-plant")) {
 	path = "files/glb/" + "Recycling Full Plant.glb";
 	camera.position.set(
@@ -125,6 +131,9 @@ if (currentPath.includes("crushing-plant")) {
 		jsonData["Recycling Full Plant"].position.y,
 		jsonData["Recycling Full Plant"].position.z
 	);
+	let x = jsonData["Recycling Full Plant"].info.split("。");
+	let x_joined = x.join("。<br><br>");
+	information_description.innerHTML = x_joined;
 	pdf_file.setAttribute(
 		"src",
 		jsonData["Recycling Full Plant"].pdf_link +
@@ -143,6 +152,9 @@ if (currentPath.includes("crushing-plant")) {
 		jsonData["MSD700 Blade"].pdf_link + "#scrollbar=0&toolbar=0&view=FitH"
 	);
 	video.setAttribute("src", jsonData["MSD700 Blade"].video_link);
+	let x = jsonData["MSD700 Blade"].info.split("。");
+	let x_joined = x.join("。<br><br>");
+	information_description.innerHTML = x_joined;
 }
 
 const dracoLoader = new DRACOLoader();

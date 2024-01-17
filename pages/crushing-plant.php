@@ -41,7 +41,7 @@
                     <p class="information-description-title">
                         Hokkaido Crushing Full Plant
                     </p>
-                    <p class="information-description-description">We have been putting much effort on industrial machines that meets the need of the market, especially developing crushing, screening techniques and systematization.  <br><br> Using experienced knowledge on up-to-date plant techniques, our crushing plants manufactures low-cost and excellent products.  <br><br> Our crushing plants cope with agrregate plant, gravel manufacturing plant, dam aggregate plant, setting stones, portable crushing plant,etc with ensured techniques using day by day technical innovation and fully experienced techniques.</p>
+                    <p class="information-description-description">-</p>
                     <!-- <p class="information-description-specification-detail" >Processing performance depends on quality of material, feeding chunks and particle size. <br><br> This machine’s spec and dimension might be changed without prior-notice for the improvement.</p> -->
                     <!-- <img class="information-specification-img" src="./files/dimension_vsi.png" />
                     <img class="information-specification-img" src="./files/dimension_vsi_platform.png" />

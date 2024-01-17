@@ -41,7 +41,7 @@
                     <p class="information-description-title">
                         Recycling Full Plant
                     </p>
-                    <p class="information-description-description">High-performance recycling plant with maximum production capability equipped with low-cost and space-saving advantages.</p>
+                    <p class="information-description-description">-</p>
                     <!-- <p class="information-description-specification">Specifications Unit (mm)</p> -->
                     <!-- <p class="information-description-specification-detail" >Processing performance depends on quality of material, feeding chunks and particle size. <br><br> This machine’s spec and dimension might be changed without prior-notice for the improvement.</p> -->
                     <!-- <img class="information-specification-img" src="./files/dimension_vsi.png" />
