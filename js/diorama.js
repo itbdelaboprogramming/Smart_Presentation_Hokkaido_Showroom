@@ -404,7 +404,7 @@ function updateFile3D(file_name) {
 		scene.remove(file3D);
 		let newFile3D;
 
-		newFile3D = `files/glb/${file_name}.glb`;
+		newFile3D = jsonData[file_name].glb_file;
 
 		loader.load(
 			newFile3D,

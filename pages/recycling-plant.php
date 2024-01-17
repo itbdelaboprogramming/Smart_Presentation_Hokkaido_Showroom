@@ -54,29 +54,33 @@
             </div>
 
             <div class="catalogue-container-2" id="catalogue-container-2" style="display:flex;">
-                <div>
+                <!-- <div>
                     <p class="catalogue-description-title-2">北海道ショールーム</p>
-                </div>
+                </div> -->
                 <div class="catalogue-description-2">
                     <div class="catalogue-product-list-2" id="model_name_2">
                         <div class="catalogue-product-list-text-2"> Recycling Full Plant </div>
-                        <img class="catalogue-image-preview-2" src="./files/Recycling Full Plant_preview.png" />
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/Recycling Full Plant_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_2">
+                        <div>リサイクルプラント</div>
                         <div class="catalogue-product-list-text-2"> Recycling Plant </div>
-                        <img class="catalogue-image-preview-2" src="./files/Recycling Plant_preview.png" />
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/Recycling Plant_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_2">
+                        <div>電動自走式ロールクラッシャ</div>
                         <div class="catalogue-product-list-text-2"> NE1200RD </div>
-                        <img class="catalogue-image-preview-2" src="./files/NE1200RD_preview.png" />
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/NE1200RD_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_2">
-                        <div class="catalogue-product-list-text-2"> MSD700 Dump </div>
-                        <img class="catalogue-image-preview-2" src="./files/MSD700 Dump_preview.png" />
+                        <div>ダンプモデル</div>
+                        <div class="catalogue-product-list-text-2"> MSD700-Dump </div>
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/MSD700 Dump_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_2">
-                        <div class="catalogue-product-list-text-2"> MSD700 Backhoe </div>
-                        <img class="catalogue-image-preview-2" src="./files/MSD700 Backhoe_preview.png" />
+                        <div>バックホーモデル</div>
+                        <div class="catalogue-product-list-text-2"> MSD700-Backhoe </div>
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/MSD700 Backhoe_preview.png" />
                     </div>
                 </div>
             </div>

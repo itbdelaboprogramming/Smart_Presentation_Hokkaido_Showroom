@@ -53,41 +53,48 @@
             </div>
 
             <div class="catalogue-container-2" id="catalogue-container-2" style="display:flex;">
-                <div>
+                <!-- <div>
                     <p class="catalogue-description-title-2">北海道ショールーム</p>
-                </div>
+                </div> -->
                 <div class="catalogue-description-2">
                     <div class="catalogue-product-list-2 active" id="model_name_1">
                         <div class="catalogue-product-list-text-2"> Hokkaido Crushing Full Plant </div>
-                        <img class="catalogue-image-preview-2" src="./files/Hokkaido Crushing Full Plant_preview.png" />
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/Hokkaido Crushing Full Plant_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_1">
-                        <div class="catalogue-product-list-text-2"> Hokkaido Crushing Plant </div>
-                        <img class="catalogue-image-preview-2" src="./files/Hokkaido Crushing Plant_preview.png" />
+                        <div>砕石プラント</div>
+                        <div class="catalogue-product-list-text-2"> Crushing Plant </div>
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/Hokkaido Crushing Plant_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_1">
+                        <div>電動自走式クラッシャ</div>
                         <div class="catalogue-product-list-text-2"> NE750J </div>
-                        <img class="catalogue-image-preview-2" src="./files/NE750J_preview.png" />
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/NE750J_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_1">
-                        <div class="catalogue-product-list-text-2"> NEBC10520 Belt Conveyor </div>
-                        <img class="catalogue-image-preview-2" src="./files/NEBC10520 Belt Conveyor_preview.png" />
+                        <div>自走式ベルトコンベア</div>
+                        <div class="catalogue-product-list-text-2"> NEBC10520 </div>
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/NEBC10520 Belt Conveyor_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_1">
-                        <div class="catalogue-product-list-text-2"> N-ePower </div>
-                        <img class="catalogue-image-preview-2" src="./files/N-ePower_preview.png" />
+                        <div>給電コンテナハウス</div>
+                        <div class="catalogue-product-list-text-2"> NePower </div>
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/N-ePower_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_1">
+                        <div>コンテナ型 <br> 小水力発電</div>
                         <div class="catalogue-product-list-text-2"> Micro Hydro System </div>
-                        <img class="catalogue-image-preview-2" src="./files/Micro Hydro System_preview.png" />
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/Micro Hydro System_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_1">
-                        <div class="catalogue-product-list-text-2"> MSD700 Bucket </div>
-                        <img class="catalogue-image-preview-2" src="./files/MSD700 Bucket_preview.png" />
+                        <div>バケットモデル</div>
+                        <div class="catalogue-product-list-text-2"> MSD700-Bucket </div>
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/MSD700 Bucket_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_1">
-                        <div class="catalogue-product-list-text-2"> MSD700 Blade </div>
-                        <img class="catalogue-image-preview-2" src="./files/MSD700 Blade_preview.png" />
+                        <div>ブレードモデル</div>
+                        <div class="catalogue-product-list-text-2"> MSD700-Blade </div>
+                        <img class="catalogue-image-preview-2" src="./files/img_preview/MSD700 Blade_preview.png" />
                     </div>
                 </div>
             </div>

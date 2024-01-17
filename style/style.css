@@ -675,8 +675,8 @@ canvas {
 }
 
 .catalogue-image-preview-2 {
-	height: 100%;
-	width: 100%;
+	height: 80%;
+	width: 80%;
 }
 
 /* ----------------------------------------- FOR BUTTON INFORMATION ---------------------------------------- */
@@ -885,7 +885,7 @@ canvas {
 	position: absolute;
 	z-index: 2;
 	top: 0;
-	bottom: 10%;
+	bottom: 8%;
 	left: 0;
 	margin-left: 23px;
 	margin-top: auto;
