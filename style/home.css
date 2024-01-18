@@ -12,25 +12,25 @@
 
 /* Use a video as background */
 .bg {
-    /* Remove the background-image property */
-    height: 100%;
-    overflow: hidden; /* Hide overflow content, such as video controls */
+	/* Remove the background-image property */
+	height: 100%;
+	overflow: hidden; /* Hide overflow content, such as video controls */
 
-    /* Add styles to position the video element */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+	/* Add styles to position the video element */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 	display: flex;
-    align-items: center;
-    justify-content: center;
+	align-items: center;
+	justify-content: center;
 }
-  
+
 #bgVideo {
 	width: 100%;
 	height: auto;
-    z-index: -1; 
+	z-index: -1;
 }
 /* Use a video as background */
 
@@ -60,9 +60,10 @@
 .button-container {
 	display: flex;
 	flex-direction: row;
-	gap: 25px;
+	gap: 45px;
 
 	font-family: "Inter";
+	padding: 0px 23px;
 }
 
 .button-container-2 {
@@ -73,19 +74,30 @@
 
 .button-404 {
 	display: flex;
-	width: 600px;
-	height: 400px;
-	padding: 2.5px 2.5px 2.5px 2.5px;
+	min-width: 400px;
+	max-width: 600px;
+	height: auto;
+	padding: 30px 2.5px 30px 2.5px;
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
 	background: #fff;
 	text-decoration: none;
-	overflow: hidden; 
+	overflow: hidden;
 	position: relative;
 
 	color: black;
 	cursor: pointer;
+}
+
+@media (max-width: 900px) {
+	.button-container {
+		flex-direction: column;
+	}
+	.button-404 {
+		min-width: 300px;
+		max-width: 400px;
+	}
 }
 
 .button-404:before {
@@ -95,7 +107,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	border: 5px solid #fff; 
+	border: 5px solid #fff;
 	box-sizing: border-box;
 	pointer-events: none;
 	z-index: 1;
@@ -110,12 +122,12 @@
 
 .button-404 span {
 	position: absolute;
-    bottom: 2.5%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: #fff; /* Adjust background color and opacity */
-    padding: 5px 10px;
-    border-radius: 5px;
+	bottom: 2.5%;
+	/* left: 50%; */
+	/* transform: translateX(-50%); */
+	background-color: #fff; /* Adjust background color and opacity */
+	padding: 5px 10px;
+	border-radius: 5px;
 	font-weight: 700;
 	font-size: 1.4rem;
 	margin: 0;
@@ -135,21 +147,21 @@
 }
 
 .button-movie {
-    display: flex;
-    /* flex-direction: column; */
-    width: 300px;
-    height: 100px;
-    margin-top: 25px;
+	display: flex;
+	/* flex-direction: column; */
+	width: 300px;
+	height: 100px;
+	margin-top: 25px;
 	justify-content: center;
 	align-items: center;
-    border-radius: 10px;
-    background: #fff;
-    text-decoration: none;
+	border-radius: 10px;
+	background: #fff;
+	text-decoration: none;
 	overflow: hidden;
 	position: relative;
 
-    color: black;
-    cursor: pointer;
+	color: black;
+	cursor: pointer;
 }
 
 .button-movie:before {
@@ -159,21 +171,21 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	border: 5px solid #fff; 
+	border: 5px solid #fff;
 	box-sizing: border-box;
 	pointer-events: none;
 	z-index: 1;
 }
 
 .button-movie img {
-    max-width: 100%;
-    max-height: 100%;
-    transition: transform 0.3s ease-in-out;
-    z-index: 0;
+	max-width: 100%;
+	max-height: 100%;
+	transition: transform 0.3s ease-in-out;
+	z-index: 0;
 }
 
 .button-movie:hover {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .button-movie:hover img {
@@ -181,6 +193,6 @@
 }
 
 .button-movie:active {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    transform: translateY(3px);
+	box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+	transform: translateY(3px);
 }
