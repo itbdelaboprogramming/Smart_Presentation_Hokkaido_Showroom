@@ -128,6 +128,7 @@ const information_description = document.querySelector(
 );
 // const information_link = document.querySelector(".information-link");
 const pdf_file = document.getElementById("pdf-file");
+const info_img = document.querySelector(".information-specification-img");
 
 // ------------------------------------- video button ------------------------------------
 const video_button = document.querySelector(".menu-video");
@@ -423,6 +424,13 @@ function updateInformation(file_name) {
 		video.setAttribute("src", jsonData[file_name].video_link);
 	} else {
 		video_button.style.display = "none";
+	}
+
+	if (jsonData[file_name].hasOwnProperty("info_img")) {
+		info_img.style.display = "block";
+		info_img.src = jsonData[file_name].info_img;
+	} else {
+		info_img.style.display = "none";
 	}
 }
 

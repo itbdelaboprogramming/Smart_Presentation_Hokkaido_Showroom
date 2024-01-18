@@ -106,6 +106,7 @@ const information_description = document.querySelector(
 );
 const pdf_button = document.querySelector(".menu-pdf");
 const video_button = document.querySelector(".menu-video");
+const info_img = document.querySelector(".information-specification-img");
 
 if (currentPath.includes("crushing-plant")) {
 	path = jsonData["Hokkaido Crushing Full Plant"].glb_file;
@@ -197,5 +198,11 @@ function updateInformation(file_name) {
 		video.setAttribute("src", jsonData[file_name].video_link);
 	} else {
 		video_button.style.display = "none";
+	}
+	if (jsonData[file_name].hasOwnProperty("info_img")) {
+		info_img.style.display = "block";
+		info_img.src = jsonData[file_name].info_img;
+	} else {
+		info_img.style.display = "none";
 	}
 }

@@ -41,11 +41,11 @@
                     </p>
                     <p class="information-description-description">-</p>
                     <!-- <p class="information-description-specification-detail" >Processing performance depends on quality of material, feeding chunks and particle size. <br><br> This machine’s spec and dimension might be changed without prior-notice for the improvement.</p> -->
-                    <!-- <img class="information-specification-img" src="./files/dimension_vsi.png" />
-                    <img class="information-specification-img" src="./files/dimension_vsi_platform.png" />
-                    <img class="information-specification-img" src="./files/specification_2.png" />
-                    <img class="information-specification-img" src="./files/specification.png" />
-                    <img class="information-specification-img" src="./files/specification_3.png" /> -->
+                    <img class="information-specification-img" />
+                    <!-- <img class="information-specification-img" src="./files/dimension_vsi_platform.png" /> -->
+                    <!-- <img class="information-specification-img" src="./files/specification_2.png" /> -->
+                    <!-- <img class="information-specification-img" src="./files/specification.png" /> -->
+                    <!-- <img class="information-specification-img" src="./files/specification_3.png" /> -->
                 </div>
                 <div class="information-footer">
                     <div  class="menu-pdf">
