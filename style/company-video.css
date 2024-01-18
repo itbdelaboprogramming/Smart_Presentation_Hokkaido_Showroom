@@ -7,10 +7,10 @@ body {
 
 /* ------------------ FLOATING CONTAINER ------------------ */
 .container-top-left {
-	position: fixed;
+	/* position: fixed;
 	z-index: 2;
 	top: 0;
-	left: 0;
+	left: 0; */
 	margin-top: 23px;
 	margin-left: 23px;
 
@@ -68,7 +68,7 @@ body {
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
-	margin: 200px 23px 0px 23px;
+	margin: 73px 23px 23px 23px;
 	flex-wrap: wrap;
 	gap: 60px;
 }

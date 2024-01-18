@@ -11,11 +11,9 @@
     <body>
         <div class="company-page">
             <div class="container-top-left">
-                <div class="pdf_container">
-                    <button class="menu-container-back-button" onClick="location.href='home'">
-                        <img src="./assets/Back-Button.svg">
-                    </button>
-                </div>
+                <button class="menu-container-back-button" onClick="location.href='home'">
+                    <img src="./assets/Back-Button.svg">
+                </button>
                 <div class="page-name-container">
                     <div class="page-name-text">Nakayama 紹介動画​</div>
                 </div>
