@@ -13,7 +13,7 @@
 
             <!-- if using the background picture, comment this <video> -->
              <video autoplay muted loop idate="bgVideo">
-                <source src="./assets/video/light_background.mp4" type="video/mp4">
+                <source src="./assets/video/light3_background.mp4" type="video/mp4">
                 Your browser does not support the video tag.
              </video>   
 
@@ -23,12 +23,12 @@
                 <div class="button-container">
                     <a class="button-404" href="crushing-plant">
                     <img src="./assets/Crushing Plant.png" alt="Crushing Plant">
-                        <span>破砕プラントの3Dモデル</span>
+                        <span>破砕プラント</span>
                     </a>
                     
                     <a class="button-404" href="recycling-plant">
                     <img src="./assets/Recycling Plant.png" alt="Recycling Plant">
-                        <span>リサイクル工場の3Dモデル</span>
+                        <span>リサイクルプラント</span>
                     </a>
                 </div>
 
