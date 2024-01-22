@@ -3,7 +3,10 @@ const myCanvas = document.querySelector("#myCanvas");
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import { CSS2DRenderer } from "three/addons/renderers/CSS2DRenderer.js";
+import {
+	CSS2DRenderer,
+	CSS2DObject,
+} from "three/addons/renderers/CSS2DRenderer.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import jsonData from "./data/data.json" assert { type: "json" };
 
@@ -107,30 +110,19 @@ const information_description = document.querySelector(
 const pdf_button = document.querySelector(".menu-pdf");
 const video_button = document.querySelector(".menu-video");
 const info_img = document.querySelector(".information-specification-img");
+export let product_list_text;
 
 if (currentPath.includes("crushing-plant")) {
 	path = jsonData["Hokkaido Crushing Full Plant"].glb_file;
-	camera.position.set(
-		jsonData["Hokkaido Crushing Full Plant"].position.x,
-		jsonData["Hokkaido Crushing Full Plant"].position.y,
-		jsonData["Hokkaido Crushing Full Plant"].position.z
-	);
+	setProductListText("Hokkaido Crushing Full Plant");
 	updateInformation("Hokkaido Crushing Full Plant");
 } else if (currentPath.includes("recycling-plant")) {
 	path = jsonData["Recycling Full Plant"].glb_file;
-	camera.position.set(
-		jsonData["Recycling Full Plant"].position.x,
-		jsonData["Recycling Full Plant"].position.y,
-		jsonData["Recycling Full Plant"].position.z
-	);
+	setProductListText("Recycling Full Plant");
 	updateInformation("Recycling Full Plant");
 } else {
 	path = jsonData["MSD700-Blade"].glb_file;
-	camera.position.set(
-		jsonData["MSD700-Blade"].position.x,
-		jsonData["MSD700-Blade"].position.y,
-		jsonData["MSD700-Blade"].position.z
-	);
+	setProductListText("MSD700-Blade");
 	updateInformation("MSD700-Blade");
 }
 
@@ -182,6 +174,7 @@ function updateInformation(file_name) {
 	let x = jsonData[file_name].info.split("。");
 	let x_joined = x.join("。<br><br>");
 	information_description.innerHTML = x_joined;
+	createAnnotation(file_name, new THREE.Vector3(0, 10, 0), "A");
 
 	if (jsonData[file_name].hasOwnProperty("pdf_link")) {
 		pdf_button.style.display = "flex";
@@ -205,4 +198,40 @@ function updateInformation(file_name) {
 	} else {
 		info_img.style.display = "none";
 	}
+
+	camera.position.set(
+		jsonData[file_name].position.x,
+		jsonData[file_name].position.y,
+		jsonData[file_name].position.z
+	);
+}
+
+console.log(scene);
+
+export function createAnnotation(content, position, label) {
+	const annotationDiv = document.createElement("div");
+	annotationDiv.id = "annotationDiv";
+
+	annotationDiv.textContent = content;
+	annotationDiv.style.backgroundColor = "#74E7D4";
+	annotationDiv.style.fontFamily = "Ubuntu";
+	annotationDiv.style.borderRadius = "5px";
+	annotationDiv.style.padding = "4px";
+
+	const annotation = new CSS2DObject(annotationDiv);
+	annotation.name = label;
+	annotation.position.copy(position);
+	annotation.center.set(0, 1, 0);
+	scene.add(annotation);
+}
+
+export function removeAnnotation(label) {
+	const annotation = scene.getObjectByName(label);
+	if (annotation != null) {
+		scene.remove(annotation);
+	}
+}
+
+export function setProductListText(text) {
+	product_list_text = text;
 }

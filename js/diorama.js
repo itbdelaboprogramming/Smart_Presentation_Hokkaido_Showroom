@@ -2,11 +2,17 @@ import { scene, camera, orbitControls, loader } from "../script.js";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import jsonData from "../data/data.json" assert { type: "json" };
+import {
+	product_list_text,
+	setProductListText,
+	createAnnotation,
+	removeAnnotation,
+} from "../script.js";
 
 // ---------------------------------------------------------------------------------------
 // ----------------------------------- Const, Var, Let -----------------------------------
 // ---------------------------------------------------------------------------------------
-let product_list_text = "VSI Gyropactor";
+// let product_list_text = "VSI Gyropactor";
 // ----------------------------------- dark/light mode -----------------------------------
 const toggle = document.querySelector(".toggle");
 
@@ -376,13 +382,15 @@ function loadCatalogue(catalogue_product_list) {
 			resetCatalogueSelect();
 
 			// product_list.classList.toggle("active");
-			product_list.classList.add("active"); // Add the "active" class here
+			product_list.classList.add("active");
 
-			product_list_text = product_list.querySelector(
-				".catalogue-product-list-text-2"
-			).innerText;
+			setProductListText(
+				product_list.querySelector(".catalogue-product-list-text-2").innerText
+			);
+			// product_list_text = product_list.querySelector(
+			// 	".catalogue-product-list-text-2"
+			// ).innerText;
 
-			// Find the current 3D model object
 			let file3D = scene.getObjectByName("file3D");
 
 			// Reset the model and annotations for the current 3D model
@@ -406,6 +414,16 @@ function updateInformation(file_name) {
 	let x = jsonData[file_name].info.split("。");
 	let x_joined = x.join("。<br><br>");
 	information_description.innerHTML = x_joined;
+	removeAnnotation("A");
+	createAnnotation(
+		file_name,
+		new THREE.Vector3(
+			jsonData[file_name].annotation.x,
+			jsonData[file_name].annotation.y,
+			jsonData[file_name].annotation.z
+		),
+		"A"
+	);
 
 	// information_link.href = jsonData[file_name].web_link;
 	// information_link.innerHTML = file_name + " | Nakayama Iron Works (ncjpn.com)";
