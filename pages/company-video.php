@@ -15,7 +15,7 @@
                     <img src="./assets/Back-Button.svg">
                 </button>
                 <div class="page-name-container">
-                    <div class="page-name-text">Nakayama 紹介動画​</div>
+                    <div class="page-name-text">動画一覧​</div>
                 </div>
             </div>
             <div class="video-content-container">

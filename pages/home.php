@@ -23,7 +23,7 @@
                 <div class="button-container">
                     <a class="button-404" href="crushing-plant">
                     <img src="./assets/Crushing Plant.png" alt="Crushing Plant">
-                        <span>破砕プラント</span>
+                        <span>砕石​プラント</span>
                     </a>
                     
                     <a class="button-404" href="recycling-plant">
@@ -34,7 +34,7 @@
 
                 <div class="button-container-2">
                     <a class="button-movie" href="company-video">
-                        <img src="./assets/movie.png" alt="Company Information">
+                        <img src="./assets/movie-2.png" alt="Company Information">
                             <!-- <span>Company Information</span> -->
                     </a>                    
                 </div>

@@ -176,13 +176,13 @@
                 <div class="menu-container-blue-animation">
                     <img src="./assets/Animation-Off-Button.png" id="animation-off">
                     <img src="./assets/Animation-On-Button.png" id="animation-on" style="display: none;">
-                    Animation
+                    Rotation
                 </div>
             </div>
 
             <div class="container-bottom-right">
                 <div class="menu-container-blue-album active">
-                    Catalog
+                    Machine List
                     <img src="./assets/Album-Button.png">
                 </div>
                 <div class="menu-container-blue-lightning">
