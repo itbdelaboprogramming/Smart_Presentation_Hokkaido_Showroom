@@ -13,6 +13,7 @@
             <div class="container-top-left">
                 <button class="menu-container-back-button" onClick="location.href='home'">
                     <img src="./assets/Back-Button.svg">
+                    Back
                 </button>
                 <div class="page-name-container">
                     <div class="page-name-text">動画一覧​</div>

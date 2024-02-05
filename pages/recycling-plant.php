@@ -24,11 +24,10 @@
             <!-- line annotation -->
             <!-- <canvas id="lineCanvas" style="position: absolute; top: 0; left: 0;"></canvas> -->
             <div class="container-top-left">
-                <div class="pdf_container">
-                    <button class="menu-container-back-button" onClick="location.href='home'">
-                        <img src="./assets/Back-Button.svg">
-                    </button>
-                </div>
+                <button class="menu-container-back-button" onClick="location.href='home'">
+                    <img src="./assets/Back-Button.svg">
+                    Back
+                </button>
                 <div class="page-name-container">
                     <div class="page-name-text">リサイクルプラント</div>
                 </div>
