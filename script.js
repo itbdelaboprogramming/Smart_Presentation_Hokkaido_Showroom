@@ -174,7 +174,11 @@ function updateInformation(file_name) {
 	let x = jsonData[file_name].info.split("。");
 	let x_joined = x.join("。<br><br>");
 	information_description.innerHTML = x_joined;
-	createAnnotation(file_name, new THREE.Vector3(0, 10, 0), "A");
+	createAnnotation(
+		jsonData[file_name].annotation_text,
+		new THREE.Vector3(0, 10, 0),
+		"A"
+	);
 
 	if (jsonData[file_name].hasOwnProperty("pdf_link")) {
 		pdf_button.style.display = "flex";
@@ -205,8 +209,6 @@ function updateInformation(file_name) {
 		jsonData[file_name].position.z
 	);
 }
-
-console.log(scene);
 
 export function createAnnotation(content, position, label) {
 	const annotationDiv = document.createElement("div");

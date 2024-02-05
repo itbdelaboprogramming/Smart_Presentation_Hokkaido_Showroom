@@ -65,7 +65,7 @@
                 </div> -->
                 <div class="catalogue-description-2">
                     <div class="catalogue-product-list-2 active" id="model_name_1">
-                        <div class="catalogue-product-list-text-2"> Hokkaido Crushing Full Plant </div>
+                        <div class="catalogue-product-list-text-2"> Overview </div>
                         <img class="catalogue-image-preview-2" src="./files/img_preview/Hokkaido Crushing Full Plant_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_1">

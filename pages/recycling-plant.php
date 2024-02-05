@@ -65,8 +65,8 @@
                     <p class="catalogue-description-title-2">北海道ショールーム</p>
                 </div> -->
                 <div class="catalogue-description-2">
-                    <div class="catalogue-product-list-2" id="model_name_2">
-                        <div class="catalogue-product-list-text-2"> Recycling Full Plant </div>
+                    <div class="catalogue-product-list-2 active" id="model_name_2">
+                        <div class="catalogue-product-list-text-2"> Overview </div>
                         <img class="catalogue-image-preview-2" src="./files/img_preview/Recycling Full Plant_preview.png" />
                     </div>
                     <div class="catalogue-product-list-2" id="model_name_2">

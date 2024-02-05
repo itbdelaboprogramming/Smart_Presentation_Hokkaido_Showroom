@@ -1,10 +1,7 @@
 {
 	"Hokkaido Crushing Full Plant": {
 		"info": "-",
-		"pdf_link": "./files/pdf/SR_en_ver.2.06_20220523.pdf",
-		"video_link": "./files/video/中山鉄工所ジャイロパクタ SRシリーズ.mp4",
 		"glb_file": "files/glb/Hokkaido Crushing Full Plant.glb",
-		"info_img": "./files/img/exp.jpg",
 		"annotation": {
 			"x": 0,
 			"y": 15,
@@ -15,7 +12,8 @@
 			"y": 25,
 			"z": -30
 		},
-		"audio_link": "./audio/Crushing Plant.mp3"
+		"audio_link": "./audio/Crushing Plant.mp3",
+		"annotation_text": "Overview"
 	},
 	"Crushing Plant": {
 		"info": "中山鉄工所のDendomanプラントは、3ステージのコンパクト配置で機能性を高め、環境と安全に配慮したプラントです。複数の自走式破砕機をコンパクトに構成しているため、大掛かりな基礎工事が不要で、従来より短い工期で設置できます。採石場の切羽の変化に合わせて簡単に変更できるため、効率的なプラント運営が出来ます。各機械に搭載したセンサーやカメラで、生産量、稼働状況などを可視化し、操作室から少人数での安全な遠隔操作が可能です。短い工期と少人数でのプラント運営を可能にすることで、大幅なコスト削減を実現します。",
@@ -33,7 +31,8 @@
 			"y": 25,
 			"z": -35
 		},
-		"audio_link": "./audio/Crushing Plant.mp3"
+		"audio_link": "./audio/Crushing Plant.mp3",
+		"annotation_text": "Crushing Plant"
 	},
 	"NE750J": {
 		"info": "NE750Jは採石場での一次破砕に使われる電動自走式クラッシャです。砕石場の切羽進展に合わせて場内の移動が可能です。処理能力は1時間あたり750トンを誇ります。",
@@ -50,7 +49,8 @@
 			"y": 11,
 			"z": 5
 		},
-		"audio_link": "./audio/NE750J.mp3"
+		"audio_link": "./audio/NE750J.mp3",
+		"annotation_text": "NE750J"
 	},
 	"NEBC10520": {
 		"info": "Not yet developed",
@@ -66,7 +66,8 @@
 			"y": 8,
 			"z": 17
 		},
-		"audio_link": "./audio/Crushing Plant.mp3"
+		"audio_link": "./audio/Crushing Plant.mp3",
+		"annotation_text": "NEBC10520"
 	},
 	"NePower": {
 		"info": "NePowerは電力事情が整っていない環境で、大型機械稼働や、オフィス作業を安定して行うことの出来る給電コンテナハウスです。状況・目的に応じて、電圧・出力・周波数を調整できます。大容量バッテリーによる安定した給電能力を持ち、ソーラー発電とディーゼル発電を搭載することで、急速充電にも対応しています。",
@@ -81,7 +82,8 @@
 			"y": 4,
 			"z": 3
 		},
-		"audio_link": "./audio/NePower.mp3"
+		"audio_link": "./audio/NePower.mp3",
+		"annotation_text": "NePower"
 	},
 	"MSD700-Bucket": {
 		"info": "MSD700は、人が入るのが困難な現場で代わりに作業するマイクロ建機になります。クローラの付いた本体にアタッチメントを交換することで、用途に合わせて仕様変更が可能です。バケットモデルのバケットの高さは880mmで、50kgの重量物をラクラク持ち上げることが出来ます。",
@@ -97,7 +99,8 @@
 			"y": 1,
 			"z": 2
 		},
-		"audio_link": "./audio/MSD700 Bucket.mp3"
+		"audio_link": "./audio/MSD700 Bucket.mp3",
+		"annotation_text": "MSD700-Bucket"
 	},
 	"MSD700-Blade": {
 		"info": "MSD700は、人が入るのが困難な現場で代わりに作業するマイクロ建機になります。クローラの付いた本体にアタッチメントを交換することで、用途に合わせて仕様変更が可能です。ブレードモデルは狭いところでもパワフルに土砂を押し出すことが出来ます。",
@@ -113,7 +116,8 @@
 			"y": 1,
 			"z": 2
 		},
-		"audio_link": "./audio/MSD700 Blade.mp3"
+		"audio_link": "./audio/MSD700 Blade.mp3",
+		"annotation_text": "MSD700-Blade"
 	},
 	"Micro Hydro System": {
 		"info": "コンテナ型小水力発電は、従来の個別品の構成をワンパッケージにしました。コンパクトで容易な設置が可能で、費用削減が期待できます。建屋、その屋内の配管/配線工事を省くことができる為、現地工事の短縮や作業の安全性を向上させています。",
@@ -130,12 +134,11 @@
 			"y": 5,
 			"z": 4
 		},
-		"audio_link": "./audio/Micro Hydro System.mp3"
+		"audio_link": "./audio/Micro Hydro System.mp3",
+		"annotation_text": "Micro Hydro System"
 	},
 	"Recycling Full Plant": {
 		"info": "-",
-		"pdf_link": "./files/pdf/SR_en_ver.2.06_20220523.pdf",
-		"video_link": "./files/video/中山鉄工所ジャイロパクタ SRシリーズ.mp4",
 		"glb_file": "files/glb/Recycling Full Plant.glb",
 		"annotation": {
 			"x": 0,
@@ -147,7 +150,8 @@
 			"y": 10,
 			"z": 20
 		},
-		"audio_link": "./audio/Recycling Plant.mp3"
+		"audio_link": "./audio/Recycling Plant.mp3",
+		"annotation_text": "Overview"
 	},
 	"Recycling Plant": {
 		"info": "IoT高機能型リサイクルプラントは、生産量や機械状態の総合集中管理を行い、省人化を実現したリサイクルプラントです。全ての機械をN-Linkと連携し、安全で効率的な生産を可能にします。",
@@ -163,7 +167,8 @@
 			"y": 10,
 			"z": 18
 		},
-		"audio_link": "./audio/Recycling Plant.mp3"
+		"audio_link": "./audio/Recycling Plant.mp3",
+		"annotation_text": "Recycling Plant"
 	},
 	"NE1200RD": {
 		"info": "NE1200RDはビル解体工事向けに開発されたバッテリー搭載型の電動自走式ロールクラッシャです。大塊のコンクリート廃材を破砕し、鉄筋の除去率は95%を誇ります。作業区域内への立ち入りを検知すると、自動停止致します。",
@@ -179,7 +184,8 @@
 			"y": 6,
 			"z": 6
 		},
-		"audio_link": "./audio/NE1200RD.mp3"
+		"audio_link": "./audio/NE1200RD.mp3",
+		"annotation_text": "NE1200RD"
 	},
 	"MSD700-Dump": {
 		"info": "MSD700は、人が入るのが困難な現場で代わりに作業するマイクロ建機になります。クローラの付いた本体にアタッチメントを交換することで、用途に合わせて仕様変更が可能です。ダンプモデルは100kgの重量物を運搬することができ、粉塵や土壌の運搬作業が可能です。",
@@ -196,7 +202,8 @@
 			"y": 1,
 			"z": 2
 		},
-		"audio_link": "./audio/MSD700 Dump.mp3"
+		"audio_link": "./audio/MSD700 Dump.mp3",
+		"annotation_text": "MSD700-Dump"
 	},
 	"MSD700-Backhoe": {
 		"info": "MSD700は、人が入るのが困難な現場で代わりに作業するマイクロ建機になります。クローラの付いた本体にアタッチメントを交換することで、用途に合わせて仕様変更が可能ですバックホーモデルは地面の掘削や、クレーン作業を行うことが出来ます。",
@@ -212,6 +219,7 @@
 			"y": 1,
 			"z": 2.5
 		},
-		"audio_link": "./audio/MSD700 Backhoe.mp3"
+		"audio_link": "./audio/MSD700 Backhoe.mp3",
+		"annotation_text": "MSD700-Backhoe"
 	}
 }

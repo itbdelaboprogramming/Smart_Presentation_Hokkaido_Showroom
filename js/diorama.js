@@ -311,6 +311,7 @@ menuInformation.addEventListener("click", () => {
 		informationContainer.style.display = "none";
 	}
 });
+hideInformation(true);
 
 // ------------------------------------- video button ------------------------------------
 video_button.addEventListener("click", () => {
@@ -397,9 +398,29 @@ function loadCatalogue(catalogue_product_list) {
 			// resetModelAndAnnotations(file3D);
 
 			updateFile3D(product_list_text);
-			updateInformation(product_list_text);
+			if (product_list_text === "Overview") {
+				// updateInformation("Hokkaido Crushing Full Plant");
+				// console.log("Overview");
+				updateAnnotation(convertOverviewToName("Overview"));
+				hideInformation(true);
+			} else {
+				hideInformation(false);
+				updateInformation(product_list_text);
+			}
 		});
 	});
+}
+
+function hideInformation(status) {
+	if (status) {
+		menuInformation.classList.remove("active");
+		menuInformation.style.display = "none";
+		informationContainer.style.display = "none";
+	} else {
+		menuInformation.classList.add("active");
+		menuInformation.style.display = "flex";
+		informationContainer.style.display = "flex";
+	}
 }
 
 function resetCatalogueSelect() {
@@ -408,15 +429,10 @@ function resetCatalogueSelect() {
 	});
 }
 
-function updateInformation(file_name) {
-	information_title.innerHTML = file_name;
-
-	let x = jsonData[file_name].info.split("。");
-	let x_joined = x.join("。<br><br>");
-	information_description.innerHTML = x_joined;
+function updateAnnotation(file_name) {
 	removeAnnotation("A");
 	createAnnotation(
-		file_name,
+		jsonData[file_name].annotation_text,
 		new THREE.Vector3(
 			jsonData[file_name].annotation.x,
 			jsonData[file_name].annotation.y,
@@ -424,6 +440,16 @@ function updateInformation(file_name) {
 		),
 		"A"
 	);
+}
+
+function updateInformation(file_name) {
+	information_title.innerHTML = file_name;
+
+	let x = jsonData[file_name].info.split("。");
+	let x_joined = x.join("。<br><br>");
+	information_description.innerHTML = x_joined;
+
+	updateAnnotation(file_name);
 
 	// information_link.href = jsonData[file_name].web_link;
 	// information_link.innerHTML = file_name + " | Nakayama Iron Works (ncjpn.com)";
@@ -459,8 +485,8 @@ function updateFile3D(file_name) {
 
 		scene.remove(file3D);
 		let newFile3D;
-
-		newFile3D = jsonData[file_name].glb_file;
+		let file_name2 = convertOverviewToName(file_name);
+		newFile3D = jsonData[file_name2].glb_file;
 
 		loader.load(
 			newFile3D,
@@ -471,9 +497,9 @@ function updateFile3D(file_name) {
 				file3D.position.set(0, -0.95, 0);
 
 				camera.position.set(
-					jsonData[file_name].position.x,
-					jsonData[file_name].position.y,
-					jsonData[file_name].position.z
+					jsonData[file_name2].position.x,
+					jsonData[file_name2].position.y,
+					jsonData[file_name2].position.z
 				);
 			},
 			undefined,
@@ -519,3 +545,15 @@ pdf_pop_up.addEventListener("click", function (e) {
 		}
 	}
 });
+
+function convertOverviewToName(file_name) {
+	if (file_name === "Overview") {
+		if (window.location.pathname.includes("crushing-plant")) {
+			return "Hokkaido Crushing Full Plant";
+		} else {
+			return "Recycling Full Plant";
+		}
+	} else {
+		return file_name;
+	}
+}
