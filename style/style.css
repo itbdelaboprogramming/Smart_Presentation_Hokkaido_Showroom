@@ -222,7 +222,8 @@ canvas {
 
 /* -------------------------------------------- BLUE CONTAINER -------------------------------------------- */
 .menu-container-blue-information,
-.menu-container-blue-animation {
+.menu-container-blue-animation,
+.menu-container-blue-sound {
 	display: flex;
 	justify-content: left;
 	align-items: center;
@@ -252,7 +253,7 @@ canvas {
 	background-color: #189ab4;
 	border-radius: 9px;
 	height: 46.99px;
-	min-width: 93px;
+	min-width: 120px;
 	cursor: pointer;
 	transition: background-color 0.3s ease-in;
 
@@ -706,7 +707,7 @@ canvas {
 }
 
 /* ------------------------------------------- FOR BUTTON SOUND -------------------------------------------- */
-.menu-container-blue-sound {
+/* .menu-container-blue-sound {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -717,7 +718,7 @@ canvas {
 	height: 46.99px;
 	cursor: pointer;
 	transition: background-color 0.3s ease-in;
-}
+} */
 
 .menu-container-blue-sound:hover {
 	box-shadow: 0px 4px 4px var(--onhover-color);
@@ -912,6 +913,14 @@ canvas {
 	::-webkit-scrollbar-thumb:hover {
 		background: #555;
 	}
+}
+
+.information-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 7px 7px 0px 0px;
+	cursor: pointer;
 }
 
 .information-description {

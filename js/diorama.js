@@ -136,6 +136,8 @@ const information_description = document.querySelector(
 const pdf_file = document.getElementById("pdf-file");
 const info_img = document.querySelector(".information-specification-img");
 
+const info_close = document.querySelector(".information-close");
+
 // ------------------------------------- video button ------------------------------------
 const video_button = document.querySelector(".menu-video");
 const video_pop_up = document.querySelector(".container-full-screen-video");
@@ -251,19 +253,19 @@ slider.addEventListener("input", () => {
 });
 
 // ---------------------------------------- sound ----------------------------------------
-// menuSound.addEventListener("click", () => {
-// 	menuSound.classList.toggle("active");
-
-// 	if (menuSound.classList.contains("active")) {
-// 		iconSoundOff.style.display = "none";
-// 		iconSoundOn.style.display = "block";
-// 		soundExpand.style.display = "flex";
-// 	} else {
-// 		iconSoundOff.style.display = "block";
-// 		iconSoundOn.style.display = "none";
-// 		soundExpand.style.display = "none";
-// 	}
-// });
+menuSound.addEventListener("click", () => {
+	menuSound.classList.toggle("active");
+	
+	// 	if (menuSound.classList.contains("active")) {
+	// 	iconSoundOff.style.display = "none";
+	// 	iconSoundOn.style.display = "block";
+	// 	soundExpand.style.display = "flex";
+	// } else {
+	// 	iconSoundOff.style.display = "block";
+	// 	iconSoundOn.style.display = "none";
+	// 	soundExpand.style.display = "none";
+	// }
+});
 
 // toggle_speech.addEventListener("click", () => {
 // 	toggle_speech.classList.toggle("active");
@@ -311,6 +313,12 @@ menuInformation.addEventListener("click", () => {
 		informationContainer.style.display = "none";
 	}
 });
+
+info_close.addEventListener("click", () => {
+	menuInformation.classList.remove("active");
+	informationContainer.style.display = "none";
+});
+
 hideInformation(true);
 
 // ------------------------------------- video button ------------------------------------

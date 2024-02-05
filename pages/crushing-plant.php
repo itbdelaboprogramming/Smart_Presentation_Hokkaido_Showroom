@@ -35,6 +35,7 @@
 
             <div class="information-container" id="information-container" style="display:none;">
                 <div class="information-description">
+                    <img class="information-close" src="./assets/x_btn.svg" />
                     <p class="information-description-title">
                         Hokkaido Crushing Full Plant
                     </p>
@@ -182,10 +183,11 @@
                     <img src="./assets/Information-Button.png">
                     Information
                 </div>
-                <!-- <div class="menu-container-blue-sound">
+                <div class="menu-container-blue-sound">
                     <img src="./assets/Sound-Off-Button.png" id="sound-off">
-                    <img src="./assets/Sound-On-Button.png" id="sound-on" style="display: none;">
-                </div> -->
+                    <!-- <img src="./assets/Sound-On-Button.png" id="sound-on" style="display: none;"> -->
+                    Sound
+                </div>
                 <div class="menu-container-blue-animation">
                     <img src="./assets/Animation-Off-Button.png" id="animation-off">
                     <img src="./assets/Animation-On-Button.png" id="animation-on" style="display: none;">
