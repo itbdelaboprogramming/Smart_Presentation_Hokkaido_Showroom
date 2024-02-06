@@ -8,6 +8,7 @@ import {
 	createAnnotation,
 	removeAnnotation,
 } from "../script.js";
+import { updateSound, sound, timeoutId } from "./audio.js";
 
 // ---------------------------------------------------------------------------------------
 // ----------------------------------- Const, Var, Let -----------------------------------
@@ -69,36 +70,6 @@ var audio_speech = new Audio("./audio/Play.ht - VSI Gyropactor.wav");
 var audio_speech_2 = new Audio(
 	"./audio/Play.ht - VSI Gyropactor & Platform.wav"
 );
-var audio_speech_3 = new Audio("./audio/Play.ht - Full Plant.wav");
-
-var sound = audio_speech_3;
-
-async function audioPlayer() {
-	// if (change_audio === "model_name_1") {
-	// 	sound = audio_speech;
-	// } else if (change_audio === "model_name_2") {
-	// 	sound = audio_speech_2;
-	// } else if (change_audio === "model_name_3") {
-	// 	sound = audio_speech_3;
-	// }
-
-	if (typeof soundStatus !== "undefined" && soundStatus === 1) {
-		sound.addEventListener("ended", function () {
-			// Delay the next call to audioPlayer by 30000 milliseconds
-			setTimeout(() => {
-				audioPlayer();
-			}, 30000);
-		});
-	}
-	try {
-		sound.currentTime = 0;
-		await sound.play();
-	} catch (e) {
-		// do nothing
-		// console.log("error", e);
-	}
-}
-audioPlayer();
 
 // Function to print "test"
 // function printTest() {
@@ -385,7 +356,7 @@ function loadCatalogue(catalogue_product_list) {
 				change_audio = product_list.id;
 				sound.pause();
 				sound.currentTime = 0;
-				toggle_speech.classList.contains("active") ? audioPlayer() : "";
+				// toggle_speech.classList.contains("active") ? audioPlayer() : "";
 			}
 
 			resetCatalogueSelect();
@@ -411,12 +382,21 @@ function loadCatalogue(catalogue_product_list) {
 				// console.log("Overview");
 				updateAnnotation(convertOverviewToName("Overview"));
 				hideInformation(true);
+				resetAndUpdateSound(convertOverviewToName("Overview"));
 			} else {
 				hideInformation(false);
 				updateInformation(product_list_text);
+				resetAndUpdateSound(product_list_text);
 			}
 		});
 	});
+}
+
+function resetAndUpdateSound(file_name) {
+	clearTimeout(timeoutId);
+	sound.pause();
+	sound.currentTime = 0;
+	updateSound(new Audio(jsonData[file_name].audio_link));
 }
 
 function hideInformation(status) {

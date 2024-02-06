@@ -209,6 +209,7 @@
 
             <script type="module" src="script.js"> </script>
             <script type="module" src="./js/diorama.js"></script>
+            <script type="module" src="./js/audio.js"></script>
         </div>
     </body>
 </html>

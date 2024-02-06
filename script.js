@@ -9,6 +9,7 @@ import {
 } from "three/addons/renderers/CSS2DRenderer.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import jsonData from "./data/data.json" assert { type: "json" };
+import { audioPlayer, timeoutId, sound, updateSound } from "./js/audio.js";
 
 // ----------------------------------- SCENE BACKGROUND COLOR -----------------------------------
 export const scene = new THREE.Scene();
@@ -81,7 +82,7 @@ const loadingScreenBar = document.getElementById("loadingBar");
 const loadingScreenContainer = document.querySelector(
 	".loadingScreenContainer"
 );
-const loadingManager = new THREE.LoadingManager();
+export const loadingManager = new THREE.LoadingManager();
 
 loadingManager.onStart = function () {
 	loadingScreenContainer.style.display = "flex";
@@ -89,11 +90,13 @@ loadingManager.onStart = function () {
 
 loadingManager.onProgress = function (url, loaded, total) {
 	loadingScreenBar.value = (loaded / total) * 100;
+	// console.log("Loading file: " + url + ".\nLoaded: " + loaded + " of " + total);
 };
 
 loadingManager.onLoad = function () {
 	loadingScreenBar.value = 0;
 	loadingScreenContainer.style.display = "none";
+	setTimeout(audioPlayer, 500);
 };
 
 export const loader = new GLTFLoader(loadingManager);
@@ -116,14 +119,17 @@ if (currentPath.includes("crushing-plant")) {
 	path = jsonData["Hokkaido Crushing Full Plant"].glb_file;
 	setProductListText("Hokkaido Crushing Full Plant");
 	updateInformation("Hokkaido Crushing Full Plant");
+	resetAndUpdateSound("Hokkaido Crushing Full Plant");
 } else if (currentPath.includes("recycling-plant")) {
 	path = jsonData["Recycling Full Plant"].glb_file;
 	setProductListText("Recycling Full Plant");
 	updateInformation("Recycling Full Plant");
+	resetAndUpdateSound("Recycling Full Plant");
 } else {
 	path = jsonData["MSD700-Blade"].glb_file;
 	setProductListText("MSD700-Blade");
 	updateInformation("MSD700-Blade");
+	resetAndUpdateSound("MSD700-Blade");
 }
 
 const dracoLoader = new DRACOLoader();
@@ -139,7 +145,7 @@ loader.load(
 		let file3D = gltf.scene;
 		file3D.name = "file3D";
 		scene.add(file3D);
-		file3D.layers.enableAll();
+		// file3D.layers.enableAll();
 
 		file3D.position.set(0, -0.95, 0);
 	},
@@ -236,4 +242,15 @@ export function removeAnnotation(label) {
 
 export function setProductListText(text) {
 	product_list_text = text;
+}
+
+function resetAndUpdateSound(file_name) {
+	clearTimeout(timeoutId);
+	try {
+		sound.pause();
+		sound.currentTime = 0;
+	} catch (e) {
+		// do nothing
+	}
+	updateSound(new Audio(jsonData[file_name].audio_link));
 }
