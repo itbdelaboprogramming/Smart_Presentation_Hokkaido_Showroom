@@ -12,7 +12,7 @@
         <div class="bg">
 
             <!-- if using the background picture, comment this <video> -->
-             <video autoplay muted loop idate="bgVideo">
+             <video autoplay muted loop id="bgVideo">
                 <source src="./assets/video/light3_background.mp4" type="video/mp4">
                 Your browser does not support the video tag.
              </video>   

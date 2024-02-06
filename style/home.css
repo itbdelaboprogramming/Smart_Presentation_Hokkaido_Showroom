@@ -28,9 +28,11 @@
 }
 
 #bgVideo {
-	width: 100%;
-	height: auto;
-	z-index: -1;
+	position: fixed;
+	left: 0;
+	top: 0;
+	min-width: 100%;
+	min-height: 100%;
 }
 /* Use a video as background */
 
