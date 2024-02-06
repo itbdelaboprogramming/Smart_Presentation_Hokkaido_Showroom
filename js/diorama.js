@@ -255,7 +255,7 @@ slider.addEventListener("input", () => {
 // ---------------------------------------- sound ----------------------------------------
 menuSound.addEventListener("click", () => {
 	menuSound.classList.toggle("active");
-	
+
 	// 	if (menuSound.classList.contains("active")) {
 	// 	iconSoundOff.style.display = "none";
 	// 	iconSoundOn.style.display = "block";
@@ -565,3 +565,16 @@ function convertOverviewToName(file_name) {
 		return file_name;
 	}
 }
+
+// ------------------------------------- redirect after 1 minute no interaction -------------------------------------
+const back_button = document.querySelector(".menu-container-back-button");
+function redirect() {
+	back_button.click();
+}
+
+let timer = setTimeout(redirect, 60000);
+
+document.addEventListener("click", function (event) {
+	clearTimeout(timer);
+	timer = setTimeout(redirect, 60000);
+});
