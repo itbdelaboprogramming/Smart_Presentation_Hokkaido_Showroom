@@ -495,41 +495,6 @@ canvas {
 	justify-content: center;
 }
 
-@media screen and (max-width: 900px) {
-	.lightning-title {
-		display: none;
-	}
-
-	.lightning-title-2 {
-		/* flex-direction: column; */
-		display: none;
-	}
-
-	.opsi-container {
-		justify-content: center;
-		margin: 3px 0px 5px 0px;
-	}
-
-	.menu-container-blue-lightning-expand-wrapper {
-		gap: 0px;
-	}
-
-	.menu-container-blue-lightning-expand {
-		max-width: 690px;
-		min-width: 180px;
-		height: 230px;
-	}
-
-	.slider-group {
-		margin: 4px 0px;
-	}
-
-	.lightning-component-container {
-		flex-direction: column;
-		margin: 0px;
-	}
-}
-
 /* -------------------------------------------- NAKAYAMA'S TEXT -------------------------------------------- */
 .item-name-container {
 	position: fixed;
@@ -736,7 +701,7 @@ canvas {
 	left: 0%;
 	padding-bottom: 23px;
 	padding-left: 23px;
-	margin-left: 70px;
+	margin-left: 150px;
 }
 
 .sound-expand {
@@ -855,11 +820,51 @@ canvas {
 		padding: 0px 0px 23px 0px;
 		margin: 0;
 	}
+}
+
+@media screen and (max-width: 1070px) {
+	.lightning-title {
+		display: none;
+	}
+
+	.lightning-title-2 {
+		/* flex-direction: column; */
+		display: none;
+	}
+
+	.opsi-container {
+		justify-content: center;
+		margin: 3px 0px 5px 0px;
+	}
+
+	.menu-container-blue-lightning-expand-wrapper {
+		gap: 0px;
+	}
+
+	.menu-container-blue-lightning-expand {
+		max-width: 690px;
+		min-width: 180px;
+		height: 230px;
+	}
+
+	.slider-group {
+		margin: 4px 0px;
+	}
+
+	.lightning-component-container {
+		flex-direction: column;
+		margin: 0px;
+	}
 
 	.sound-expand {
-		/* Box */
-		min-width: 110px;
-		width: 100px;
+		min-width: 180px;
+		height: 230px;
+
+		padding: 0px 0px 0px 0px;
+		font-weight: 400;
+		font-size: 11.5802px;
+		line-height: 13px;
+		color: #04445f;
 	}
 }
 

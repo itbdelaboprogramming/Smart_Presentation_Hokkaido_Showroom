@@ -43,6 +43,12 @@ const maxValue_lamp = slider_lamp.getAttribute("max");
 let value_lamp;
 const sliderFill_lamp = document.getElementById("fill-lamp");
 
+// ------------------------------- slider volume --------------------------------
+const slider_volume = document.getElementById("slider-sound");
+const maxValue_volume = slider_volume.getAttribute("max");
+let value_volume;
+const sliderFill_volume = document.getElementById("fill-sound");
+
 // -------------------------------------- catalogue --------------------------------------
 const menuAlbum = document.querySelector(".menu-container-blue-album");
 const catalogueContainer = document.getElementById("catalogue-container-2");
@@ -202,6 +208,15 @@ slider_lamp.addEventListener("input", () => {
 	updateLamp();
 });
 
+// ------------------------------- slider volume --------------------------------
+slider_volume.value = 0.5;
+updateSliderVolume();
+updateVolume();
+slider_volume.addEventListener("input", () => {
+	updateSliderVolume();
+	updateVolume();
+});
+
 // -------------------------------------- catalogue --------------------------------------
 menuAlbum.addEventListener("click", () => {
 	menuAlbum.classList.toggle("active");
@@ -227,15 +242,15 @@ slider.addEventListener("input", () => {
 menuSound.addEventListener("click", () => {
 	menuSound.classList.toggle("active");
 
-	// 	if (menuSound.classList.contains("active")) {
-	// 	iconSoundOff.style.display = "none";
-	// 	iconSoundOn.style.display = "block";
-	// 	soundExpand.style.display = "flex";
-	// } else {
-	// 	iconSoundOff.style.display = "block";
-	// 	iconSoundOn.style.display = "none";
-	// 	soundExpand.style.display = "none";
-	// }
+	if (menuSound.classList.contains("active")) {
+		// iconSoundOff.style.display = "none";
+		// iconSoundOn.style.display = "block";
+		soundExpand.style.display = "flex";
+	} else {
+		// iconSoundOff.style.display = "block";
+		// iconSoundOn.style.display = "none";
+		soundExpand.style.display = "none";
+	}
 });
 
 // toggle_speech.addEventListener("click", () => {
@@ -344,6 +359,18 @@ function updateSliderLamp() {
 function updateLamp() {
 	let lamp = scene.getObjectByName("dirLight");
 	lamp.intensity = slider_lamp.value;
+}
+
+// ------------------------------- slider volume --------------------------------
+function updateSliderVolume() {
+	value_volume = (slider_volume.value / maxValue_volume) * 100 + "%";
+	sliderFill_volume.style.width = value_volume;
+}
+
+function updateVolume() {
+	// let sound = scene.getObjectByName("dirLight");
+	// sound.intensity = slider_lamp.value;
+	sound.volume = slider_volume.value;
 }
 
 // -------------------------------------- catalogue --------------------------------------

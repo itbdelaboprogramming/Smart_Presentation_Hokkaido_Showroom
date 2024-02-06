@@ -110,12 +110,20 @@
             <div class="container-bottom-left-ml2x">
                 <div class="sound-expand" style="display:none;">
                     <div class="sound-expand-component">
-                        Voice Over
-                        <div class="toggle-container">
+                        Volume Controller
+                        <div class="slider-group">
+                            <div class="slider-container">
+                                <span class="bar">
+                                    <span class="fill" id="fill-sound"></span>
+                                </span>
+                                <input type="range" min="0" max="1" value="0.5" step="0.05" class="slider" id="slider-sound"/>
+                            </div>
+                        </div>
+                        <!-- <div class="toggle-container">
                             Off
                             <div class="toggle-speech"></div>
                             On
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
