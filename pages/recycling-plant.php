@@ -207,7 +207,7 @@
             </div>
             <div class="container-full-screen-video">
                 <div class="pdf-pop-up-container-video" id="pdf-pop-up-container-video">
-                    <video id="video" width="100%" height="auto" type="video/mp4" controls></video>
+                    <video id="video" width="100%" height="auto" type="video/mp4" controls  disablePictureInPicture controlslist="nodownload noplaybackrate"></video>
                 </div>
             </div>
             <div class="loadingScreenContainer" style="display: none">

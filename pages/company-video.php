@@ -24,7 +24,7 @@
                     for ($i = 0; $i < 8; $i++) {
                 ?>
                         <div class="video-card">
-                            <video src="./files/video/中山鉄工所ジャイロパクタ SRシリーズ.mp4" width="100%" height="auto" type="video/mp4" controls></video>
+                            <video src="./files/video/中山鉄工所ジャイロパクタ SRシリーズ.mp4" width="100%" height="auto" type="video/mp4" controls disablePictureInPicture controlslist="nodownload noplaybackrate"></video>
                         </div>
                 <?php
                     }
