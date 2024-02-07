@@ -119,6 +119,7 @@ const info_close = document.querySelector(".information-close");
 const video_button = document.querySelector(".menu-video");
 const video_pop_up = document.querySelector(".container-full-screen-video");
 const video = document.getElementById("video");
+const close_video_x = document.querySelector(".close-video");
 
 // ---------------------------------------------------------------------------------------
 // ------------------------------------- PROGRAM CODE ------------------------------------
@@ -310,6 +311,12 @@ hideInformation(true);
 // ------------------------------------- video button ------------------------------------
 video_button.addEventListener("click", () => {
 	video_pop_up.classList.toggle("active");
+});
+
+close_video_x.addEventListener("click", () => {
+	video_pop_up.classList.remove("active");
+	video.pause();
+	video.currentTime = 0;
 });
 
 video_pop_up.addEventListener("click", function (e) {

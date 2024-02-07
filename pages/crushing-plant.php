@@ -222,6 +222,9 @@
             </div>
             <div class="container-full-screen-video">
                 <div class="pdf-pop-up-container-video" id="pdf-pop-up-container-video">
+                    <div class="close-video">
+                        <img src="./assets/video_close.svg" height="10px" width="10px"/>
+                    </div>
                     <video id="video" width="100%" height="auto" type="video/mp4" controls  disablePictureInPicture controlslist="nodownload noplaybackrate"></video>
                 </div>
             </div>
