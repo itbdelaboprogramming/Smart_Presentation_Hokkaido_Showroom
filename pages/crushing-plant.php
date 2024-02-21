@@ -192,7 +192,7 @@
                     Information
                 </div>
                 <div class="menu-container-blue-sound">
-                    <img src="./assets/Sound-Off-Button.png" id="sound-off">
+                    <img src="./assets/Sound-On-Button.png" id="sound-off">
                     <!-- <img src="./assets/Sound-On-Button.png" id="sound-on" style="display: none;"> -->
                     Sound
                 </div>
