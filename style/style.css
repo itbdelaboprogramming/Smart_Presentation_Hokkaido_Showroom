@@ -587,6 +587,19 @@ canvas {
 	}
 }
 
+.catalogue-close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 7px 7px 0px 0px;
+	cursor: pointer;
+	margin: 5px 5px 0px 0px;
+}
+
+.catalogue-close:hover {
+	filter: drop-shadow(0px 0px 3px rgba(24, 154, 180, 0.9));
+}
+
 .catalogue-description-title-2 {
 	font-family: "Ubuntu";
 	font-style: normal;

@@ -56,6 +56,8 @@ const catalogue_product_list = document.querySelectorAll(
 	".catalogue-product-list-2"
 );
 
+const catalogue_close = document.querySelector(".catalogue-close");
+
 // ------------------------------------- slider zoom -------------------------------------
 const slider = document.getElementById("slider-zoom");
 const maxValue = slider.getAttribute("max");
@@ -227,6 +229,11 @@ menuAlbum.addEventListener("click", () => {
 	} else {
 		catalogueContainer.style.display = "none";
 	}
+});
+
+catalogue_close.addEventListener("click", () => {
+	menuAlbum.classList.remove("active");
+	catalogueContainer.style.display = "none";
 });
 
 loadCatalogue(catalogue_product_list);
@@ -586,9 +593,9 @@ function redirect() {
 	back_button.click();
 }
 
-let timer = setTimeout(redirect, 60000);
+let timer = setTimeout(redirect, 60000*5);
 
 document.addEventListener("click", function (event) {
 	clearTimeout(timer);
-	timer = setTimeout(redirect, 60000);
+	timer = setTimeout(redirect, 60000*5);
 });
