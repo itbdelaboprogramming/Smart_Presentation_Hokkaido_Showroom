@@ -437,7 +437,7 @@ function resetAndUpdateSound(file_name) {
 	clearTimeout(timeoutId);
 	sound.pause();
 	sound.currentTime = 0;
-	updateSound(new Audio(jsonData[file_name].audio_link));
+	updateSound(new Audio(jsonData[file_name].audio_link), slider_volume.value);
 }
 
 function hideInformation(status) {
@@ -593,9 +593,9 @@ function redirect() {
 	back_button.click();
 }
 
-let timer = setTimeout(redirect, 60000*5);
+let timer = setTimeout(redirect, 60000 * 5);
 
 document.addEventListener("click", function (event) {
 	clearTimeout(timer);
-	timer = setTimeout(redirect, 60000*5);
+	timer = setTimeout(redirect, 60000 * 5);
 });

@@ -36,6 +36,11 @@ export async function audioPlayer() {
 }
 // audioPlayer();
 
-export function updateSound(newSound) {
+export function updateSound(newSound, volume) {
 	sound = newSound;
+	if (volume !== undefined && volume !== null && volume !== "") {
+		sound.volume = volume;
+	} else {
+		sound.volume = 0.5;
+	}
 }
