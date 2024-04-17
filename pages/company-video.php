@@ -50,6 +50,7 @@
                 ?>
                         <div class="video-card">
                             <video src="<?php echo $filePath; ?>" width="100%" height="auto" type="video/mp4" controls disablePictureInPicture controlslist="nodownload noplaybackrate"></video>
+                            <img class="information-close" src="./assets/x_btn.svg" />
                             <div class="video-title"><?php echo $title; ?></div>
                         </div>
                 <?php
@@ -57,5 +58,6 @@
                 ?>
             </div>
         </div>
+        <script type="module" src="./js/company-video.js"></script>
     </body>
 </html>
