@@ -53,11 +53,12 @@
 	user-select: none;
 }
 
-/* .title-home {
-	font-size: 6rem;
-	font-weight: 700;
+.title-home {
+	color: #fff;
+	font-size: 3rem;
+	font-weight: 350;
 	margin: 0;
-} */
+}
 
 .button-container {
 	display: flex;

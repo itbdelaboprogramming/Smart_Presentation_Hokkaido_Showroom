@@ -18,7 +18,7 @@
              </video>   
 
             <div class="page-home">
-                <!-- <p class="title-home">中山鉄工所北海道ショールーム</p> -->
+                <p class="title-home">スマート・プレゼンテーションは画面に触れて操作ができます</p>
     
                 <div class="button-container">
                     <a class="button-404" href="crushing-plant">
