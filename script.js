@@ -3,10 +3,11 @@ const myCanvas = document.querySelector("#myCanvas");
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import {
-	CSS2DRenderer,
-	CSS2DObject,
-} from "three/addons/renderers/CSS2DRenderer.js";
+// import {
+// 	CSS2DRenderer,
+// 	CSS2DObject,
+// } from "three/addons/renderers/CSS2DRenderer.js";
+import { CSS2DRenderer, CSS2DObject} from "./js/CSS2DRenderer.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
 import jsonData from "./data/data.json" assert { type: "json" };
 import { audioPlayer, timeoutId, sound, updateSound } from "./js/audio.js";
@@ -182,7 +183,7 @@ function updateInformation(file_name) {
 	information_description.innerHTML = x_joined;
 	createAnnotation(
 		jsonData[file_name].annotation_text,
-		new THREE.Vector3(0, 10, 0),
+		new THREE.Vector3(4, 7.25, 0),
 		"A"
 	);
 
