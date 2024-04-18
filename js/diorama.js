@@ -1,7 +1,7 @@
 import { scene, camera, orbitControls, loader } from "../script.js";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import jsonData from "../data/data.json" assert { type: "json" };
+import jsonData from "../data/data.json" with { type: "json" };
 import {
 	product_list_text,
 	setProductListText,
@@ -318,6 +318,8 @@ hideInformation(true);
 // ------------------------------------- video button ------------------------------------
 video_button.addEventListener("click", () => {
 	video_pop_up.classList.toggle("active");
+	video.currentTime = 0;
+	video.play();
 });
 
 close_video_x.addEventListener("click", () => {
@@ -587,7 +589,7 @@ function convertOverviewToName(file_name) {
 	}
 }
 
-// ------------------------------------- redirect after 1 minute no interaction -------------------------------------
+// ------------------------------------- redirect after 5 minute no interaction -------------------------------------
 const back_button = document.querySelector(".menu-container-back-button");
 function redirect() {
 	back_button.click();

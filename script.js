@@ -9,7 +9,7 @@ import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 // } from "three/addons/renderers/CSS2DRenderer.js";
 import { CSS2DRenderer, CSS2DObject} from "./js/CSS2DRenderer.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
-import jsonData from "./data/data.json" assert { type: "json" };
+import jsonData from "./data/data.json" with { type: "json" };
 import { audioPlayer, timeoutId, sound, updateSound } from "./js/audio.js";
 
 // ----------------------------------- SCENE BACKGROUND COLOR -----------------------------------
