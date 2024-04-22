@@ -318,6 +318,7 @@ hideInformation(true);
 // ------------------------------------- video button ------------------------------------
 video_button.addEventListener("click", () => {
 	video_pop_up.classList.toggle("active");
+	sound.pause();
 	video.currentTime = 0;
 	video.play();
 });
@@ -326,6 +327,7 @@ close_video_x.addEventListener("click", () => {
 	video_pop_up.classList.remove("active");
 	video.pause();
 	video.currentTime = 0;
+	sound.play();
 });
 
 video_pop_up.addEventListener("click", function (e) {
@@ -336,6 +338,7 @@ video_pop_up.addEventListener("click", function (e) {
 			video_pop_up.classList.remove("active");
 			video.pause();
 			video.currentTime = 0;
+			sound.play()
 		}
 	}
 });
