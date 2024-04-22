@@ -319,8 +319,6 @@ hideInformation(true);
 video_button.addEventListener("click", () => {
 	video_pop_up.classList.toggle("active");
 	sound.pause();
-	video.currentTime = 0;
-	video.play();
 });
 
 close_video_x.addEventListener("click", () => {
