@@ -128,3 +128,17 @@ body {
 video::-webkit-media-controls-fullscreen-button {
 	display: none;
 }
+
+/* ----------------------------------------------- TEXT CONTAINER ----------------------------------------------- */
+
+.bottom-center {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.text-page {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 350;
+    margin: 0;
+}

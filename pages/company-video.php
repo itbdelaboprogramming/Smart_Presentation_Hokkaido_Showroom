@@ -57,6 +57,9 @@
                     }
                 ?>
             </div>
+            <div class="bottom-center">
+                <div class="text-page">ビデオのタイトルをクリックすると、より見やすくなります。</div>
+            </div>
         </div>
         <script type="module" src="./js/company-video.js"></script>
     </body>
