@@ -20,16 +20,16 @@
             <?php
                    for ($i = 0; $i < 5; $i++) {
             ?>
-                <div class="pdf-card">
+                <div class="pdf-card" data-pdf="./files/pdf/Micro_Hydro.pdf">
                     <!-- <iframe src="./files/pdf/Micro_Hydro.pdf#toolbar=0" width="370" height="486" frameborder="0" ></iframe> -->
-                    <object data="./files/pdf/Micro_Hydro.pdf#toolbar=0" type="application/pdf" width="370" height="486">
+                    <object data="./files/pdf/Micro_Hydro.pdf#toolbar=0" type="application/pdf" width="374" height="486">
                         alt : <a href="/files/pdf/Micro_Hydro.pdf">Micro_Hydro.pdf</a>
                     </object>
                     <div class="overlay"></div>
                 </div>
-                <div class="pdf-card">
+                <div class="pdf-card" data-pdf="./files/pdf/SR_en_ver.2.06_20220523.pdf">
                     <!-- <iframe src="./files/pdf/SR_en_ver.2.06_20220523.pdf#toolbar=0" width="370" height="486" frameborder="0" ></iframe> -->
-                    <object data="./files/pdf/SR_en_ver.2.06_20220523.pdf#toolbar=0" type="application/pdf" width="370" height="486">
+                    <object data="./files/pdf/SR_en_ver.2.06_20220523.pdf#toolbar=0" type="application/pdf" width="374" height="486">
                         alt : <a href="/files/pdf/SR_en_ver.2.06_20220523.pdf#toolbar=0">SR_en_ver.2.06_20220523.pdf</a>
                     </object>
                     <div class="overlay"></div>
@@ -40,6 +40,11 @@
         </div>
         <div class="bottom-center">
             <div class="text-page">ビデオのタイトルをクリックすると、より見やすくなります。</div>
+        </div>
+        <div class="container-full-screen-pdf">
+            <div class="pdf-pop-up-container" id="pdf-pop-up-container">
+                <embed id="pdf-file" type="application/pdf" width="100%" height="100%"/>
+            </div>
         </div>
     </div>
     <script type="module" src="./js/catalog-page.js"></script>

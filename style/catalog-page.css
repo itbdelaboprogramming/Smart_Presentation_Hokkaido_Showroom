@@ -90,6 +90,31 @@ body {
 	position: relative;
 }
 
+/* -------------------------------------------------- PDF POP UP -------------------------------------------------- */
+.container-full-screen-pdf {
+	position: fixed;
+	z-index: 3;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	padding: 5% 7% 5% 7%;
+	backdrop-filter: blur(5px);
+
+	display: none;
+	user-select: none;
+}
+
+.container-full-screen-pdf.active {
+	display: block;
+}
+
+.pdf-pop-up-container {
+	border: 10px solid var(--secondary-color-200, #ff7582);
+	height: 100%;
+	width: 100%;
+}
+
 /* ---------------------------------------------- PAGE FOOTER ---------------------------------------------- */
 .bottom-center {
 	text-align: center;
