@@ -25,6 +25,10 @@
         case "company-video":
             include "./pages/company-video.php";
             break;
+
+        case "catalog-page":
+            include "./pages/catalog-page.php";
+            break;
         
         default:
             http_response_code(404);
