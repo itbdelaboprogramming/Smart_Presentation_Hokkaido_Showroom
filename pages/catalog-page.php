@@ -39,7 +39,7 @@
             ?>
         </div>
         <div class="bottom-center">
-            <div class="text-page">ビデオのタイトルをクリックすると、より見やすくなります。</div>
+            <div class="text-page">PDF のタイトルをクリックすると、より見やすくなります。</div>
         </div>
         <div class="container-full-screen-pdf">
             <div class="pdf-pop-up-container" id="pdf-pop-up-container">

@@ -33,6 +33,9 @@
                 </div>
 
                 <div class="button-container-2">
+                    <a class="button-movie" href="catalog-page">
+                        <img src="./assets/catalog.png" alt="Company Information">
+                    </a>                    
                     <a class="button-movie" href="company-video">
                         <img src="./assets/movie-2.png" alt="Company Information">
                             <!-- <span>Company Information</span> -->
