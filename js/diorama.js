@@ -8,7 +8,7 @@ import {
 	createAnnotation,
 	removeAnnotation,
 } from "../script.js";
-import { updateSound, sound, timeoutId } from "./audio.js";
+import { updateSound, sound, timeoutId, setSoundStatus, playSound } from "./audio.js";
 
 // ---------------------------------------------------------------------------------------
 // ----------------------------------- Const, Var, Let -----------------------------------
@@ -72,12 +72,12 @@ const iconSoundOn = document.getElementById("sound-on");
 const soundExpand = document.querySelector(".sound-expand");
 
 let change_audio = "model_name_1";
-let soundStatus = 1;
+// let soundStatus = 1;
 
-var audio_speech = new Audio("./audio/Play.ht - VSI Gyropactor.wav");
-var audio_speech_2 = new Audio(
-	"./audio/Play.ht - VSI Gyropactor & Platform.wav"
-);
+// var audio_speech = new Audio("./audio/Play.ht - VSI Gyropactor.wav");
+// var audio_speech_2 = new Audio(
+// 	"./audio/Play.ht - VSI Gyropactor & Platform.wav"
+// );
 
 // Function to print "test"
 // function printTest() {
@@ -318,6 +318,7 @@ hideInformation(true);
 // ------------------------------------- video button ------------------------------------
 video_button.addEventListener("click", () => {
 	video_pop_up.classList.toggle("active");
+	setSoundStatus(0);
 	sound.pause();
 });
 
@@ -325,7 +326,8 @@ close_video_x.addEventListener("click", () => {
 	video_pop_up.classList.remove("active");
 	video.pause();
 	video.currentTime = 0;
-	sound.play();
+	setSoundStatus(1);
+	playSound();
 });
 
 video_pop_up.addEventListener("click", function (e) {
@@ -336,7 +338,8 @@ video_pop_up.addEventListener("click", function (e) {
 			video_pop_up.classList.remove("active");
 			video.pause();
 			video.currentTime = 0;
-			sound.play()
+			setSoundStatus(1);
+			playSound();
 		}
 	}
 });
