@@ -1131,6 +1131,10 @@ canvas {
 	transform: translateY(2px);
 }
 
+video::-webkit-media-controls-fullscreen-button {
+	display: none;
+}
+
 /* --------------------------------------------- LOADING SCREEN -------------------------------------------- */
 #loadingBarLabel {
 	font-family: "Ubuntu";
