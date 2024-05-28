@@ -64,13 +64,17 @@ body {
 
 /* -------------------------------------------------- PDF -------------------------------------------------- */
 .pdf-content-container {
-	display: flex;
+	/* display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
 	margin: 73px 23px 23px 23px;
 	flex-wrap: wrap;
-	gap: 60px;
+	gap: 60px; */
+	display: grid;
+	grid-template-columns: repeat(6, 1fr); /* 6 columns */
+	gap: 16px;
+	padding: 16px 23px;
 }
 
 .overlay {
@@ -92,11 +96,16 @@ body {
 }
 
 .pdf-card {
-	width: 336px;
-	height: 482px;
+	/* width: 334px; */
+	/* height: 482px; */
+	width: calc(((100vw - 16px - 46px - (16px * 5) - (32px * 6)) / 6) - 1px);
+	height: calc(((100vh - 87px - 48px - 120px - 71px) / 2) - 1px);
 	overflow: hidden;
 	position: relative;
 	background-color: white;
+
+	transform: translateX(-50%);
+	left: 50%;
 }
 
 .pdf-card object {
@@ -104,6 +113,12 @@ body {
 	transform: translate(-50%, -50%);
 	top: 50%;
 	left: 50%;
+	/* width: 374px; */
+	/* height: 486px; */
+	width: calc(
+		((100vw - 62px - (16px * 5) - (32px * 6) + (40px * 6)) / 6) - 1px
+	);
+	height: calc(((100vh - 87px - 48px - 120px - 71px + 8px) / 2) - 1px);
 }
 
 .video-title {
@@ -140,7 +155,7 @@ body {
 /* ---------------------------------------------- PAGE FOOTER ---------------------------------------------- */
 .bottom-center {
 	text-align: center;
-	margin: 20px 0;
+	margin: 16px 0;
 }
 
 .text-page {

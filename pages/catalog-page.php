@@ -5,7 +5,6 @@
     <link rel="icon" type="image/x-icon" href="assets/SR_logo_03_red.png">
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/catalog-page.css">
-    <link rel="stylesheet" href="./style/company-video.css">
 </head>
 <body>
     <div>
@@ -37,7 +36,7 @@
             ?>
                 <div class="pdf-background">
                     <div class="pdf-card" data-pdf="./files/pdf/<?php echo $pdfPath; ?>">
-                        <object data="./files/pdf/<?php echo $pdfPath; ?>#toolbar=0" type="application/pdf" width="374" height="486">
+                        <object data="./files/pdf/<?php echo $pdfPath; ?>#toolbar=0" type="application/pdf">
                             alt : <a href="/files/pdf/<?php echo $pdfPath; ?>"><?php echo $pdfPath; ?></a>
                         </object>
                     </div>
