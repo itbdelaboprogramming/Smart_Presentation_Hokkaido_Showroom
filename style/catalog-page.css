@@ -88,14 +88,22 @@ body {
 	border: 1px solid #74e7d4;
 	border-radius: 5px;
 	background-color: rgba(255, 255, 255, 1);
+	position: relative;
 }
 
 .pdf-card {
-	width: 350px;
-	height: 486px;
+	width: 336px;
+	height: 482px;
 	overflow: hidden;
 	position: relative;
 	background-color: white;
+}
+
+.pdf-card object {
+	position: absolute;
+	transform: translate(-50%, -50%);
+	top: 50%;
+	left: 50%;
 }
 
 .video-title {

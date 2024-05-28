@@ -40,9 +40,9 @@
                         <object data="./files/pdf/<?php echo $pdfPath; ?>#toolbar=0" type="application/pdf" width="374" height="486">
                             alt : <a href="/files/pdf/<?php echo $pdfPath; ?>"><?php echo $pdfPath; ?></a>
                         </object>
-                        <div class="overlay"></div>
                     </div>
                     <div class="video-title"><?php echo $pdfTitle; ?></div>
+                    <div class="overlay"></div>
                 </div>
             <?php
                 }
