@@ -13,7 +13,7 @@
                 <img src="./assets/Back-Button.svg"> Back
             </button>
             <div class="page-name-container">
-                <div class="page-name-text">Catalog Page​</div>
+                <div class="page-name-text">カタログ一覧​</div>
             </div>
         </div>
         <div class="pdf-content-container">
@@ -48,7 +48,7 @@
             ?>
         </div>
         <div class="bottom-center">
-            <div class="text-page">PDF のタイトルをクリックすると、より見やすくなります。</div>
+            <div class="text-page">PDFのタイトルをクリックすると、より見やすくなります。</div>
         </div>
         <div class="container-full-screen-pdf">
             <div class="pdf-pop-up-container" id="pdf-pop-up-container">
