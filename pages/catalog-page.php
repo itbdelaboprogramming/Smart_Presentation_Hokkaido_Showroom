@@ -5,6 +5,7 @@
     <link rel="icon" type="image/x-icon" href="assets/SR_logo_03_red.png">
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/catalog-page.css">
+    <link rel="stylesheet" href="./style/company-video.css">
 </head>
 <body>
     <div>
@@ -18,21 +19,30 @@
         </div>
         <div class="pdf-content-container">
             <?php
-                   for ($i = 0; $i < 5; $i++) {
+                $pdfList = array(
+                    "PDF 1" => "Micro_Hydro.pdf",
+                    "PDF 2" => "SR_en_ver.2.06_20220523.pdf",
+                    "PDF 3" => "SR_en_ver.2.06_20220523.pdf",
+                    "PDF 4" => "Micro_Hydro.pdf",
+                    "PDF 5" => "SR_en_ver.2.06_20220523.pdf",
+                    "PDF 6" => "Micro_Hydro.pdf",
+                    "PDF 7" => "SR_en_ver.2.06_20220523.pdf",
+                    "PDF 8" => "SR_en_ver.2.06_20220523.pdf",
+                    "PDF 9" => "Micro_Hydro.pdf",
+                    "PDF 10" => "SR_en_ver.2.06_20220523.pdf",
+                    "PDF 11" => "SR_en_ver.2.06_20220523.pdf",
+                    "PDF 12" => "Micro_Hydro.pdf"
+                );
+                foreach ($pdfList as $pdfTitle => $pdfPath) {
             ?>
-                <div class="pdf-card" data-pdf="./files/pdf/Micro_Hydro.pdf">
-                    <!-- <iframe src="./files/pdf/Micro_Hydro.pdf#toolbar=0" width="370" height="486" frameborder="0" ></iframe> -->
-                    <object data="./files/pdf/Micro_Hydro.pdf#toolbar=0" type="application/pdf" width="374" height="486">
-                        alt : <a href="/files/pdf/Micro_Hydro.pdf">Micro_Hydro.pdf</a>
-                    </object>
-                    <div class="overlay"></div>
-                </div>
-                <div class="pdf-card" data-pdf="./files/pdf/SR_en_ver.2.06_20220523.pdf">
-                    <!-- <iframe src="./files/pdf/SR_en_ver.2.06_20220523.pdf#toolbar=0" width="370" height="486" frameborder="0" ></iframe> -->
-                    <object data="./files/pdf/SR_en_ver.2.06_20220523.pdf#toolbar=0" type="application/pdf" width="374" height="486">
-                        alt : <a href="/files/pdf/SR_en_ver.2.06_20220523.pdf#toolbar=0">SR_en_ver.2.06_20220523.pdf</a>
-                    </object>
-                    <div class="overlay"></div>
+                <div class="pdf-background">
+                    <div class="pdf-card" data-pdf="./files/pdf/<?php echo $pdfPath; ?>">
+                        <object data="./files/pdf/<?php echo $pdfPath; ?>#toolbar=0" type="application/pdf" width="374" height="486">
+                            alt : <a href="/files/pdf/<?php echo $pdfPath; ?>"><?php echo $pdfPath; ?></a>
+                        </object>
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="video-title"><?php echo $pdfTitle; ?></div>
                 </div>
             <?php
                 }
