@@ -74,7 +74,7 @@ body {
 	display: grid;
 	grid-template-columns: repeat(6, 1fr); /* 6 columns */
 	gap: 16px;
-	padding: 16px 23px;
+	padding: 12px 23px;
 }
 
 .overlay {
