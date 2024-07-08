@@ -80,11 +80,11 @@
                         <div class="catalogue-product-list-text-2"> NE750J </div>
                         <img class="catalogue-image-preview-2" src="./files/img_preview/NE750J_preview.png" />
                     </div>
-                    <div class="catalogue-product-list-2" id="model_name_1">
+                    <!-- <div class="catalogue-product-list-2" id="model_name_1">
                         <div>自走式ベルトコンベア</div>
                         <div class="catalogue-product-list-text-2"> NEBC10520 </div>
                         <img class="catalogue-image-preview-2" src="./files/img_preview/NEBC10520 Belt Conveyor_preview.png" />
-                    </div>
+                    </div> -->
                     <div class="catalogue-product-list-2" id="model_name_1">
                         <div>給電コンテナハウス</div>
                         <div class="catalogue-product-list-text-2"> NePower </div>
@@ -226,7 +226,7 @@
                     <div class="close-video">
                         <img src="./assets/video_close.svg" height="10px" width="10px"/>
                     </div>
-                    <video id="video" width="100%" height="auto" type="video/mp4" controls  disablePictureInPicture controlslist="nodownload noplaybackrate"></video>
+                    <video id="video" width="100%" height="auto" type="video/mp4" controls preload="auto" disablePictureInPicture controlslist="nodownload noplaybackrate"></video>
                 </div>
             </div>
             <div class="loadingScreenContainer" style="display: none">
