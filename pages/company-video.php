@@ -18,19 +18,7 @@
         </div>
         <div class="video-content-container">
             <?php
-                // // Array of video file names and corresponding titles
-                    // $videoFiles = array(
-                    //     "1. Dendomanシリーズ.mp4" => "Dendomanシリーズ",
-                    //     "2. NE100HBJ.mp4" => "NE100HBJ",
-                    //     "3. NE100JB.mp4" => "NE100JB",
-                    //     "4. NE200HBJ.mp4" => "NE200HBJ",
-                    //     "5. NE200J.mp4" => "NE200J",
-                    //     "6. VSI.mp4" => "VSI",
-                    //     "7. ゴミ吸引選別_ASシリーズ.mp4" => "ゴミ吸引選別_ASシリーズ",
-                    //     "8. バケットハンマーBH70.mp4" => "バケットハンマーBH70"
-                    // );
-
-                    // Array of video file names and corresponding titles
+                // Array of video file names and corresponding titles
                     $videoFiles = array(
                         "1. Dendomanシリーズ.mp4" => "Dendomanシリーズ",
                         "2. NE100HBJ.mp4" => "NE100HBJ",
@@ -39,8 +27,20 @@
                         "5. NE200J.mp4" => "NE200J",
                         "6. VSI.mp4" => "VSI",
                         "7. ゴミ吸引選別_ASシリーズ.mp4" => "ゴミ吸引選別_ASシリーズ",
-                        "中山鉄工所ジャイロパクタ SRシリーズ.mp4" => "バケットハンマーBH70"
+                        "8. バケットハンマーBH70.mp4" => "バケットハンマーBH70"
                     );
+
+                    // // Array of video file names and corresponding titles
+                    // $videoFiles = array(
+                    //     "1. Dendomanシリーズ.mp4" => "Dendomanシリーズ",
+                    //     "2. NE100HBJ.mp4" => "NE100HBJ",
+                    //     "3. NE100JB.mp4" => "NE100JB",
+                    //     "4. NE200HBJ.mp4" => "NE200HBJ",
+                    //     "5. NE200J.mp4" => "NE200J",
+                    //     "6. VSI.mp4" => "VSI",
+                    //     "7. ゴミ吸引選別_ASシリーズ.mp4" => "ゴミ吸引選別_ASシリーズ",
+                    //     "中山鉄工所ジャイロパクタ SRシリーズ.mp4" => "バケットハンマーBH70"
+                    // );
 
                 foreach ($videoFiles as $fileName => $title) {
                     $filePath = "./files/video/" . $fileName;
