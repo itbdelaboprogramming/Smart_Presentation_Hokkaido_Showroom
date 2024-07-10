@@ -211,7 +211,7 @@
                     <div class="close-video">
                         <img src="./assets/video_close.svg" height="10px" width="10px"/>
                     </div>
-                    <video id="video" width="100%" height="auto" type="video/mp4" controls  disablePictureInPicture controlslist="nodownload noplaybackrate"></video>
+                    <video id="video" width="100%" height="auto" type="video/mp4" controls preload="auto" disablePictureInPicture controlslist="nodownload noplaybackrate"></video>
                 </div>
             </div>
             <div class="loadingScreenContainer" style="display: none">

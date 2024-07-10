@@ -10,7 +10,7 @@
     <div>
         <div class="container-top-left">
             <button class="menu-container-back-button" onClick="location.href='home'">
-                <img src="./assets/Back-Button.svg"> Back
+                <img src="./assets/Back-Button.svg" alt="back"> Back
             </button>
             <div class="page-name-container">
                 <div class="page-name-text">カタログ一覧​</div>
@@ -19,18 +19,18 @@
         <div class="pdf-content-container">
             <?php
                 $pdfList = array(
-                    "PDF 1" => "Micro_Hydro.pdf",
-                    "PDF 2" => "SR_en_ver.2.06_20220523.pdf",
-                    "PDF 3" => "SR_en_ver.2.06_20220523.pdf",
-                    "PDF 4" => "Micro_Hydro.pdf",
-                    "PDF 5" => "SR_en_ver.2.06_20220523.pdf",
-                    "PDF 6" => "Micro_Hydro.pdf",
-                    "PDF 7" => "SR_en_ver.2.06_20220523.pdf",
-                    "PDF 8" => "SR_en_ver.2.06_20220523.pdf",
-                    "PDF 9" => "Micro_Hydro.pdf",
-                    "PDF 10" => "SR_en_ver.2.06_20220523.pdf",
-                    "PDF 11" => "SR_en_ver.2.06_20220523.pdf",
-                    "PDF 12" => "Micro_Hydro.pdf"
+                    "会社案内" => "会社案内.pdf",
+                    "総合カタログ" => "総合カタログ.pdf",
+                    "Dendomanシリーズ" => "Dendomanシリーズ.pdf",
+                    "プラント-唐津砕石殿" => "Dendomanプラント-唐津砕石殿.pdf",
+                    "プラント-熊礦石材殿" => "Dendomanプラント-熊礦石材殿.pdf",
+                    "IoT高機能型プラント" => "IoT高機能型リサイクルプラント.pdf",
+                    "N-Link" => "N-Link.pdf",
+                    "MSD700" => "MSD700.pdf",
+                    "NE750J" => "NE750J.pdf",
+                    "NePower" => "NePower.pdf",
+                    "小水力発電システム" => "小水力発電システム.pdf",
+                    "VSI" => "SR_en_ver.2.06_20220523.pdf",
                 );
                 foreach ($pdfList as $pdfTitle => $pdfPath) {
             ?>
