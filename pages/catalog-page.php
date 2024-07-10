@@ -10,7 +10,7 @@
     <div>
         <div class="container-top-left">
             <button class="menu-container-back-button" onClick="location.href='home'">
-                <img src="./assets/Back-Button.svg"> Back
+                <img src="./assets/Back-Button.svg" alt="back"> Back
             </button>
             <div class="page-name-container">
                 <div class="page-name-text">カタログ一覧​</div>
@@ -36,7 +36,7 @@
             ?>
                 <div class="pdf-background">
                     <div class="pdf-card" data-pdf="./files/pdf/<?php echo $pdfPath; ?>">
-                        <object data="./files/pdf/<?php echo $pdfPath; ?>#toolbar=0" type="application/pdf">
+                        <object title="pdf - <?php echo $pdfTitle; ?>" data="./files/pdf/<?php echo $pdfPath; ?>#toolbar=0" type="application/pdf">
                             alt : <a href="/files/pdf/<?php echo $pdfPath; ?>"><?php echo $pdfPath; ?></a>
                         </object>
                     </div>
