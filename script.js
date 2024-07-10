@@ -60,7 +60,7 @@ dirLight.position.set(100, 100, -10);
 dirLight.castShadow = true;
 scene.add(dirLight);
 // --------------------------- LIGHTNING DEFAULT: CENTER BELOW CENTER ---------------------------
-const renderer = new THREE.WebGLRenderer({ canvas: myCanvas });
+export const renderer = new THREE.WebGLRenderer({ canvas: myCanvas });
 renderer.setClearColor(0xff0000, 1.0);
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(myCanvas.offsetWidth, myCanvas.offsetHeight);
@@ -158,20 +158,24 @@ loader.load(
 
 // ----------------------------------------- RENDER LOOP ----------------------------------------
 renderer.setAnimationLoop(() => {
+	animateLoop();
+});
+
+export function animateLoop(){
 	orbitControls.update();
 	labelRenderer.render(scene, camera);
 	renderer.render(scene, camera);
-});
+}
 
-// orbitControls.addEventListener("change", render);
+orbitControls.addEventListener("change", render);
 // renderer.setAnimationLoop(null);
  
-// function render(){
-//     labelRenderer.render(scene, camera);
-//     renderer.render(scene, camera);
-// }
+function render(){
+    labelRenderer.render(scene, camera);
+    renderer.render(scene, camera);
+}
  
-render();
+// render();
 // ---------------------------------------- RESIZE CANVAS ---------------------------------------
 myCanvas.style.width = window.innerWidth + "px";
 myCanvas.style.height = window.innerHeight + "px";

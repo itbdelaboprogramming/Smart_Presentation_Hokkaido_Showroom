@@ -1,4 +1,4 @@
-import { scene, camera, orbitControls, loader } from "../script.js";
+import { scene, camera, orbitControls, loader, renderer, animateLoop } from "../script.js";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
 import jsonData from "../data/data.json" with { type: "json" };
@@ -320,6 +320,7 @@ video_button.addEventListener("click", () => {
 	video_pop_up.classList.toggle("active");
 	setSoundStatus(0);
 	sound.pause();
+	renderer.setAnimationLoop(null);
 });
 
 close_video_x.addEventListener("click", () => {
@@ -514,6 +515,7 @@ function updateInformation(file_name) {
 }
 
 function updateFile3D(file_name) {
+	renderer.setAnimationLoop(animateLoop);
 	try {
 		let file3D = scene.getObjectByName("file3D");
 		file3D.name = "file3D";
