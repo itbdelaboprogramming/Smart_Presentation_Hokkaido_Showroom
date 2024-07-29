@@ -9,6 +9,8 @@ pdfCards.forEach(function (pdfCard) {
 		const pdf_object = pdfCard.querySelector(".pdf-card");
 		if (currentPdfCard !== pdf_object.getAttribute("data-pdf")) {
 			currentPdfCard = pdf_object.getAttribute("data-pdf");
+			// pdf_file.contentDocument.location.reload(true);
+			// pdf_file.scrollTop = 900;
 			pdf_file.setAttribute(
 				"src",
 				currentPdfCard + "#page=1&scrollbar=0&toolbar=0&view=FitH"
@@ -50,4 +52,16 @@ pdf_pop_up.addEventListener("click", function (e) {
 			pdf_pop_up.classList.remove("active");
 		}
 	}
+});
+
+// redirect to home after 5 minutes of inactivity
+const back_button = document.querySelector(".menu-container-back-button");
+function redirect() {
+	back_button.click();
+}
+
+let timer = setTimeout(redirect, 60000 * 5);
+document.addEventListener("click", function (event) {
+	clearTimeout(timer);
+	timer = setTimeout(redirect, 60000 * 5);
 });
