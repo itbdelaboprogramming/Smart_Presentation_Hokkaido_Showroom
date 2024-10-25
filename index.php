@@ -25,6 +25,10 @@
         case "company-video":
             include "./pages/company-video.php";
             break;
+        
+        case "company-playlist":
+            include "./pages/company-playlist.php";
+            break;
 
         case "catalog-page":
             include "./pages/catalog-page.php";
