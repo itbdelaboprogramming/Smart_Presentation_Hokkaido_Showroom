@@ -56,6 +56,18 @@
         </div>
         <div class="bottom-center">
             <div class="text-page">ビデオのタイトルをクリックすると、より見やすくなります。</div>
+        
+            <div class="youtube-icons">
+                <!-- Nakayama Japan YouTube Channel -->
+                 <a href="company-playlist">
+                    <img src="./assets/niw-japan.jpg" alt="Nakayama Japan YouTube" class="youtube-icon">
+                </a>
+                
+                <!-- Nakayama Overseas YouTube Channel -->
+                <a href="">
+                    <img src="./assets/niw-overseas.jpg" alt="Nakayama Overseas Youtube" class="youtube-icon">
+                </a>
+            </div>  
         </div>
     </div>
     <script type="module" src="./js/company-video.js"></script>
