@@ -37,8 +37,8 @@
         <div class="playlist-content-container">
             <?php
                 $playlists = array(
-                    "1.jpg" => [
-                        "title" => "Playlist 1",
+                    "1.jpeg" => [
+                        "title" => "Information",
                         "videos" => [
                             ["file" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像.mp4", "title" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像", "duration" => "00:00:53"],
                             ["file" => "Dendoman series NE100JT.mp4", "title" => "Dendoman series NE100JT", "duration" => "00:00:10"],
@@ -50,8 +50,33 @@
                             ["file" => "video8.mp4", "title" => "Video 8", "duration" => "00:00:10"]
                         ]
                     ],
-                    "2.jpg" => [
-                        "title" => "Playlist 2",
+                    "2.jpeg" => [
+                        "title" => "Dendoman",
+                        "videos" => [
+                            ["file" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像.mp4", "title" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像", "duration" => "00:00:53"],
+                            ["file" => "Dendoman series NE100JT.mp4", "title" => "Dendoman series NE100JT", "duration" => "00:00:10"],
+                            ["file" => "Dendoman series NE250I.mp4", "title" => "Dendoman series NE250I", "duration" => "00:00:53"],
+                            ["file" => "N-Link_コスト削減編.mp4", "title" => "N-Link_コスト削減編", "duration" => "00:00:10"],
+                            ["file" => "NE100JB_en_30秒.mp4", "title" => "NE100JB_en_30秒", "duration" => "00:00:10"],
+                            ["file" => "vコンパクト小水力発電システム Mission to Zero-emission Micro Hydro System.mp4", "title" => "コンパクト小水力発電システム Mission to Zero-emission Micro Hydro System", "duration" => "00:00:10"],
+                            ["file" => "video7.mp4", "title" => "Video 7", "duration" => "00:00:10"],
+                            ["file" => "video8.mp4", "title" => "Video 8", "duration" => "00:00:10"]
+                        ]
+                    ],
+                    "3.jpeg" => [
+                        "title" => "N-LINK",
+                        "videos" => [
+                            ["file" => "video1.mp4", "title" => "Video 1", "duration" => "00:00:53"],
+                            ["file" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像.mp4", "title" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像", "duration" => "00:00:53"],
+                            ["file" => "Dendoman series NE100JT.mp4", "title" => "Dendoman series NE100JT", "duration" => "00:00:10"],
+                            ["file" => "Dendoman series NE250I.mp4", "title" => "Dendoman series NE250I", "duration" => "00:00:53"],
+                            ["file" => "N-Link_コスト削減編.mp4", "title" => "N-Link_コスト削減編", "duration" => "00:00:10"],
+                            ["file" => "NE100JB_en_30秒.mp4", "title" => "NE100JB_en_30秒", "duration" => "00:00:10"],
+                            ["file" => "video8.mp4", "title" => "Video 8", "duration" => "00:00:10"]
+                        ]
+                    ],
+                    "4.jpeg" => [
+                        "title" => "Crusher",
                         "videos" => [
                             ["file" => "video1.mp4", "title" => "Video 1", "duration" => "00:00:53"],
                             ["file" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像.mp4", "title" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像", "duration" => "00:00:53"],
@@ -67,7 +92,7 @@
                 foreach ($playlists as $image => $playlist) {
                     echo '<div class="playlist-card" data-videos=\'' . json_encode($playlist["videos"]) . '\'>';
                     echo '<div class="card-content">';
-                    echo '<img src="./files/img/' . $image . '" alt="' . $playlist["title"] . '">';
+                    echo '<img src="./files/img/playlists/' . $image . '" alt="' . $playlist["title"] . '">';
                     echo '<div class="playlist-title">' . $playlist["title"] . '</div>';
                     echo '</div>';
                     echo '</div>';
