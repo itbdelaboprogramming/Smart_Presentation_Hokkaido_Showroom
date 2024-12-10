@@ -38,29 +38,32 @@
             <?php
                 $playlists = array(
                     "1.jpeg" => [
-                        "title" => "Information",
+                        "title" => "インフォメーション",
                         "videos" => [
-                            ["file" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像.mp4", "title" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像", "duration" => "00:00:53"],
-                            ["file" => "Dendoman series NE100JT.mp4", "title" => "Dendoman series NE100JT", "duration" => "00:00:10"],
-                            ["file" => "Dendoman series NE250I.mp4", "title" => "Dendoman series NE250I", "duration" => "00:00:53"],
-                            ["file" => "N-Link_コスト削減編.mp4", "title" => "N-Link_コスト削減編", "duration" => "00:00:10"],
-                            ["file" => "NE100JB_en_30秒.mp4", "title" => "NE100JB_en_30秒", "duration" => "00:00:10"],
-                            ["file" => "vコンパクト小水力発電システム Mission to Zero-emission Micro Hydro System.mp4", "title" => "コンパクト小水力発電システム Mission to Zero-emission Micro Hydro System", "duration" => "00:00:10"],
-                            ["file" => "video7.mp4", "title" => "Video 7", "duration" => "00:00:10"],
-                            ["file" => "video8.mp4", "title" => "Video 8", "duration" => "00:00:10"]
+                            ["file" => "砕石フォーラム2024.mp4", "title" => "砕石フォーラム2024", "duration" => "00:00:53"],
+                            ["file" => "NHKワールド／中山鉄工所インターン生の活動.mp4", "title" => "NHKワールド／中山鉄工所インターン生の活動", "duration" => "00:08:19"],
+                            ["file" => "2022NEW環境展_紹介動画PV.mp4", "title" => "2022NEW環境展_紹介動画PV", "duration" => "00:02:24"],
+                            ["file" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像.mp4", "title" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像", "duration" => "00:04:09"]
                         ]
                     ],
                     "2.jpeg" => [
                         "title" => "Dendoman",
                         "videos" => [
-                            ["file" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像.mp4", "title" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像", "duration" => "00:00:53"],
-                            ["file" => "Dendoman series NE100JT.mp4", "title" => "Dendoman series NE100JT", "duration" => "00:00:10"],
-                            ["file" => "Dendoman series NE250I.mp4", "title" => "Dendoman series NE250I", "duration" => "00:00:53"],
-                            ["file" => "N-Link_コスト削減編.mp4", "title" => "N-Link_コスト削減編", "duration" => "00:00:10"],
-                            ["file" => "NE100JB_en_30秒.mp4", "title" => "NE100JB_en_30秒", "duration" => "00:00:10"],
-                            ["file" => "vコンパクト小水力発電システム Mission to Zero-emission Micro Hydro System.mp4", "title" => "コンパクト小水力発電システム Mission to Zero-emission Micro Hydro System", "duration" => "00:00:10"],
-                            ["file" => "video7.mp4", "title" => "Video 7", "duration" => "00:00:10"],
-                            ["file" => "video8.mp4", "title" => "Video 8", "duration" => "00:00:10"]
+                            ["file" => "NE100HBJ_PV01_20220607.mp4", "title" => "NE100HBJ_PV01_20220607", "duration" => "00:01:42"],
+                            ["file" => "NE200HBJ_PV01_20220607.mp4", "title" => "NE200HBJ_PV01_20220607", "duration" => "00:02:06"],
+                            ["file" => "NE200J_油圧緩衝機構PV_03.mp4", "title" => "NE200J_油圧緩衝機構PV_03", "duration" => "00:01:26"],
+                            ["file" => "NE100JB_ja_50秒.mp4", "title" => "NE100JB_ja_50秒", "duration" => "00:00:51"],
+                            ["file" => "NE100JB_en_30秒.mp4", "title" => "NE100JB_en_30秒", "duration" => "00:00:31"],
+                            ["file" => "Dendoman NE100JP.mp4", "title" => "Dendoman NE100JP", "duration" => "00:04:41"],
+                            ["file" => "Dendoman series NE100JT.mp4", "title" => "Dendoman series NE100JT", "duration" => "00:02:15"],
+                            ["file" => "Dendoman series NE250I.mp4", "title" => "Dendoman series NE250I", "duration" => "00:01:59"],
+                            ["file" => "Dendoman　電動自走式クラッシャ　NE200I（インパクトタイプ）／㈱中山鉄工所.mp4", "title" => "Dendoman 電動自走式クラッシャ NE200I (インパクトタイプ)/㈱中山鉄工所", "duration" => "00:02:05"],
+                            ["file" => "Dendoman　電動自走式クラッシャ　NE200C（コーンタイプ）／㈱中山鉄工所.mp4", "title" => "Dendoman　電動自走式クラッシャ　NE200C（コーンタイプ）／㈱中山鉄工所", "duration" => "00:06:34"],
+                            ["file" => "Dendoman　電動自走式クラッシャ　NE1500WR（ロールタイプ）／㈱中山鉄工所.mp4", "title" => "Dendoman　電動自走式クラッシャ　NE1500WR（ロールタイプ）／㈱中山鉄工所", "duration" => "00:07:55"],
+                            ["file" => "Dendoman 電動自走式クラッシャNE280J（ジョータイプ）／㈱中山鉄工所.mp4", "title" => "Dendoman 電動自走式クラッシャNE280J（ジョータイプ）／㈱中山鉄工所", "duration" => "00:03:11"],
+                            ["file" => "Dendoman 電動自走式クラッシャ NE250J（ジョータイプ）／㈱中山鉄工所.mp4", "title" => "Dendoman 電動自走式クラッシャ NE250J（ジョータイプ）／㈱中山鉄工所", "duration" => "00:04:28"],
+                            ["file" => "Dendoman　電動自走式クラッシャNE100J（ジョータイプ）／㈱中山鉄工所.mp4", "title" => "Dendoman　電動自走式クラッシャNE100J（ジョータイプ）／㈱中山鉄工所", "duration" => "00:05:19"],
+                            ["file" => "電動自走式クラッシャＮＥ３００Ｊ _ ㈱中山鉄工所.mp4", "title" => "電動自走式クラッシャＮＥ３００Ｊ _ ㈱中山鉄工所", "duration" => "00:03:56"]
                         ]
                     ],
                     "3.jpeg" => [
