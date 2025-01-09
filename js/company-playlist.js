@@ -10,12 +10,28 @@ const nextBtn = document.getElementById('next-btn'); // For right sliding
 mainVideo.volume = 1; // Set volume to 100%
 
 // Close video player overlay when clicking outside the video player container
-videoPlayerOverlay.addEventListener('click', function(event) {
-    if (event.target === this) {  // If clicked outside the video player container
+videoPlayerOverlay.addEventListener('click', function (event) {
+    if (event.target === this) { // If clicked outside the video player container
         videoPlayerOverlay.classList.add('hidden');
         mainVideo.pause();
         mainVideo.src = ''; // Stop the video when closing the overlay
     }
+});
+
+// Function to toggle play/pause
+function togglePlayPause() {
+    if (mainVideo.paused) {
+        mainVideo.play(); // Play the video if it's paused
+    } else {
+        mainVideo.pause(); // Pause the video if it's playing
+    }
+}
+
+// Add event listeners for both click and touchstart to handle play/pause
+mainVideo.addEventListener('click', togglePlayPause); // For mouse clicks
+mainVideo.addEventListener('touchstart', (event) => {
+    event.preventDefault(); // Prevent default touch behavior (e.g., scrolling)
+    togglePlayPause(); // Call the same toggle function
 });
 
 // Load playlist videos
@@ -36,7 +52,7 @@ document.querySelectorAll('.playlist-card').forEach(card => {
             // Create a video element to capture the first frame
             const videoElement = document.createElement('video');
             videoElement.src = `./files/video/${video.file}`;
-            videoElement.preload = "metadata";  // Preload metadata to get the video duration and dimensions
+            videoElement.preload = "metadata"; // Preload metadata to get the video duration and dimensions
 
             // Create a canvas to draw the first frame
             const canvas = document.createElement('canvas');
@@ -44,7 +60,7 @@ document.querySelectorAll('.playlist-card').forEach(card => {
             
             // Wait for the video to load and capture the first frame
             videoElement.addEventListener('loadeddata', () => {
-                videoElement.currentTime = 0.1;  // Go to the first frame (you can adjust this time slightly)
+                videoElement.currentTime = 0.1; // Go to the first frame (you can adjust this time slightly)
 
                 // Draw the first frame on the canvas
                 videoElement.addEventListener('seeked', () => {
@@ -64,7 +80,7 @@ document.querySelectorAll('.playlist-card').forEach(card => {
             videoItem.innerHTML = `
                 <p>${index + 1}. ${video.title} - ${video.duration}</p>
             `;
-            
+
             videoItem.addEventListener('click', () => {
                 mainVideo.src = `./files/video/${video.file}`;
                 mainVideoTitle.textContent = video.title;
@@ -86,21 +102,11 @@ mainVideo.addEventListener('play', () => {
     mainVideoTitle.style.display = 'none'; // Hide the title when the video plays
 });
 
-// Add an event listener to show the title when the video is paused
-mainVideo.addEventListener('pause', () => {
-    mainVideoTitle.style.display = 'none'; // Show the title again when the video is paused
-});
+// // Add event listeners to scroll the playlist horizontally
+// prevBtn.addEventListener('click', () => {
+//     videoPlaylistContainer.scrollBy({ left: -320, behavior: 'smooth' }); // Scroll left
+// });
 
-// Optionally, you can also show the title when the video ends
-mainVideo.addEventListener('ended', () => {
-    mainVideoTitle.style.display = 'none'; // Show the title when the video ends
-});
-
-// Add event listeners to scroll the playlist horizontally
-prevBtn.addEventListener('click', () => {
-    videoPlaylistContainer.scrollBy({ left: -320, behavior: 'smooth' });
-});
-
-nextBtn.addEventListener('click', () => {
-    videoPlaylistContainer.scrollBy({ left: 320, behavior: 'smooth' });
-});
+// nextBtn.addEventListener('click', () => {
+//     videoPlaylistContainer.scrollBy({ left: 320, behavior: 'smooth' }); // Scroll right
+// });
