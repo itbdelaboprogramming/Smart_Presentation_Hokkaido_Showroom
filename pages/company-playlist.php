@@ -28,7 +28,7 @@
                     <h3 id="main-video-title"></h3>
                 </section>
                 <section class="video-playlist">
-                    <h3>Playlist</h3>
+                    <!-- <h3>Playlist</h3> -->
                     <div id="video-playlist"></div>
                 </section>
             </div>
