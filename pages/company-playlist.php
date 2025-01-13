@@ -67,10 +67,18 @@
                         ]
                     ],
                     "3.jpeg" => [
-                        "title" => "N-LINK",
+                        "title" => " Plant Design N-LINK",
                         "videos" => [
-                            ["file" => "video1.mp4", "title" => "Video 1", "duration" => "00:00:53"],
-                            ["file" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像.mp4", "title" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像", "duration" => "00:00:53"],
+                            ["file" => "N-Link_コスト削減編.mp4", "title" => "N-Link_コスト削減編", "duration" => "00:00:10"],
+                            ["file" => "N-Link_人材不足編.mp4", "title" => "N-Link_人材不足編", "duration" => "00:00:10"],
+                            ["file" => "N-Link_環境改善編.mp4", "title" => "N-Link_環境改善編", "duration" => "00:00:10"]
+                        ]
+                    ],
+                    "4.jpeg" => [
+                        "title" => "Crusher",
+                        "videos" => [
+                            ["file" => "不燃物破砕専用機 FRシリーズ　フリッタ.mp4", "title" => "不燃物破砕専用機 FRシリーズ　フリッタ", "duration" => "00:00:53"],
+                            ["file" => "VSI_ja_20210610.mp4", "title" => "VSI_ja_20210610", "duration" => "00:00:53"],
                             ["file" => "Dendoman series NE100JT.mp4", "title" => "Dendoman series NE100JT", "duration" => "00:00:10"],
                             ["file" => "Dendoman series NE250I.mp4", "title" => "Dendoman series NE250I", "duration" => "00:00:53"],
                             ["file" => "N-Link_コスト削減編.mp4", "title" => "N-Link_コスト削減編", "duration" => "00:00:10"],
@@ -78,8 +86,8 @@
                             ["file" => "video8.mp4", "title" => "Video 8", "duration" => "00:00:10"]
                         ]
                     ],
-                    "4.jpeg" => [
-                        "title" => "Crusher",
+                    "5.jpeg" => [
+                        "title" => "Screen Feeder",
                         "videos" => [
                             ["file" => "video1.mp4", "title" => "Video 1", "duration" => "00:00:53"],
                             ["file" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像.mp4", "title" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像", "duration" => "00:00:53"],
