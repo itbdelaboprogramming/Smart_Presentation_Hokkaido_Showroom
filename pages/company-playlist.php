@@ -78,24 +78,76 @@
                         "title" => "Crusher",
                         "videos" => [
                             ["file" => "不燃物破砕専用機 FRシリーズ　フリッタ.mp4", "title" => "不燃物破砕専用機 FRシリーズ　フリッタ", "duration" => "00:00:53"],
-                            ["file" => "VSI_ja_20210610.mp4", "title" => "VSI_ja_20210610", "duration" => "00:00:53"],
-                            ["file" => "Dendoman series NE100JT.mp4", "title" => "Dendoman series NE100JT", "duration" => "00:00:10"],
-                            ["file" => "Dendoman series NE250I.mp4", "title" => "Dendoman series NE250I", "duration" => "00:00:53"],
-                            ["file" => "N-Link_コスト削減編.mp4", "title" => "N-Link_コスト削減編", "duration" => "00:00:10"],
-                            ["file" => "NE100JB_en_30秒.mp4", "title" => "NE100JB_en_30秒", "duration" => "00:00:10"],
-                            ["file" => "video8.mp4", "title" => "Video 8", "duration" => "00:00:10"]
+                            ["file" => "VSI_ja_20210610.mp4", "title" => "リバーシブル竪型破砕・整粒機　ジャイロパクタ　NAKAYAMA VSI", "duration" => "00:00:53"],
+                            ["file" => "2軸パワーロール破砕機 PRC1500P／2-shaft Power Roll Crusher ｜ (株)中山鉄工所.mp4", "title" => "2軸パワーロール破砕機 PRC1500P／2-shaft Power Roll Crusher ｜ (株)中山鉄工所", "duration" => "00:00:10"],
+                            ["file" => "2軸解砕機 パワーロールクラッシャ　PRC1200P／㈱中山鉄工所.mp4", "title" => "2軸解砕機 パワーロールクラッシャ　PRC1200P／㈱中山鉄工所", "duration" => "00:00:53"],
+                            ["file" => "PRC1500P エンジン解砕.mp4", "title" => "PRC1500P エンジン解砕", "duration" => "00:00:10"],
+                            ["file" => "破砕能力2倍のネオコーン破砕機／Neo Cone Crusher｜ (株)中山鉄工所.mp4", "title" => "破砕能力2倍のネオコーン破砕機／Neo Cone Crusher｜ (株)中山鉄工所", "duration" => "00:00:10"],
+                            ["file" => "ジョー破砕機　AC Series／Jaw Crusher｜ (株)中山鉄工所.mp4", "title" => "ジョー破砕機　AC Series／Jaw Crusher｜ (株)中山鉄工所", "duration" => "00:00:10"]
                         ]
                     ],
                     "5.jpeg" => [
                         "title" => "Screen Feeder",
                         "videos" => [
-                            ["file" => "video1.mp4", "title" => "Video 1", "duration" => "00:00:53"],
-                            ["file" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像.mp4", "title" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像", "duration" => "00:00:53"],
-                            ["file" => "Dendoman series NE100JT.mp4", "title" => "Dendoman series NE100JT", "duration" => "00:00:10"],
-                            ["file" => "Dendoman series NE250I.mp4", "title" => "Dendoman series NE250I", "duration" => "00:00:53"],
-                            ["file" => "N-Link_コスト削減編.mp4", "title" => "N-Link_コスト削減編", "duration" => "00:00:10"],
-                            ["file" => "NE100JB_en_30秒.mp4", "title" => "NE100JB_en_30秒", "duration" => "00:00:10"],
-                            ["file" => "video8.mp4", "title" => "Video 8", "duration" => "00:00:10"]
+                            ["file" => "リサイクル切替式選別機　NRE4122.mp4", "title" => "リサイクル切替式選別機　NRE4122", "duration" => "00:00:53"],
+                            ["file" => "小型選別機　PBS750,PBS900／Screen Kits｜ (株)中山鉄工所.mp4", "title" => "小型選別機　PBS750,PBS900／Screen Kits｜ (株)中山鉄工所", "duration" => "00:00:53"]
+                        ]
+                    ],
+                    "6.jpeg" => [
+                        "title" => "Crusher Unit",
+                        "videos" => [
+                            ["file" => "(株)中山鉄工所／可搬式破砕機　HC320GX.mp4", "title" => "(株)中山鉄工所／可搬式破砕機　HC320GX", "duration" => "00:00:53"],
+                            ["file" => "(株)中山鉄工所／可搬式破砕機　HFA4M.mp4", "title" => "(株)中山鉄工所／可搬式破砕機　HFA4M", "duration" => "00:00:53"]
+                        ]
+                    ],
+                    "7.jpeg" => [
+                        "title" => "Suction Air Separator Unit",
+                        "videos" => [
+                            ["file" => "(株)中山鉄工所／ゴミ吸引選別ユニット　NAS1200.mp4", "title" => "(株)中山鉄工所／ゴミ吸引選別ユニット　NAS1200", "duration" => "00:00:53"],
+                            ["file" => "(株)中山鉄工所／ゴミ吸引選別式ユニット　NAS900.mp4", "title" => "(株)中山鉄工所／ゴミ吸引選別式ユニット　NAS900", "duration" => "00:00:53"],
+                            ["file" => "(株)中山鉄工所／吸選機　AS1500.mp4", "title" => "(株)中山鉄工所／吸選機　AS1500", "duration" => "00:00:10"],
+                            ["file" => "(株)中山鉄工所／ゴミ吸引選別　ASシリーズ.mp4", "title" => "(株)中山鉄工所／ゴミ吸引選別　ASシリーズ", "duration" => "00:00:53"],
+                            ["file" => "(株)中山鉄工所／NASシリーズ.mp4", "title" => "(株)中山鉄工所／NASシリーズ", "duration" => "00:00:10"]
+                        ]
+                    ],
+                    "8.jpeg" => [
+                        "title" => "Soil Remediation",
+                        "videos" => [
+                            ["file" => "(株)中山鉄工所／土壌土質改良機　MGM501E.mp4", "title" => "(株)中山鉄工所／土壌土質改良機　MGM501E", "duration" => "00:00:53"],
+                            ["file" => "(株)中山鉄工所／土壌土質改良機　ZGMシリーズ.mp4", "title" => "(株)中山鉄工所／土壌土質改良機　ZGMシリーズ", "duration" => "00:00:53"]
+                        ]
+                    ],
+                    "9.jpeg" => [
+                        "title" => "Attachment",
+                        "videos" => [
+                            ["file" => "(株)中山鉄工所／BH70.mp4", "title" => "(株)中山鉄工所／BH70", "duration" => "00:00:53"]
+                        ]
+                    ],
+                    "10.jpeg" => [
+                        "title" => "Environment",
+                        "videos" => [
+                            ["file" => "ND50 2007.mpg", "title" => "ND50 2007", "duration" => "00:00:53"],
+                            ["file" => "老竹発電.mp4", "title" => "老竹発電", "duration" => "00:00:53"],
+                            ["file" => "松隈小水力.mp4", "title" => "松隈小水力", "duration" => "00:00:10"],
+                            ["file" => "(株)中山鉄工所／Ne-Power紹介動画.mp4", "title" => "(株)中山鉄工所／Ne-Power紹介動画", "duration" => "00:00:53"]
+                        ]
+                    ],
+                    "11.jpeg" => [
+                        "title" => "3DCG",
+                        "videos" => [
+                            ["file" => "(株)中山鉄工所／コーンクラッシャ NSCシリーズ.mp4", "title" => "(株)中山鉄工所／コーンクラッシャ NSCシリーズ", "duration" => "00:00:53"],
+                            ["file" => "(株)中山鉄工所／スクリーン NSRシリーズ.mp4", "title" => "(株)中山鉄工所／スクリーン NSRシリーズ", "duration" => "00:00:53"],
+                            ["file" => "(株)中山鉄工所／ジャイロパクタ SRシリーズ.mp4", "title" => "(株)中山鉄工所／ジャイロパクタ SRシリーズ", "duration" => "00:00:10"],
+                            ["file" => "(株)中山鉄工所／ジョークラッシャ AC、RCシリーズ.mp4", "title" => "(株)中山鉄工所／ジョークラッシャ AC、RCシリーズ", "duration" => "00:00:53"],
+                            ["file" => "(株)中山鉄工所／インパクトクラッシャ ACDシリーズ.mp4", "title" => "(株)中山鉄工所／インパクトクラッシャ ACDシリーズ", "duration" => "00:00:10"],
+                            ["file" => "(株)中山鉄工所／ロールクラッシャ PRCシリーズ.mp4", "title" => "(株)中山鉄工所／ロールクラッシャ PRCシリーズ", "duration" => "00:00:10"],
+                            ["file" => "(株)中山鉄工所／油圧緩衝機構 説明.mp4", "title" => "(株)中山鉄工所／油圧緩衝機構 説明", "duration" => "00:00:10"]
+                        ]
+                    ],
+                    "12.jpeg" => [
+                        "title" => "Compact Construction Machine",
+                        "videos" => [
+                            ["file" => "(株)中山鉄工所／MSD700.mp4", "title" => "(株)中山鉄工所／MSD700", "duration" => "00:00:53"]
                         ]
                     ]
                 );
