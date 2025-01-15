@@ -3,8 +3,8 @@ const closeButton = document.getElementById('close-button');
 const mainVideo = document.getElementById('main-video');
 const mainVideoTitle = document.getElementById('main-video-title');
 const videoPlaylistContainer = document.getElementById('video-playlist');
-const prevBtn = document.getElementById('prev-btn'); // For left sliding
-const nextBtn = document.getElementById('next-btn'); // For right sliding
+// const prevBtn = document.getElementById('prev-btn'); // For left sliding
+// const nextBtn = document.getElementById('next-btn'); // For right sliding
 
 // Set the video player volume to maximum on load
 mainVideo.volume = 1; // Set volume to 100%
@@ -97,10 +97,10 @@ document.querySelectorAll('.playlist-card').forEach(card => {
     });
 });
 
-// Add an event listener to hide the title when the video starts playing
-mainVideo.addEventListener('play', () => {
-    mainVideoTitle.style.display = 'none'; // Hide the title when the video plays
-});
+// // Add an event listener to hide the title when the video starts playing
+// mainVideo.addEventListener('play', () => {
+//     mainVideoTitle.style.display = 'none'; // Hide the title when the video plays
+// });
 
 // // Add event listeners to scroll the playlist horizontally
 // prevBtn.addEventListener('click', () => {
