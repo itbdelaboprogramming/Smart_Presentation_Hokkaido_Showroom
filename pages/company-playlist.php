@@ -28,7 +28,7 @@
                     <h3 id="main-video-title"></h3>
                 </section>
                 <section class="video-playlist">
-                    <!-- <h3>Playlist</h3> -->
+                    <h3>Playlist</h3>
                     <div id="video-playlist"></div>
                 </section>
             </div>
@@ -42,21 +42,21 @@
                         "videos" => [
                             ["file" => "砕石フォーラム2024.mp4", "title" => "砕石フォーラム2024", "duration" => "00:00:53"],
                             ["file" => "NHKワールド／中山鉄工所インターン生の活動.mp4", "title" => "NHKワールド／中山鉄工所インターン生の活動", "duration" => "00:08:19"],
-                            ["file" => "2022NEW環境展_紹介動画PV.mp4", "title" => "2022NEW環境展_紹介動画PV", "duration" => "00:02:24"],
+                            ["file" => "2022NEW環境展_紹介動画PV.mp4", "title" => "2022NEW環境展 紹介動画PV", "duration" => "00:02:24"],
                             ["file" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像.mp4", "title" => "2018NEW環境展 中山鉄工所ブース プラント組立メイキング映像", "duration" => "00:04:09"]
                         ]
                     ],
                     "2.jpeg" => [
                         "title" => "Dendoman",
                         "videos" => [
-                            ["file" => "NE100HBJ_PV01_20220607.mp4", "title" => "NE100HBJ_PV01_20220607", "duration" => "00:01:42"],
-                            ["file" => "NE200HBJ_PV01_20220607.mp4", "title" => "NE200HBJ_PV01_20220607", "duration" => "00:02:06"],
-                            ["file" => "NE200J_油圧緩衝機構PV_03.mp4", "title" => "NE200J_油圧緩衝機構PV_03", "duration" => "00:01:26"],
-                            ["file" => "NE100JB_ja_50秒.mp4", "title" => "NE100JB_ja_50秒", "duration" => "00:00:51"],
-                            ["file" => "NE100JB_en_30秒.mp4", "title" => "NE100JB_en_30秒", "duration" => "00:00:31"],
+                            ["file" => "NE100HBJ_PV01_20220607.mp4", "title" => "NE100HBJ　バッテリー搭載自走式クラッシャ", "duration" => "00:01:42"],
+                            ["file" => "NE200HBJ_PV01_20220607.mp4", "title" => "NE200HBJ　バッテリー搭載自走式クラッシャ　CO2排出ゼロ", "duration" => "00:02:06"],
+                            ["file" => "NE200J_油圧緩衝機構PV_03.mp4", "title" => "NE200J 油圧緩衝機構", "duration" => "00:01:26"],
+                            ["file" => "NE100JB_ja_50秒.mp4", "title" => "NE100JB 完全電動化自走式クラッシャ", "duration" => "00:00:51"],
+                            ["file" => "NE100JB_en_30秒.mp4", "title" => "The Battery Crusher NE100JB", "duration" => "00:00:31"],
                             ["file" => "Dendoman NE100JP.mp4", "title" => "Dendoman NE100JP", "duration" => "00:04:41"],
-                            ["file" => "Dendoman series NE100JT.mp4", "title" => "Dendoman series NE100JT", "duration" => "00:02:15"],
-                            ["file" => "Dendoman series NE250I.mp4", "title" => "Dendoman series NE250I", "duration" => "00:01:59"],
+                            ["file" => "Dendoman series NE100JT.mp4", "title" => "Dendoman Series NE100JT", "duration" => "00:02:15"],
+                            ["file" => "Dendoman series NE250I.mp4", "title" => "Dendoman Series NE250I", "duration" => "00:01:59"],
                             ["file" => "Dendoman　電動自走式クラッシャ　NE200I（インパクトタイプ）／㈱中山鉄工所.mp4", "title" => "Dendoman 電動自走式クラッシャ NE200I (インパクトタイプ)/㈱中山鉄工所", "duration" => "00:02:05"],
                             ["file" => "Dendoman　電動自走式クラッシャ　NE200C（コーンタイプ）／㈱中山鉄工所.mp4", "title" => "Dendoman　電動自走式クラッシャ　NE200C（コーンタイプ）／㈱中山鉄工所", "duration" => "00:06:34"],
                             ["file" => "Dendoman　電動自走式クラッシャ　NE1500WR（ロールタイプ）／㈱中山鉄工所.mp4", "title" => "Dendoman　電動自走式クラッシャ　NE1500WR（ロールタイプ）／㈱中山鉄工所", "duration" => "00:07:55"],
@@ -69,9 +69,9 @@
                     "3.jpeg" => [
                         "title" => " Plant Design N-LINK",
                         "videos" => [
-                            ["file" => "N-Link_コスト削減編.mp4", "title" => "N-Link_コスト削減編", "duration" => "00:00:10"],
-                            ["file" => "N-Link_人材不足編.mp4", "title" => "N-Link_人材不足編", "duration" => "00:00:10"],
-                            ["file" => "N-Link_環境改善編.mp4", "title" => "N-Link_環境改善編", "duration" => "00:00:10"]
+                            ["file" => "N-Link_コスト削減編.mp4", "title" => "N-Link コスト削減編", "duration" => "00:00:10"],
+                            ["file" => "N-Link_人材不足編.mp4", "title" => "N-Link 人材不足編", "duration" => "00:00:10"],
+                            ["file" => "N-Link_環境改善編.mp4", "title" => "N-Link 環境改善編", "duration" => "00:00:10"]
                         ]
                     ],
                     "4.jpeg" => [
@@ -126,7 +126,7 @@
                     "10.jpeg" => [
                         "title" => "Environment",
                         "videos" => [
-                            ["file" => "ND50 2007.mpg", "title" => "ND50 2007", "duration" => "00:00:53"],
+                            ["file" => "ND50 2007.mp4", "title" => "ND50 2007", "duration" => "00:00:53"],
                             ["file" => "老竹発電.mp4", "title" => "老竹発電", "duration" => "00:00:53"],
                             ["file" => "松隈小水力.mp4", "title" => "松隈小水力", "duration" => "00:00:10"],
                             ["file" => "(株)中山鉄工所／Ne-Power紹介動画.mp4", "title" => "(株)中山鉄工所／Ne-Power紹介動画", "duration" => "00:00:53"]
