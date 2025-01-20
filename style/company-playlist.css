@@ -121,6 +121,10 @@ body {
     color: #ffffff;
 }
 
+video::-webkit-media-controls-fullscreen-button {
+	display: none;
+}
+
 /* Video Playlist Section */
 .video-playlist {
     display: flex;

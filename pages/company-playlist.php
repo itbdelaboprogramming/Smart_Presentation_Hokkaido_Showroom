@@ -22,13 +22,13 @@
             <div class="video-player-container">
                 <!-- <button class="close-button" id="close-button">X</button> -->
                 <section class="main-video">
-                    <video id="main-video" class="static-size" controls autoplay disablePictureInPicture controlslist="nodownload noplaybackrate nofullscreen">
+                    <video id="main-video" class="static-size" controls autoplay disablePictureInPicture controlslist="nodownload noplaybackrate">
                         <source src="" id="main-video-source">
                     </video>
                     <h3 id="main-video-title"></h3>
                 </section>
                 <section class="video-playlist">
-                    <h3>Playlist</h3>
+                    <h3 id="video-playlist-title">Playlist of</h3>
                     <div id="video-playlist"></div>
                 </section>
             </div>
