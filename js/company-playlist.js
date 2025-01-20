@@ -3,6 +3,8 @@ const closeButton = document.getElementById('close-button');
 const mainVideo = document.getElementById('main-video');
 const mainVideoTitle = document.getElementById('main-video-title');
 const videoPlaylistContainer = document.getElementById('video-playlist');
+const videoPlaylistTitle = document.getElementById('video-playlist-title');
+// const playlistCard = document.querySelectorAll(".playlist-card");
 // const prevBtn = document.getElementById('prev-btn'); // For left sliding
 // const nextBtn = document.getElementById('next-btn'); // For right sliding
 
@@ -44,6 +46,12 @@ document.querySelectorAll('.playlist-card').forEach(card => {
         mainVideo.src = `./files/video/${firstVideo.file}`;
         mainVideoTitle.textContent = firstVideo.title;
 
+        // Get the title from the card
+        const playlistTitle = card.querySelector(".playlist-title").textContent;
+
+        // Fetch the title text of video playlist
+        videoPlaylistTitle.textContent = `Playlist of ${playlistTitle}`;
+
         videoPlaylistContainer.innerHTML = ''; // Clear the previous playlist
         videos.forEach((video, index) => {
             const videoItem = document.createElement('div');
@@ -60,7 +68,7 @@ document.querySelectorAll('.playlist-card').forEach(card => {
             
             // Wait for the video to load and capture the first frame
             videoElement.addEventListener('loadeddata', () => {
-                videoElement.currentTime = 0.1; // Go to the first frame (you can adjust this time slightly)
+                videoElement.currentTime = 1.5; // Go to the first frame (you can adjust this time slightly)
 
                 // Draw the first frame on the canvas
                 videoElement.addEventListener('seeked', () => {
