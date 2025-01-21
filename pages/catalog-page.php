@@ -36,9 +36,6 @@
             ?>
                 <div class="pdf-background">
                     <div class="pdf-card" data-pdf="./files/pdf/<?php echo $pdfPath; ?>">
-                        <!-- <object title="pdf - <?php echo $pdfTitle; ?>" data="./files/pdf/<?php echo $pdfPath; ?>#toolbar=0" type="application/pdf">
-                            alt : <a href="/files/pdf/<?php echo $pdfPath; ?>"><?php echo $pdfPath; ?></a>
-                        </object> -->
                         <img width="100%" src="./files/pdf_preview/<?php echo $pdfTitle; ?>.jpg" alt="pdf-icon"></img>
                     </div>
                     <div class="video-title"><?php echo $pdfTitle; ?></div>
