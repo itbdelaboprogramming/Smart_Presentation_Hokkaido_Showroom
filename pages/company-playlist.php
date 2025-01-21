@@ -6,6 +6,8 @@
     <title>Smart Presentation - Playlist</title>
     <link rel="stylesheet" href="./style/company-playlist.css">
     <link rel="icon" type="image/x-icon" href="assets/SR_logo_03_red.png">
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    <script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 </head>
 <body>
     <div class="company-page">
@@ -22,8 +24,11 @@
             <div class="video-player-container">
                 <!-- <button class="close-button" id="close-button">X</button> -->
                 <section class="main-video">
-                    <video id="main-video" class="static-size" controls autoplay disablePictureInPicture controlslist="nodownload noplaybackrate">
+                    <!-- <video id="main-video" class="static-size" controls autoplay disablePictureInPicture controlslist="nodownload noplaybackrate">
                         <source src="" id="main-video-source">
+                    </video> -->
+                    <video id="main-video" class="plyr static-size" autoplay>
+                         <source src="" id="main-video-source" type="video/mp4">
                     </video>
                     <h3 id="main-video-title"></h3>
                 </section>

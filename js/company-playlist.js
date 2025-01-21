@@ -8,26 +8,55 @@ const videoPlaylistTitle = document.getElementById('video-playlist-title');
 // const prevBtn = document.getElementById('prev-btn'); // For left sliding
 // const nextBtn = document.getElementById('next-btn'); // For right sliding
 
+// // Initialize Plyr
+// const player = new Plyr(mainVideo, {
+//     controls: [
+//         'play-large', // The large play button in the center
+//         'play',       // Play/pause playback
+//         'progress',   // The progress bar and scrubber
+//         'current-time', // The current time of playback
+//         'duration',   // The full duration of the media
+//         'mute',       // Toggle mute
+//         'volume',     // Volume control 
+//     ],
+// });
+
+// Initialize Plyr
+const player = new Plyr(mainVideo, {
+    controls: ['play-large','play', 'progress','current-time','duration','mute', 'volume', 'fullscreen'],
+    fullscreen: { enabled: false } // Disabling fullscreen toggle
+});
+
+// Disable double-click fullscreen on video area
+mainVideo.addEventListener('dbclick',(event) => {
+    event.preventDefault();
+});
+
 // Set the video player volume to maximum on load
-mainVideo.volume = 1; // Set volume to 100%
+player.volume = 1; // 1 = Set volume to 100%
 
 // Close video player overlay when clicking outside the video player container
-videoPlayerOverlay.addEventListener('click', function (event) {
-    if (event.target === this) { // If clicked outside the video player container
+videoPlayerOverlay.addEventListener('click', (event) => {
+    if (event.target === videoPlayerOverlay) { // If clicked outside the video player container
         videoPlayerOverlay.classList.add('hidden');
-        mainVideo.pause();
-        mainVideo.src = ''; // Stop the video when closing the overlay
+        player.pause();
+        player.src = null; // Stop the video when closing the overlay
     }
 });
 
-// Function to toggle play/pause
-function togglePlayPause() {
-    if (mainVideo.paused) {
-        mainVideo.play(); // Play the video if it's paused
-    } else {
-        mainVideo.pause(); // Pause the video if it's playing
-    }
-}
+// // Function to toggle play/pause
+// function togglePlayPause() {
+//     if (player.paused) {
+//         player.play(); // Play the video if it's paused
+//     } else {
+//         player.pause(); // Pause the video if it's playing
+//     }
+// }
+
+// Toggle play/pause functionality
+const togglePlayPause = () => {
+    player.paused ? player.play() : player.pause();
+};
 
 // Add event listeners for both click and touchstart to handle play/pause
 mainVideo.addEventListener('click', togglePlayPause); // For mouse clicks
@@ -42,16 +71,23 @@ document.querySelectorAll('.playlist-card').forEach(card => {
         const videos = JSON.parse(card.dataset.videos);
         const firstVideo = videos[0];
 
-        // Ensure video player remains in the overlay container and doesn't go fullscreen
-        mainVideo.src = `./files/video/${firstVideo.file}`;
+        // Load the first video into Plyr
+        player.source = {
+            type: 'video',
+            sources: [
+                { src: `./files/video/${firstVideo.file}`, type: 'video/mp4' }
+            ]
+        };
         mainVideoTitle.textContent = firstVideo.title;
 
-        // Get the title from the card
-        const playlistTitle = card.querySelector(".playlist-title").textContent;
+        // // Update the playlist title
+        // const playlistTitle = card.querySelector(".playlist-title").textContent;
+        // videoPlaylistTitle.textContent = `Playlist of ${playlistTitle}`;
 
-        // Fetch the title text of video playlist
-        videoPlaylistTitle.textContent = `Playlist of ${playlistTitle}`;
+         // Update the playlist title
+         videoPlaylistTitle.textContent = `Playlist of ${card.querySelector('.playlist-title').textContent}`;
 
+        // Generate playlist thumbnails
         videoPlaylistContainer.innerHTML = ''; // Clear the previous playlist
         videos.forEach((video, index) => {
             const videoItem = document.createElement('div');
@@ -68,7 +104,7 @@ document.querySelectorAll('.playlist-card').forEach(card => {
             
             // Wait for the video to load and capture the first frame
             videoElement.addEventListener('loadeddata', () => {
-                videoElement.currentTime = 1.5; // Go to the first frame (you can adjust this time slightly)
+                videoElement.currentTime = 2; // Go to the first frame (you can adjust this time slightly)
 
                 // Draw the first frame on the canvas
                 videoElement.addEventListener('seeked', () => {
@@ -82,18 +118,30 @@ document.querySelectorAll('.playlist-card').forEach(card => {
                     const thumbnailImage = new Image();
                     thumbnailImage.src = canvas.toDataURL();
                     videoItem.appendChild(thumbnailImage);
+
+                    // Append title and duration
+                    const videoInfo = document.createElement('p');
+                    videoInfo.textContent = `${index + 1}. ${video.title} - ${video.duration}`;
+                    videoItem.appendChild(videoInfo);
                 });
             });
 
-            videoItem.innerHTML = `
-                <p>${index + 1}. ${video.title} - ${video.duration}</p>
-            `;
-
             videoItem.addEventListener('click', () => {
-                mainVideo.src = `./files/video/${video.file}`;
+                player.source = {
+                    type: 'video',
+                    sources: [
+                        { src: `./files/video/${video.file}`, type: 'video/mp4' }
+                    ]
+                };
                 mainVideoTitle.textContent = video.title;
-                mainVideo.play(); // Start the video immediately
+                player.play();
             });
+
+            // videoItem.addEventListener('click', () => {
+            //     mainVideo.src = `./files/video/${video.file}`;
+            //     mainVideoTitle.textContent = video.title;
+            //     mainVideo.play(); // Start the video immediately
+            // });
 
             videoPlaylistContainer.appendChild(videoItem);
         });
