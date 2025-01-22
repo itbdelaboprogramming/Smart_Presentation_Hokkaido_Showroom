@@ -124,6 +124,13 @@ body {
     color: #ffffff;
 }
 
+/* Plyr video player */
+.plyr__video-wrapper {
+    height: 690px !important;
+    max-height: 690px;
+    overflow: hidden;
+}
+
 video::-webkit-media-controls-fullscreen-button {
 	display: none;
 }
@@ -216,6 +223,7 @@ video::-webkit-media-controls-fullscreen-button {
     gap: 20px;
     justify-content: center;
     padding: 20px;
+    padding-bottom: 13px;
 }
 
 .playlist-card {
