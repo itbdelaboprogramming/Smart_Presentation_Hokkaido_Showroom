@@ -1,0 +1,412 @@
+/* File: style/admin-ui.css (FINAL PROFESSIONAL VERSION) */
+
+:root {
+    --admin-bg-modal: #1f2937;
+    --admin-bg-input: #111827;
+    --admin-border: #374151;
+    --admin-accent: #74e7d4; /* Cyan */
+    --admin-primary: #189ab4; /* Blue */
+    --admin-danger: #ef4444; /* Red */
+    --admin-warning: #f59e0b; /* Yellow */
+    --admin-success: #10b981; /* Green */
+    --admin-text-main: #f3f4f6;
+    --admin-text-muted: #9ca3af;
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+}
+
+/* --- 1. Top Right Container --- */
+.container-top-right-admin {
+    position: fixed;
+    z-index: 100;
+    top: 23px;
+    right: 23px;
+    display: flex;
+    gap: 10px;
+}
+
+/* --- 2. Standard Buttons --- */
+.admin-button-add {
+    background-color: var(--admin-primary);
+    color: white;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 8px;
+    padding: 0 20px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Jarak antara ikon dan teks */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.admin-button-add:hover {
+    background-color: var(--admin-accent);
+    color: #0f172a;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(116, 231, 212, 0.3);
+}
+
+/* Logout Button */
+.admin-logout-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 158, 11, 0.1);
+    border: 1px solid var(--admin-warning);
+    color: var(--admin-warning);
+    padding: 0 15px;
+    border-radius: 8px;
+    height: 46.99px;
+    cursor: pointer;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    gap: 8px;
+}
+
+.admin-logout-button:hover {
+    background-color: var(--admin-warning);
+    color: #1f2937;
+}
+
+
+/* --- 3. Card Action Buttons (Floating on Cards) --- */
+.admin-card-container {
+    position: relative;
+}
+
+.admin-card-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 20;
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.admin-card-container:hover .admin-card-buttons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Support for catalogue-product-list-2 in crushing/recycling plant pages */
+.catalogue-product-list-2:hover .admin-card-buttons {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.admin-button-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.admin-button-edit { background-color: var(--admin-warning); color: #1f2937; }
+.admin-button-delete { background-color: var(--admin-danger); }
+.admin-button-manage { background-color: var(--admin-primary); }
+
+.admin-button-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+
+/* --- 4. Modal System --- */
+.admin-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.admin-modal-overlay.active {
+    display: flex;
+    opacity: 1;
+}
+
+.admin-modal-content {
+    background-color: var(--admin-bg-modal);
+    color: var(--admin-text-main);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--admin-border);
+    transform: scale(0.95);
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    display: flex;
+    flex-direction: column;
+    max-height: 90vh; /* Agar tidak melebihi layar */
+}
+
+.admin-modal-overlay.active .admin-modal-content {
+    transform: scale(1);
+}
+
+.admin-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--admin-border);
+    flex-shrink: 0;
+}
+
+.admin-modal-header h2 {
+    margin: 0;
+    color: var(--admin-accent);
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.admin-modal-close {
+    background: transparent;
+    border: none;
+    color: var(--admin-text-muted);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    line-height: 1;
+}
+.admin-modal-close:hover { color: white; }
+
+.admin-modal-body {
+    overflow-y: auto; /* Scroll jika konten panjang */
+    flex-grow: 1;
+    padding-right: 5px; /* Ruang untuk scrollbar */
+}
+
+/* Custom Scrollbar for Modal */
+.admin-modal-body::-webkit-scrollbar { width: 8px; }
+.admin-modal-body::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
+.admin-modal-body::-webkit-scrollbar-thumb { background: var(--admin-border); border-radius: 4px; }
+.admin-modal-body::-webkit-scrollbar-thumb:hover { background: var(--admin-text-muted); }
+
+
+/* --- 5. Forms --- */
+.admin-form-group {
+    margin-bottom: 1.25rem;
+    text-align: left;
+}
+
+.admin-form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--admin-text-muted);
+}
+
+.admin-modal-body input[type="text"],
+.admin-modal-body input[type="number"],
+.admin-modal-body input[type="file"],
+.admin-modal-body textarea,
+.admin-modal-body select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box; 
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    background-color: var(--admin-bg-input);
+    color: var(--admin-text-main);
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.admin-modal-body input:focus,
+.admin-modal-body textarea:focus,
+.admin-modal-body select:focus {
+    outline: none;
+    border-color: var(--admin-accent);
+    box-shadow: 0 0 0 3px rgba(116, 231, 212, 0.15);
+}
+
+/* File Input Styling */
+.admin-modal-body input[type="file"] {
+    padding: 0.5rem;
+    font-size: 0.85rem;
+}
+.admin-modal-body input[type="file"]::file-selector-button {
+    background-color: var(--admin-border);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-family: "Inter", sans-serif;
+}
+
+/* --- 6. Modal Footer --- */
+.admin-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--admin-border);
+    flex-shrink: 0;
+}
+
+.admin-button-save, .admin-button-cancel, .admin-button-danger {
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.admin-button-cancel {
+    background-color: transparent;
+    border: 1px solid var(--admin-border);
+    color: var(--admin-text-muted);
+}
+.admin-button-cancel:hover { background-color: var(--admin-border); color: white; }
+
+.admin-button-save { background-color: var(--admin-primary); color: white; }
+.admin-button-save:hover { background-color: var(--admin-accent); color: #0f172a; }
+
+.admin-button-danger { background-color: var(--admin-danger); color: white; }
+.admin-button-danger:hover { background-color: #dc2626; }
+
+
+/* --- 7. Data Tables (Professional Look) --- */
+.admin-table-container {
+    border: 1px solid var(--admin-border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    color: var(--admin-text-main);
+}
+
+.admin-table thead {
+    background-color: #111827; /* Darker header */
+}
+
+.admin-table th {
+    text-align: left;
+    padding: 12px 16px;
+    font-weight: 600;
+    color: var(--admin-text-muted);
+    border-bottom: 1px solid var(--admin-border);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+}
+
+.admin-table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--admin-border);
+    vertical-align: middle;
+}
+
+.admin-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Zebra Striping */
+.admin-table tbody tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.02);
+}
+
+/* Hover Effect */
+.admin-table tbody tr:hover {
+    background-color: rgba(116, 231, 212, 0.05); /* Slight cyan tint */
+}
+
+
+/* --- 8. Toast Notification --- */
+.admin-toast-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.admin-toast {
+    background-color: var(--admin-bg-modal);
+    color: var(--admin-text-main);
+    border-left: 4px solid var(--admin-primary);
+    padding: 16px 24px;
+    border-radius: 6px;
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    min-width: 300px;
+    animation: slideIn 0.3s ease-out forwards;
+    font-family: "Inter", sans-serif;
+    font-size: 0.95rem;
+    border: 1px solid var(--admin-border);
+}
+
+.admin-toast i { margin-right: 12px; font-size: 1.1rem; }
+.admin-toast.success { border-left-color: var(--admin-success); }
+.admin-toast.success i { color: var(--admin-success); }
+.admin-toast.error { border-left-color: var(--admin-danger); }
+.admin-toast.error i { color: var(--admin-danger); }
+.admin-toast.info { border-left-color: var(--admin-primary); }
+.admin-toast.info i { color: var(--admin-primary); }
+
+@keyframes slideIn {
+    from { transform: translateX(100%); opacity: 0; }
+    to { transform: translateX(0); opacity: 1; }
+}
+
+/* --- 9. Confirmation Modal (Small) --- */
+.admin-modal-content.confirmation-modal {
+    max-width: 400px;
+    text-align: center;
+}
+.confirmation-icon {
+    font-size: 3rem;
+    color: var(--admin-warning);
+    margin-bottom: 1rem;
+}
+.confirmation-text {
+    color: var(--admin-text-muted);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}

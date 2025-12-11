@@ -1,7 +1,6 @@
 import { scene, camera, orbitControls, loader, renderer, animateLoop } from "../script.js";
 import * as THREE from "three";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-import jsonData from "../data/data.json" with { type: "json" };
 import {
 	product_list_text,
 	setProductListText,
@@ -9,6 +8,7 @@ import {
 	removeAnnotation,
 } from "../script.js";
 import { updateSound, sound, timeoutId, setSoundStatus, playSound } from "./audio.js";
+const jsonData = window.PRODUCT_DATA || {};
 
 // ---------------------------------------------------------------------------------------
 // ----------------------------------- Const, Var, Let -----------------------------------
@@ -396,39 +396,37 @@ function updateVolume() {
 
 // -------------------------------------- catalogue --------------------------------------
 
-// Inside the loadCatalogue function
 function loadCatalogue(catalogue_product_list) {
 	catalogue_product_list.forEach(function (product_list) {
-		product_list.addEventListener("click", () => {
+        if (product_list.classList.contains('admin-button-edit-product')) return;
+
+		product_list.addEventListener("click", (e) => {
+            if (e.target.closest('.admin-button-edit-product')) return;
+
 			if (product_list.id != change_audio) {
 				change_audio = product_list.id;
 				sound.pause();
 				sound.currentTime = 0;
-				// toggle_speech.classList.contains("active") ? audioPlayer() : "";
 			}
 
 			resetCatalogueSelect();
-
-			// product_list.classList.toggle("active");
 			product_list.classList.add("active");
 
 			setProductListText(
 				product_list.querySelector(".catalogue-product-list-text-2").innerText
 			);
-			// product_list_text = product_list.querySelector(
-			// 	".catalogue-product-list-text-2"
-			// ).innerText;
-
-			let file3D = scene.getObjectByName("file3D");
-
-			// Reset the model and annotations for the current 3D model
-			// resetModelAndAnnotations(file3D);
 
 			updateFile3D(product_list_text);
+
+            let fileNameReal = convertOverviewToName(product_list_text);
+            if (jsonData[fileNameReal]) {
+                let prodId = jsonData[fileNameReal].id;
+                window.CURRENT_PRODUCT_ID = prodId; 
+                fetchAndRenderAnnotations(prodId);
+            }
+            // -------------------------------------------------
+
 			if (product_list_text === "Overview") {
-				// updateInformation("Hokkaido Crushing Full Plant");
-				// console.log("Overview");
-				updateAnnotation(convertOverviewToName("Overview"));
 				hideInformation(true);
 				resetAndUpdateSound(convertOverviewToName("Overview"));
 			} else {
@@ -466,16 +464,16 @@ function resetCatalogueSelect() {
 }
 
 function updateAnnotation(file_name) {
-	removeAnnotation("A");
-	createAnnotation(
-		jsonData[file_name].annotation_text,
-		new THREE.Vector3(
-			jsonData[file_name].annotation.x,
-			jsonData[file_name].annotation.y,
-			jsonData[file_name].annotation.z
-		),
-		"A"
-	);
+	// removeAnnotation("A");
+	// createAnnotation(
+	// 	jsonData[file_name].annotation_text,
+	// 	new THREE.Vector3(
+	// 		jsonData[file_name].annotation.x,
+	// 		jsonData[file_name].annotation.y,
+	// 		jsonData[file_name].annotation.z
+	// 	),
+	// 	"A"
+	// );
 }
 
 function updateInformation(file_name) {
@@ -485,11 +483,7 @@ function updateInformation(file_name) {
 	let x_joined = x.join("。<br><br>");
 	information_description.innerHTML = x_joined;
 
-	updateAnnotation(file_name);
-
-	// information_link.href = jsonData[file_name].web_link;
-	// information_link.innerHTML = file_name + " | Nakayama Iron Works (ncjpn.com)";
-	if (jsonData[file_name].hasOwnProperty("pdf_link")) {
+	if (jsonData[file_name].hasOwnProperty("pdf_link") && jsonData[file_name].pdf_link) {
 		pdf_button.style.display = "flex";
 		pdf_file.setAttribute(
 			"src",
@@ -499,14 +493,14 @@ function updateInformation(file_name) {
 		pdf_button.style.display = "none";
 	}
 
-	if (jsonData[file_name].hasOwnProperty("video_link")) {
+	if (jsonData[file_name].hasOwnProperty("video_link") && jsonData[file_name].video_link) {
 		video_button.style.display = "flex";
 		video.setAttribute("src", jsonData[file_name].video_link);
 	} else {
 		video_button.style.display = "none";
 	}
 
-	if (jsonData[file_name].hasOwnProperty("info_img")) {
+	if (jsonData[file_name].hasOwnProperty("info_img") && jsonData[file_name].info_img) {
 		info_img.style.display = "block";
 		info_img.src = jsonData[file_name].info_img;
 	} else {
@@ -545,7 +539,6 @@ function updateFile3D(file_name) {
 			}
 		);
 	} catch (e) {
-		// do nothing
 	}
 }
 
@@ -607,3 +600,89 @@ document.addEventListener("click", function (event) {
 	clearTimeout(timer);
 	timer = setTimeout(redirect, 60000 * 5);
 });
+
+async function fetchAndRenderAnnotations(productId) {
+    const toRemove = [];
+    scene.traverse((child) => {
+        if (child.isCSS2DObject && child.name === 'annotation-point') {
+            toRemove.push(child);
+        }
+    });
+    toRemove.forEach(child => scene.remove(child));
+
+    try {
+        const response = await fetch(`api/product_api.php?action=get_annotations&product_id=${productId}`);
+        const result = await response.json();
+
+        if (result.status === 'success') {
+            result.data.forEach(anno => {
+                createAnnotation(
+                    anno.text, 
+                    new THREE.Vector3(parseFloat(anno.pos_x), parseFloat(anno.pos_y), parseFloat(anno.pos_z)),
+                    "annotation-point" 
+                );
+            });
+        }
+    } catch (error) {
+        console.error("Gagal memuat anotasi:", error);
+    }
+}
+
+window.refresh3DAnnotations = () => {
+    if (window.CURRENT_PRODUCT_ID) {
+        fetchAndRenderAnnotations(window.CURRENT_PRODUCT_ID);
+    }
+};
+
+const currentPath = window.location.pathname;
+if (currentPath.includes("crushing-plant")) {
+    if (jsonData["Hokkaido Crushing Full Plant"]) {
+         window.CURRENT_PRODUCT_ID = jsonData["Hokkaido Crushing Full Plant"].id;
+         fetchAndRenderAnnotations(window.CURRENT_PRODUCT_ID);
+    }
+} else if (currentPath.includes("recycling-plant")) {
+    if (jsonData["Recycling Full Plant"]) {
+         window.CURRENT_PRODUCT_ID = jsonData["Recycling Full Plant"].id;
+         fetchAndRenderAnnotations(window.CURRENT_PRODUCT_ID);
+    }
+}
+
+// ------------------------------------- Raycasting for Annotation Placement -------------------------------------
+let onPlaceCallback = null;
+const raycaster = new THREE.Raycaster();
+const mouse = new THREE.Vector2();
+
+function onWindowMouseDown(event) {
+    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
+    mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+
+    raycaster.setFromCamera(mouse, camera);
+
+    const intersects = raycaster.intersectObjects(scene.children, true);
+
+    if (intersects.length > 0) {
+        const point = intersects[0].point;
+        
+        if (onPlaceCallback) {
+            onPlaceCallback({
+                x: point.x,
+                y: point.y,
+                z: point.z
+            });
+        }
+
+        finishPlacementMode();
+    }
+}
+
+window.startAnnotationPlacement = (callback) => {
+    onPlaceCallback = callback;
+    document.body.style.cursor = "crosshair";
+    window.addEventListener('mousedown', onWindowMouseDown);
+};
+
+function finishPlacementMode() {
+    document.body.style.cursor = "default";
+    window.removeEventListener('mousedown', onWindowMouseDown);
+    onPlaceCallback = null;
+}

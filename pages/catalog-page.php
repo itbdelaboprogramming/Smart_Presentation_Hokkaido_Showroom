@@ -1,3 +1,18 @@
+<?php
+
+$catalogs = [];
+$errorMessage = '';
+try {
+    $stmt = $pdo->prepare("SELECT * FROM catalogs ORDER BY sort_order ASC, id ASC");
+    $stmt->execute();
+    $catalogs = $stmt->fetchAll();
+} catch (PDOException $e) {
+    $errorMessage = "Error loading catalogs: " . $e->getMessage();
+}
+
+$isAdmin = (isset($_SESSION['role']) && $_SESSION['role'] == 'admin');
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,6 +20,8 @@
     <link rel="icon" type="image/x-icon" href="assets/SR_logo_03_red.png">
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/catalog-page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style/admin-ui.css">
 </head>
 <body>
     <div>
@@ -16,33 +33,56 @@
                 <div class="page-name-text">カタログ一覧​</div>
             </div>
         </div>
+
+        <?php if ($isAdmin): ?>
+        <div class="container-top-right-admin">
+            <button class="admin-button-add" id="admin-add-catalog-btn">
+                <i class="fas fa-plus"></i> Add New Catalog
+            </button>
+        </div>
+        <?php endif; ?>
+
         <div class="pdf-content-container">
             <?php
-                $pdfList = array(
-                    "会社案内" => "会社案内.pdf",
-                    "総合カタログ" => "総合カタログ.pdf",
-                    "Dendomanシリーズ" => "Dendomanシリーズ.pdf",
-                    "プラント-唐津砕石殿" => "Dendomanプラント-唐津砕石殿.pdf",
-                    "プラント-熊礦石材殿" => "Dendomanプラント-熊礦石材殿.pdf",
-                    "IoT高機能型プラント" => "IoT高機能型リサイクルプラント.pdf",
-                    "N-Link" => "N-Link.pdf",
-                    "MSD700" => "MSD700.pdf",
-                    "NE750J" => "NE750J.pdf",
-                    "NePower" => "NePower.pdf",
-                    "小水力発電システム" => "小水力発電システム.pdf",
-                    "VSI" => "SR_en_ver.2.06_20220523.pdf",
-                );
-                foreach ($pdfList as $pdfTitle => $pdfPath) {
+                if (!empty($errorMessage)):
             ?>
-                <div class="pdf-background">
-                    <div class="pdf-card" data-pdf="./files/pdf/<?php echo $pdfPath; ?>">
-                        <img width="100%" src="./files/pdf_preview/<?php echo $pdfTitle; ?>.jpg" alt="pdf-icon"></img>
+                <p style="color: red;"><?php echo htmlspecialchars($errorMessage); ?></p>
+            <?php
+                elseif (empty($catalogs)):
+            ?>
+                <p style="color: white; text-align: center; grid-column: 1 / -1;">No catalogs available.</p>
+            <?php
+                else:
+                    foreach ($catalogs as $catalog):
+                        $pdfTitle = htmlspecialchars($catalog['title']);
+                        $pdfPath = htmlspecialchars($catalog['pdf_file']);
+                        $previewImage = htmlspecialchars($catalog['preview_image']);
+                        $catalogId = $catalog['id'];
+            ?>
+                <div class="admin-card-container">
+                    
+                    <?php if ($isAdmin): ?>
+                    <div class="admin-card-buttons">
+                        <button class="admin-button-icon admin-button-edit" data-id="<?php echo $catalogId; ?>" title="Edit">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="admin-button-icon admin-button-delete" data-id="<?php echo $catalogId; ?>" title="Delete">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
                     </div>
-                    <div class="video-title"><?php echo $pdfTitle; ?></div>
-                    <div class="overlay"></div>
+                    <?php endif; ?>
+
+                    <div class="pdf-background">
+                        <div class="pdf-card" data-pdf="./files/pdf/<?php echo $pdfPath; ?>">
+                            <img width="100%" src="./files/pdf_preview/<?php echo $previewImage; ?>" alt="pdf-icon"></img>
+                        </div>
+                        <div class="video-title"><?php echo $pdfTitle; ?></div>
+                        <div class="overlay"></div>
+                    </div>
                 </div>
             <?php
-                }
+                    endforeach;
+                endif;
             ?>
         </div>
         <div class="bottom-center">
@@ -54,6 +94,52 @@
             </div>
         </div>
     </div>
+
+    <?php if ($isAdmin): ?>
+    <div class="admin-modal-overlay" id="admin-catalog-modal">
+        <div class="admin-modal-content">
+            
+            <div class="admin-modal-header">
+                <h2 id="admin-modal-title">Add New Catalog</h2>
+                <button class="admin-modal-close" id="admin-modal-close-btn">&times;</button>
+            </div>
+
+            <form class="admin-modal-body" id="admin-catalog-form" enctype="multipart/form-data">
+                <input type="hidden" id="catalog-id" name="catalog_id" value="">
+
+                <div class="admin-form-group">
+                    <label for="catalog-title">Catalog Title</label>
+                    <input type="text" id="catalog-title" name="title" placeholder="Example: MSD700" required>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="catalog-pdf">PDF File</label>
+                    <input type="file" id="catalog-pdf" name="pdf_file" accept=".pdf">
+                    <small style="color: #9ca3af;">(Leave empty to keep existing file)</small>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="catalog-image">Preview Image</label>
+                    <input type="file" id="catalog-image" name="preview_image" accept="image/jpeg, image/png, image/jpg">
+                     <small style="color: #9ca3af;">(Leave empty to keep existing image)</small>
+                </div>
+
+                <div class="admin-form-group">
+                    <label for="catalog-order">Sort Order</label>
+                    <input type="number" id="catalog-order" name="sort_order" value="10" required>
+                </div>
+
+                <div class="admin-modal-footer">
+                    <button type="button" class="admin-button-cancel" id="admin-modal-cancel-btn">Cancel</button>
+                    <button type="submit" class="admin-button-save">Save</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <?php endif; ?>
+
+    <script src="./js/admin-utils.js"></script>
     <script type="module" src="./js/catalog-page.js"></script>
 </body>
 </html>

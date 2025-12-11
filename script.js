@@ -3,14 +3,11 @@ const myCanvas = document.querySelector("#myCanvas");
 import * as THREE from "three";
 import { OrbitControls } from "three/addons/controls/OrbitControls.js";
 import { GLTFLoader } from "three/addons/loaders/GLTFLoader.js";
-// import {
-// 	CSS2DRenderer,
-// 	CSS2DObject,
-// } from "three/addons/renderers/CSS2DRenderer.js";
 import { CSS2DRenderer, CSS2DObject} from "./js/CSS2DRenderer.js";
 import { DRACOLoader } from "three/addons/loaders/DRACOLoader.js";
-import jsonData from "./data/data.json" with { type: "json" };
 import { audioPlayer, timeoutId, sound, updateSound } from "./js/audio.js";
+
+const jsonData = window.PRODUCT_DATA || {};
 
 // ----------------------------------- SCENE BACKGROUND COLOR -----------------------------------
 export const scene = new THREE.Scene();

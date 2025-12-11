@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body.login-page {
+    background-color: #1d2538;
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #e0e1dc;
+}
+
+.login-container {
+    background-color: #344054;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+}
+
+.login-container h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #74e7d4;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.login-container p {
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #98a2b3;
+}
+
+.login-form .form-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.login-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    color: #d4f2f4;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    box-sizing: border-box; 
+    border: 1px solid #475467;
+    border-radius: 5px;
+    background-color: #1d2538;
+    color: #e0e1dc;
+    font-family: "Inter", sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.login-form input[type="text"]:focus,
+.login-form input[type="password"]:focus {
+    outline: none;
+    border-color: #74e7d4;
+    box-shadow: 0 0 0 3px rgba(116, 231, 212, 0.25);
+}
+
+.login-button {
+    width: 100%;
+    padding: 0.85rem 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #189ab4;
+    color: #ffffff;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.login-button:hover {
+    background-color: #1aace0;
+    box-shadow: 0px 4px 12px rgba(24, 154, 180, 0.3);
+}
+
+.login-button:active {
+    background-color: #04445f;
+}
+
+.login-error {
+    /* background-color: #ffcccb; */
+    color: #de7b79;
+    /* border: 1px solid #ebccd1; */
+    /* border-radius: 5px; */
+    /* padding: 0.75rem 1rem; */
+    margin-top: 1rem;
+    text-align: center;
+    font-family: "Inter", sans-serif;
+    font-size: 0.9rem;
+    display: block;
+}

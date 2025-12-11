@@ -4,8 +4,10 @@
         <title>スマート・プレゼンテーション</title>
         <link rel="icon" type="image/x-icon" href="assets/SR_logo_03_red.png">
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
         <link rel="stylesheet" href="./style/style.css" >
         <link rel="stylesheet" href="./style/home.css" >
+        <link rel="stylesheet" href="./style/admin-ui.css">
 
     </head>
     <body>
@@ -15,7 +17,13 @@
              <video autoplay muted loop id="bgVideo">
                 <source src="./assets/video/light3_background.mp4" type="video/mp4">
                 Your browser does not support the video tag.
-             </video>   
+             </video> 
+             
+            <div class="container-top-right-admin">
+                <a href="auth/logout.php" class="admin-logout-button">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </div>
 
             <div class="page-home">
                 <p class="title-home">スマート・プレゼンテーションは画面に触れて操作ができます</p>

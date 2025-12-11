@@ -5,6 +5,7 @@
     <link rel="icon" type="image/x-icon" href="assets/SR_logo_03_red.png">
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style/company-video.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="company-page">
